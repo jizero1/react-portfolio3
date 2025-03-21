@@ -3,7 +3,8 @@ a {
 }
 
 a:hover, .common-icon:hover {
-    color: rgb(252, 255, 54);
+    color: rgb(255, 247, 22);
+    cursor: url('MenuImg/cursorStarEmpty.png') 16 16, auto;
 }
 
 .common-icon {
@@ -14,7 +15,7 @@ a:hover, .common-icon:hover {
 .menu-container {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(70, 73, 78);
+    background-color: #333333;
     flex-direction: column;
 }
 
@@ -43,5 +44,5 @@ a:hover, .common-icon:hover {
 
 /* menu div에 마우스 올라오면 '별'아이콘으로 마우스커서 변경 */
 .custom-cursor-hover {
-    cursor: url('cursorStar.png') 16 16 , auto;
+    cursor: url('MenuImg/cursorStar.png') 16 16 , auto;
 }
