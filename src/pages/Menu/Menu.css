@@ -1,10 +1,15 @@
 a {
     color: white;
 }
+.common-icon {
+    margin: 0px 7px 0px 7px;
+    cursor: pointer;
+}
 .menu-container {
     width: 100vw;
     height: 100vh;
     background-color: rgb(70, 71, 73);
+    flex-direction: column;
 }
 .menu-ul {
     list-style: none;
@@ -13,4 +18,13 @@ a {
     line-height: 90px;
     letter-spacing: 4px;
     flex-direction: column;
+}
+.menu-contact {
+    width: 180px;
+    height: 68px;
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    font-size: 35px;
 }
