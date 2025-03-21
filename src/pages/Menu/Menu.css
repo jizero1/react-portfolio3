@@ -1,16 +1,23 @@
 a {
     color: white;
 }
+
+a:hover, .common-icon:hover {
+    color: rgb(252, 255, 54);
+}
+
 .common-icon {
     margin: 0px 7px 0px 7px;
     cursor: pointer;
 }
+
 .menu-container {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(70, 71, 73);
+    background-color: rgb(70, 73, 78);
     flex-direction: column;
 }
+
 .menu-ul {
     list-style: none;
     font-size: 60px;
@@ -19,6 +26,7 @@ a {
     letter-spacing: 4px;
     flex-direction: column;
 }
+
 .menu-contact {
     width: 180px;
     height: 68px;
@@ -27,4 +35,13 @@ a {
     background-color: rgb(97, 97, 97);
     color: white;
     font-size: 35px;
+}
+
+.custom-cursor {
+    cursor: auto;
+}
+
+/* menu div에 마우스 올라오면 '별'아이콘으로 마우스커서 변경 */
+.custom-cursor-hover {
+    cursor: url('cursorStar.png') 16 16 , auto;
 }

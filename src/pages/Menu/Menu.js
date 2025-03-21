@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Menu.css';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaEnvelope, FaStickyNote } from "react-icons/fa";
@@ -17,16 +17,20 @@ const MenuNav = () => {
 const MenuContact = () => {
     return (
         <div className="menu-contact common-flex">
-            <FaEnvelope className="common-icon"/>
-            <FaStickyNote className="common-icon"/>
-            <FaGithub className="common-icon"/>
+            <FaEnvelope className="common-icon" />
+            <FaStickyNote className="common-icon" />
+            <FaGithub className="common-icon" />
         </div>
     )
 }
 const Menu = () => {
+    const [mouseHover, setMouseHover] = useState(false);
+
     return (
-        <div className="menu-container common-flex">
-            <MenuNav/>
+        <div className={`menu-container common-flex ${mouseHover ? 'custom-cursor-hover' : 'custom-cursor'}`}
+            onMouseEnter={() => setMouseHover(true)}
+            onMouseLeave={() => setMouseHover(false)}>
+            <MenuNav />
             <MenuContact />
         </div>
     )
