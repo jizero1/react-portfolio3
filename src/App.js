@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router className="app-container">
       <Link to="/menu">
         <div className="menu common-flex">
           <div className="menu-line1"></div>
