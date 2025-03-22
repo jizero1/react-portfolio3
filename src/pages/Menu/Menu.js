@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './Menu.css';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaEnvelope, FaStickyNote } from "react-icons/fa";
+// import { useDispatch, useSelector } from 'react-redux';
+// import { toggleMenu } from '../../actions/menuActions';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 const MenuNav = () => {
     return (
@@ -24,6 +28,7 @@ const MenuContact = () => {
     )
 }
 const Menu = () => {
+
     const [mouseHover, setMouseHover] = useState(false);
 
     return (
