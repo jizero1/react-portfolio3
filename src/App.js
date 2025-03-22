@@ -12,6 +12,7 @@ function MenuIcon() {
   const navigate = useNavigate();
   const location = useLocation();
 
+
   // 메뉴 클릭시
   const handleMenuClick = () => {
     // 현재 경로가 /menu에 있을경우, 이전 페이지로 이동한다.
@@ -19,14 +20,27 @@ function MenuIcon() {
       navigate(-1); // 뒤로가기
     } else {
       navigate('/menu');
+      // 메뉴창에 들어오면, 이모티콘을 x로 변경한다
     }
   };
 
   return (
     <div className="menu common-flex" onClick={handleMenuClick}>
-      <div className="menu-line1"></div>
+      {menuClose && (
+        <div>
+
+        <div className="menu-line1"></div>
       <div className="menu-line2"></div>
       <div className="menu-line3"></div>
+      </div>
+      )}
+      {!menuClose && (
+                <div>
+                <div className="menu-line1"></div>
+              <div className="menu-line3"></div>
+              </div>
+      )}
+
     </div>
   );
 }
