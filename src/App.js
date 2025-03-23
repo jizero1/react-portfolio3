@@ -22,6 +22,7 @@ function MenuIcon() {
       setMenuIcon(false);
     } else {
       navigate('/menu');
+      setMenuIcon(true);
     }
   };
 
@@ -43,9 +44,9 @@ function MenuIcon() {
   return (
     <div className="menu common-flex" onClick={handleMenuClick}>
         <div>
-          <div className="menu-line1 common-menu-line"></div>
-          {menuIcon && (<div className="menu-line2 common-menu-line"></div>)}
-          <div className="menu-line3 common-menu-line"></div>
+          <div className={`common-menu-line ${menuIcon ? 'menu-lineClose1' : 'menu-line1'}`} style={menuColor}></div>
+          <div className={`common-menu-line ${menuIcon ? 'menu-lineClose2' : 'menu-line2'}`} style={menuColor}></div>
+          <div className={`common-menu-line ${menuIcon ? 'menu-lineClose3' : 'menu-line3'}`} style={menuColor}></div>
         </div>
     </div>
   );

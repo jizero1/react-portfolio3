@@ -4,26 +4,95 @@
   justify-content: center;
   align-items: center;
 }
+
 a {
   text-decoration: none;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .menu {
-  width: 40px;
-  height: 40px;
-  flex-direction: column;
+  width: 50px;
   cursor: pointer;
-  margin: 20px 0px 0px 20px;
+  margin: 30px 0px 0px 30px;
   position: fixed;
 }
+
 .common-menu-line {
-  width: 38px;
-  height: 4.5px;
+  width: 40px;
+  height: 3.5px;
   background-color: black;
-  margin: 3.3px 0px 3.3px 0px;
-  border-radius: 10px;
+  margin: 8px 0px 8px 0px;
+  transition: all 0.3s ease;
+}
+
+/* ----- 메뉴 클릭시 X자로 메뉴아이콘이 표시됨 ----- */
+.menu-line1 {
+  animation: menuLineAni1 0.5s forwards;
+}
+
+.menu-line2 {
+  opacity: 0;
+}
+
+.menu-line3 {
+  animation: menuLineAni3 0.5s forwards;
+}
+
+@keyframes menuLineAni1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translateY(12px) rotate(40deg);
+  }
+}
+
+@keyframes menuLineAni3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translateY(-11px) rotate(-40deg);
+  }
+}
+
+/* ----- 메뉴아이콘 X클릭시 원래 메뉴아이콘으로 돌아옴 ----- */
+.menu-lineClose1 {
+  animation: menuLineCloseAni1 0.5s forwards;
+
+}
+
+.menu-lineClose2 {
+  opacity: 1;
+
+}
+
+.menu-lineClose3 {
+  animation: menuLineCloseAni3 0.5s forwards;
+
+}
+
+@keyframes menuLineCloseAni1 {
+  0% {
+    transform: translateY(12px) rotate(40deg);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes menuLineCloseAni3 {
+  0% {
+    transform: translateY(-11px) rotate(-40deg);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
