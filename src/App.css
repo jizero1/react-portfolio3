@@ -61,38 +61,4 @@ a {
   }
 }
 
-/* ----- 메뉴아이콘 X클릭시 원래 메뉴아이콘으로 돌아옴 ----- */
-.menu-lineClose1 {
-  animation: menuLineCloseAni1 0.5s forwards;
 
-}
-
-.menu-lineClose2 {
-  opacity: 1;
-
-}
-
-.menu-lineClose3 {
-  animation: menuLineCloseAni3 0.5s forwards;
-
-}
-
-@keyframes menuLineCloseAni1 {
-  0% {
-    transform: translateY(12px) rotate(40deg);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes menuLineCloseAni3 {
-  0% {
-    transform: translateY(-11px) rotate(-40deg);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}

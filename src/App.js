@@ -44,9 +44,9 @@ function MenuIcon() {
   return (
     <div className="menu common-flex" onClick={handleMenuClick}>
         <div>
-          <div className={`common-menu-line ${menuIcon ? 'menu-lineClose1' : 'menu-line1'}`} style={menuColor}></div>
-          <div className={`common-menu-line ${menuIcon ? 'menu-lineClose2' : 'menu-line2'}`} style={menuColor}></div>
-          <div className={`common-menu-line ${menuIcon ? 'menu-lineClose3' : 'menu-line3'}`} style={menuColor}></div>
+          <div className={`common-menu-line ${menuIcon ? '' : 'menu-line1'}`} style={menuColor}></div>
+          <div className={`common-menu-line ${menuIcon ? '' : 'menu-line2'}`} style={menuColor}></div>
+          <div className={`common-menu-line ${menuIcon ? '' : 'menu-line3'}`} style={menuColor}></div>
         </div>
     </div>
   );
