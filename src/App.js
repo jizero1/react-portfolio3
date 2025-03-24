@@ -30,7 +30,6 @@ function MenuIcon() {
   useEffect(() => {
     if (location.pathname === '/menu') {
       setMenuIcon(false); // 메뉴 페이지에 있을 때
-      // 메뉴페이지에 있을때는 menu에 바탕색을 흰색으로 변경함.
     } else {
       setMenuIcon(true); // 메뉴 페이지가 아닐 때
     }

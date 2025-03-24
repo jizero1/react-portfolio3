@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Menu.css';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaEnvelope, FaStickyNote } from "react-icons/fa";
-import { useLocation, useNavigate } from 'react-router-dom';
 import { FaCopy } from "react-icons/fa6";
 
 
@@ -34,12 +33,9 @@ const MenuContact = () => {
         }
     }
 
-    // 현재 복사가 되었는지 상태 저장 변수
-    // const [copy, setCopy] = useState('');
-
     // 컨택메뉴에서 복사버튼 클릭시 링크 복사 함수
     const handleCopy = () => {
-        // 복사하려는 url = menuLinkText
+        // 복사하려는 url은 menuLinkText에 저장되어있음
         navigator.clipboard.writeText(menuLinkText)
         .then(() => {
             alert("링크가 복사되었습니다.");
@@ -56,7 +52,6 @@ const MenuContact = () => {
                 <FaStickyNote className="common-icon" onClick={() => handleMenuLink("https://blog.naver.com/jibbbang2")} />
                 <FaGithub className="common-icon" onClick={() => handleMenuLink("https://github.com/jizero1")} />
             </div>
-            {/* // 클릭한 메뉴에따라 삼각형 위치도 달라져야함 */}
             {menuLinkOpen && (
                 <div className="menuLinkContainer common-flex">
                     <p className="menuLink">{menuLinkText}</p>
