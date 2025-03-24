@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div>
-            
-            메인 홈 화면 입니다.
+        <div className="home-container">
         </div>
     )
 }

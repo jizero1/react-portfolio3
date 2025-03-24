@@ -8,7 +8,30 @@ import Menu from './pages/Menu/Menu';
 import { Provider } from 'react-redux';
 import store from './store';
 
-function MenuIcon() {
+const PageLogo = () => {
+  const location = useLocation();
+
+  // 상단에 별 로고 화면에 표시 유무 (기본 상태는 true로 보이게함)
+  const [logoView, setLogoView] = useState(true);
+
+  // 메뉴페이지에서는 별 로고를 표시하지 않음
+  useEffect(() => {
+    if (location.pathname === "/menu") {
+      setLogoView(false);
+    } else {
+      setLogoView(true);
+    }
+  }, [location.pathname]);
+  return (
+    <div className="pageLogo">
+      {logoView && (
+        <img src="./images/cursor-star.png" alt="홈화면 로고"></img>
+      )}
+
+    </div>
+  )
+}
+const MenuIcon = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -42,11 +65,11 @@ function MenuIcon() {
 
   return (
     <div className="menu common-flex" onClick={handleMenuClick}>
-        <div>
-          <div className={`common-menu-line ${menuIcon ? '' : 'menu-line1'}`} style={menuColor}></div>
-          <div className={`common-menu-line ${menuIcon ? '' : 'menu-line2'}`} style={menuColor}></div>
-          <div className={`common-menu-line ${menuIcon ? '' : 'menu-line3'}`} style={menuColor}></div>
-        </div>
+      <div>
+        <div className={`common-menu-line ${menuIcon ? '' : 'menu-line1'}`} style={menuColor}></div>
+        <div className={`common-menu-line ${menuIcon ? '' : 'menu-line2'}`} style={menuColor}></div>
+        <div className={`common-menu-line ${menuIcon ? '' : 'menu-line3'}`} style={menuColor}></div>
+      </div>
     </div>
   );
 }
@@ -55,6 +78,7 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
+        <PageLogo />
         <MenuIcon /> {/* 메뉴 아이콘 컴포넌트 */}
         <Routes>
           <Route path="/" element={<Home />} />
