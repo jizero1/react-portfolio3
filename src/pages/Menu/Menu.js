@@ -25,7 +25,13 @@ const MenuContact = () => {
     const [menuLinkOpen, setMenuLinkOpen] = useState(false);
     const handleMenuLink = (text) => {
         setMenuLinkOpen(!menuLinkOpen);
-        setMenuLinkText(text);
+        // menuLinkOpen이 true인 상태에서 새로운 text가 들어오면 false로 변경하지 않는다
+        if (menuLinkOpen === true) {
+            if (menuLinkText !== text) {
+                setMenuLinkOpen(true);
+                setMenuLinkText(text);
+            }
+        }
     }
     return (
         <div className="menu-contact-container common-flex">
