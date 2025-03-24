@@ -8,7 +8,7 @@
 최지영 (1인개발)
 
 ## 사용 기술
-React / React Router
+React / React Router(페이지이동) / Figma(포트폴리오 디자인시 활용)
 
 ## 주요 기능
 1. 마우스 커서를 별로 변경
