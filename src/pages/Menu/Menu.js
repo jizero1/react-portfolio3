@@ -18,12 +18,28 @@ const MenuNav = () => {
         </nav>
     )
 }
+
 const MenuContact = () => {
+    // 메뉴아이콘을 클릭하면, 해당아이콘에 맞는 링크를 menuLink안에 보여준다.
+    const [menuLinkText, setMenuLinkText] = useState('');
+    const [menuLinkOpen, setMenuLinkOpen] = useState(false);
+    const handleMenuLink = (text) => {
+        setMenuLinkOpen(!menuLinkOpen);
+        setMenuLinkText(text);
+    }
     return (
-        <div className="menu-contact common-flex">
-            <FaEnvelope className="common-icon" />
-            <FaStickyNote className="common-icon" />
-            <FaGithub className="common-icon" />
+        <div className="menu-contact-container common-flex">
+            <div className="menu-icons common-flex">
+                <FaEnvelope className="common-icon" onClick={() => handleMenuLink("wlduddl4101@gmail.com")} />
+                <FaStickyNote className="common-icon" onClick={() => handleMenuLink("https://blog.naver.com/jibbbang2")} />
+                <FaGithub className="common-icon" onClick={() => handleMenuLink("https://github.com/jizero1")} />
+            </div>
+            {/* // 클릭한 메뉴에따라 삼각형 위치도 달라져야함 */}
+            {menuLinkOpen && (
+                <div className="menuLink common-flex">
+                    <p>{menuLinkText}</p>
+                </div>
+            )}
         </div>
     )
 }
