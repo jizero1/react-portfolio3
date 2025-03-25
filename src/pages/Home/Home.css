@@ -3,11 +3,31 @@
     height: 100vh;
     background-color: rgb(239, 239, 239);
 }
-.home-text{
+.home-text-container {
     flex-direction: column;
+}
+.home-text{
     /* background-color: grey; */
     font-size: 100px;
     font-weight: 700;
     letter-spacing: 2px;
     line-height: 130px;
+}
+.home-scrollIcon {
+    font-size: 50px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 30px;
+    animation: scrollIconAni 1.2s infinite linear;
+}
+@keyframes scrollIconAni {
+    0% {
+        margin-bottom: 30px;
+    }
+    50% {
+        margin-bottom: 50px;
+    }
+    100% {
+        margin-bottom: 30px;
+    }
 }
