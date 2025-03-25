@@ -9,9 +9,9 @@ const MenuNav = () => {
     return (
         <nav className="menu-nav">
             <ul className="menu-ul common-flex">
-                <li><Link to="/">HOME</Link></li>
-                <li><Link to="/about">ABOUT</Link></li>
-                <li><Link to="/project">PROJECT</Link></li>
+                <li><Link to="/"  className="common-link">HOME</Link></li>
+                <li><Link to="/about" className="common-link">ABOUT</Link></li>
+                <li><Link to="/project" className="common-link">PROJECT</Link></li>
             </ul>
         </nav>
     )

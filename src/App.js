@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Project from './pages/Project/Project';
@@ -22,10 +22,12 @@ const PageLogo = () => {
       setLogoView(true);
     }
   }, [location.pathname]);
+
+
   return (
     <div className="pageLogo">
       {logoView && (
-        <img src="./images/cursor-star.png" alt="홈화면 로고"></img>
+        <Link to="/"><img className="logoImg" src="./images/cursor-star.png" alt="홈화면 로고"></img></Link>
       )}
 
     </div>

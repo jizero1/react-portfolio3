@@ -2,7 +2,7 @@ a {
     color: white;
 }
 
-a:hover, .common-icon:hover {
+.common-link:hover, .common-icon:hover {
     color: rgb(255, 247, 22);
     cursor: url('MenuImg/cursorStarEmpty.png') 16 16, auto;
 }

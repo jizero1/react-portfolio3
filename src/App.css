@@ -15,11 +15,24 @@ a {
   box-sizing: border-box;
 }
 
+/* 로고 */
 .pageLogo {
   position: fixed;
   margin: 25px 0px 0px 90px;
   cursor: pointer;
 }
+.logoImg:hover {
+  animation: logoRotateAni 2s infinite linear;
+}
+@keyframes logoRotateAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 메뉴 */
 .menu {
   width: 50px;
   cursor: pointer;
