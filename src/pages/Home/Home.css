@@ -1,3 +1,9 @@
+/* 공통으로 사용되는 속성 */
+.common-home-starIcon {
+    position: fixed;
+    opacity: 0;
+    transition: all 1s;
+}
 .home-container{
     width: 100vw;
     height: 100vh;
@@ -31,3 +37,20 @@
         margin-bottom: 30px;
     }
 }
+
+
+.home-starIcon-container{
+    font-size: 50px;
+    /* position: relative; */
+}
+.home-starIcon-left {
+    /* position: absolute; */
+    left: 100px;
+    bottom: 200px;
+}
+.home-starIcon-right {
+    /* position: absolute; */
+    right: 100px;
+    top: 200px;
+}
+
