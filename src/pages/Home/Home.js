@@ -8,15 +8,15 @@ import { FaAngleDown, FaStar } from "react-icons/fa";
 
 const TextIcon = ({firstIcon, secondIcon, thirdIcon}) => {
     return (
-        <div>  
+        <div className="textIcon-container">  
             {firstIcon && (
-                <p>첫번째 아이콘!</p>
+                <p className="common-textIcon icon1"><FaStar/></p>
             )}
             {secondIcon && (
-                <p>두번째 아이콘!</p>
+                <p className="common-textIcon icon2"><FaStar/></p>
             )}
             {thirdIcon && (
-                <p>세번째 아이콘@</p>
+                <p className="common-textIcon icon3"><FaStar/></p>
             )}
         </div>
     )
@@ -86,8 +86,8 @@ const Home = () => {
     }
     return (
         <div className="home-container common-flex">
-            <TextIcon firstIcon={firstIcon} secondIcon={secondIcon} thirdIcon={thirdIcon}/>
             <HomeText handleFirstText={handleFirstText} handleSecondText={handleSecondText} handleThridText={handleThridText}/>
+            <TextIcon firstIcon={firstIcon} secondIcon={secondIcon} thirdIcon={thirdIcon}/>
         </div>
     )
 }
