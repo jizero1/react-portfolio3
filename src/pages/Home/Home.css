@@ -11,13 +11,19 @@
 }
 .home-text-container {
     flex-direction: column;
+    background-color: grey;
+    width: 100%;
+    position: relative;
+
 }
 .home-text{
-    /* background-color: grey; */
-    font-size: 100px;
+    /* background-color: yellow; */
+    font-size: 80px;
     font-weight: 700;
     letter-spacing: 2px;
     line-height: 130px;
+    position: absolute;
+    left: 50px;
 }
 .home-scrollIcon {
     font-size: 50px;

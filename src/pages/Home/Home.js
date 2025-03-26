@@ -6,31 +6,21 @@ import { motion } from "framer-motion";
 import { ReactTyped } from 'react-typed';
 import { FaAngleDown, FaStar } from "react-icons/fa";
 
-const HomeStarIcon = ({ scrollIcon }) => {
-
-    // 스크롤아이콘이 뜨면 돋보기와 별 아이콘(이미지)띄운다.
-    const [starIconLeft, setStarIconLeft] = useState(false);
-    const [starIconRight, setStarIconRight] = useState(false);
-
-    useEffect(() => {
-        if (scrollIcon) {
-            setStarIconLeft(true);
-            setStarIconRight(true);
-        }
-    }, [scrollIcon]);
-
+const TextIcon = ({firstIcon, secondIcon, thirdIcon}) => {
     return (
-        <div className="home-starIcon-container">
-            <div className="home-starIcon-left common-home-starIcon" style={{ opacity: scrollIcon ? 1 : 0 }} >
-                <FaStar />
-            </div>
-            <div className="home-starIcon-right common-home-starIcon" style={{ opacity: scrollIcon ? 1 : 0 }} >
-                <FaStar />
-            </div>
+        <div>  
+            {firstIcon && (
+                <p>첫번째 아이콘!</p>
+            )}
+            {secondIcon && (
+                <p>두번째 아이콘!</p>
+            )}
+            {thirdIcon && (
+                <p>세번째 아이콘@</p>
+            )}
         </div>
     )
 }
-
 const TextTyping = ({ text, onComplete }) => {
     return (
         <ReactTyped
@@ -45,31 +35,31 @@ const TextTyping = ({ text, onComplete }) => {
     )
 }
 
-const HomeText = ({ scrollIcon, handleTypingComplete }) => {
+const HomeText = ({handleFirstText, handleSecondText, handleThridText}) => {
     const [firstText, setFirstText] = useState(false);
     const [secondText, setSecondText] = useState(false);
-    const handleFirstText = () => {
-        setFirstText(true);
-    }
-    const handleSecondText = () => {
-        setSecondText(true);
-    }
+    const [scrollIcon, setScrollIcon] = useState(false);
+
     const nextText = (next) => {
         next(true);
     }
-    const handleThirdText = () => {
 
+    
+    const thirdScrollIcon = () => {
+        setScrollIcon(true); // 마지막 텍스트까지 출력되면 스크롤아이콘 띄우기
     }
     return (
         <div className="home-text-container common-flex">
             <div className="home-text">
-                <TextTyping text={"HELLO, I'M JIYOUNG"} onComplete={()=> nextText(setFirstText)}></TextTyping>
+                <TextTyping text={"HELLO, I'M JIYOUNG"} onComplete={() => {nextText(setFirstText); handleFirstText();}}></TextTyping>
+                <br></br>
                 {firstText && (
-                    <TextTyping text={"FRONT-END DEVELOPER"} onComplete={() => nextText(setSecondText)}></TextTyping>
+                    <TextTyping text={"FRONT-END DEVELOPER"} onComplete={() => {nextText(setSecondText); handleSecondText();}}></TextTyping>
                 )}
+                <br></br>
                 {secondText && (
-                    <TextTyping text={"VIEW MY PORTFOLIO"} onComplete={handleThirdText}></TextTyping>
-            
+                    <TextTyping text={"VIEW MY PORTFOLIO"} onComplete={() => {thirdScrollIcon(); handleThridText();}}></TextTyping>
+
                 )}
             </div>
             {scrollIcon && (
@@ -79,14 +69,25 @@ const HomeText = ({ scrollIcon, handleTypingComplete }) => {
     )
 }
 const Home = () => {
-    const [scrollIcon, setScrollIcon] = useState(false);
-    const handleTypingComplete = () => {
-        setScrollIcon(true);
+
+    const [firstIcon, setFirstIcon] = useState(false);
+    const [secondIcon, setSecondIcon] = useState(false);
+    const [thirdIcon, setThirdIcon] = useState(false);
+    const handleFirstText = () => {
+        // 첫번째 텍스트 타이핑 완료되면 아이콘 띄우기
+        // firstIcon을 true로 설정하고, icon컴포넌트에서 해당 아이콘을 화면에 표시함
+        setFirstIcon(true);
+    }
+    const handleSecondText = () => {
+        setSecondIcon(true);
+    }
+    const handleThridText = () => {
+        setThirdIcon(true);
     }
     return (
         <div className="home-container common-flex">
-            <HomeStarIcon scrollIcon={scrollIcon} />
-            <HomeText scrollIcon={scrollIcon} handleTypingComplete={handleTypingComplete} />
+            <TextIcon firstIcon={firstIcon} secondIcon={secondIcon} thirdIcon={thirdIcon}/>
+            <HomeText handleFirstText={handleFirstText} handleSecondText={handleSecondText} handleThridText={handleThridText}/>
         </div>
     )
 }
