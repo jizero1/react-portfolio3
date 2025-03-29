@@ -51,23 +51,18 @@ const HomeText = () => {
 const HomeInfo = () => {
     return (
         <div className="home-info-container common-flex">
-            <div className="home-info-about">
-                {/* 별 아이콘이 회색 이었다가 노란색으로 바뀌고, 주변에 빛 그림자도 생김
-                마우스 올리면 빙글빙글 도는 애니메이션 */}
-                <div className="home-info-imgTitle">
-                    <img src="" alt="별 아이콘" className="home-info-img"></img>
-                    <p className="home-info-title">별처럼 빛나는 사람이 되겠습니다.</p>
-                </div>
-                <p className="common-infoText">ABOUT에는 자기소개, 사용하는 기술, 그리고 프론트엔드 개발자로서의 목표와 비전 대한 내용이 담겨있습니다.</p>
-                <p className="common-infoText">PROJECTS에는 작업했던 프로젝트 소개와 사용한 기술에 대해 상세히 설명이 되어있습니다.</p>
+            <div className="home-info-header">
+                <p className="home-info-title">OVERVIEW</p>
+                <p className="common-info-text">ABOUT에는 자기소개, 사용하는 기술, 그리고 프론트엔드 개발자로서의 목표와 비전 대한 내용이 담겨있습니다.</p>
+                <p className="common-info-text">PROJECTS에는 작업했던 프로젝트 소개와 사용한 기술에 대해 상세히 설명이 되어있습니다.</p>
             </div>
             {/* about과 projects 페이지로 이동하는 부분 */}
             <div className="home-info-navigation common-flex">
                 {/* 위쪽+왼쪽 그림자 주기 */}
-                <div className="common-infoBox home-info-about common-flex">
+                <div className="common-info-box home-info-about common-flex">
                     <p>ABOUT</p>
                 </div>
-                <div className="common-infoBox home-info-project common-flex">
+                <div className="common-info-box home-info-project common-flex">
                     <p>PROJECTS</p>
                 </div>
             </div>

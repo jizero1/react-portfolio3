@@ -112,34 +112,35 @@
 
 
 
-.common-infoBox {
+
+
+
+
+.common-info-box {
     width: 500px;
     height: 300px;
     background-color: green;
     margin: 20px;
     border-radius: 50px;
 }
-.home-info-title {
-    font-size: 30px;
-    font-weight: 700;
-}
-.home-info-imgTitle {
-    background-color: grey;
-    display: flex;
-    align-items: center;
-}
-.home-info-img {
-    
-}
-.common-infoText {
+.common-info-text {
     font-size: 18px;
 }
+
+
+.home-info-header {
+
+}
+.home-info-title {
+
+}
+
 .home-info-container {
     width: 100%;
     height: 100vh;
     flex-direction: column;
 }
-.home-info-about {
+.home-info-overview {
 
 }
 .home-info-navigation {
