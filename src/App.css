@@ -13,6 +13,7 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* cursor: url('../public/images/cursorStar.png') 16 16, auto; */
 }
 
 /* 로고 */
