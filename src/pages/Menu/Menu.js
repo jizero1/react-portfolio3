@@ -11,7 +11,7 @@ const MenuNav = () => {
             <ul className="menu-ul common-flex">
                 <li><Link to="/"  className="common-link">HOME</Link></li>
                 <li><Link to="/about" className="common-link">ABOUT</Link></li>
-                <li><Link to="/project" className="common-link">PROJECT</Link></li>
+                <li><Link to="/project" className="common-link">PROJECTS</Link></li>
             </ul>
         </nav>
     )
