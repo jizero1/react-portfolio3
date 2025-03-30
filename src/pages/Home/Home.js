@@ -64,19 +64,23 @@ const HomeInfo = () => {
                 <p className="home-info-title">OVERVIEW</p>
                 <p className="common-info-text"><span className="common-info-spanText">ABOUT</span>에는 자기소개, 사용하는 기술, 그리고 프론트엔드 개발자로서의 목표와 비전 대한 내용이 담겨있습니다.</p>
                 <p className="common-info-text"><span className="common-info-spanText">PROJECTS</span>에는 작업했던 프로젝트 소개와 문제 해결 상황 등에 대해 상세히 설명이 되어있습니다.</p>
-                <hr className="home-info-header-line"/>
+                <hr className="home-info-header-line" />
             </div>
             {/* about과 projects 페이지로 이동하는 부분 */}
             <div className="home-info-navigation common-flex">
                 {/* 위쪽+왼쪽 그림자 주기 */}
-                <div className="common-info-box home-info-about common-flex" >
-                    <p className="common-info-box-title">ABOUT</p>
-                    <p className="common-info-box-text">자기소개, 사용하는 기술, 프론트엔드 개발자로서 목표와 비전</p>
-                </div>
-                <div className="common-info-box home-info-project common-flex">
-                    <p className="common-info-box-title">PROJECTS</p>
-                    <p className="common-info-box-text">프로젝트 소개 및 문제 해결에 대한 설명</p>
-                </div>
+                <Link to="/about">
+                    <div className="common-info-box home-info-about common-flex" >
+                        <p className="common-info-box-title">ABOUT</p>
+                        <p className="common-info-box-text">자기소개, 사용하는 기술, 프론트엔드 개발자로서 목표와 비전</p>
+                    </div>
+                </Link>
+                <Link to="/project">
+                    <div className="common-info-box home-info-project common-flex">
+                        <p className="common-info-box-title">PROJECTS</p>
+                        <p className="common-info-box-text">프로젝트 소개 및 문제 해결에 대한 설명</p>
+                    </div>
+                </Link>
             </div>
         </div>
     )

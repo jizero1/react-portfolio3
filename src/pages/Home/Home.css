@@ -134,6 +134,7 @@
     flex-direction: column;
     position: relative;
     padding: 30px;
+    color: black;
 }
 .common-info-box::before {
     content: "\2191";
@@ -153,10 +154,16 @@
     transition: transform 0.3s ease;
 }
 .home-info-about::before {
+    color: white;
     background-color: #FFB6C1;
 }
 .home-info-project:before {
+    color: white;
     background-color: rgb(165, 165, 246);
+}
+.common-info-box:hover::before {
+    background-color: white;
+    color: black;
 }
 .common-info-box:hover::before {
     /* transform: rotateX(20deg); */
@@ -182,9 +189,6 @@
 }
 .home-info-project:hover {
     background-color: rgb(165, 165, 246);
-}
-.common-info-box:hover::before {
-    background-color: white;
 }
 
 .common-info-text {
@@ -235,5 +239,8 @@
 }
 
 .home-info-navigation {
-
+    /* color: black; */
+}
+a {
+    /* color: black; */
 }
