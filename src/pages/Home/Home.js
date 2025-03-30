@@ -37,6 +37,7 @@ const HomeText = () => {
     ]
     return (
         <div className="home-text-container common-flex">
+            <div className="home-circle-box"></div>
             <div className="home-text">
                 <TextTyping text={["HELLO, I'M JIYOUNG", "FROUNT-END DEVELOPER", "VIEW MY PORTFOLIO"]}
                     onComplete={() => handleTypingComplete()}></TextTyping>

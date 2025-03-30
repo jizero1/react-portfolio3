@@ -59,6 +59,14 @@
     position: relative;
 
 }
+.home-circle-box {
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border-radius: 100%;
+    margin-bottom: 50px;
+    border: 2px solid rgb(0, 0, 0,0.6);
+}
 .home-text{
     /* background-color: yellow; */
     font-size: 90px;
@@ -123,16 +131,22 @@
     margin: 20px;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: -3px -2px 19px 2px rgb(0, 0, 0,0.2);
     flex-direction: column;
     position: relative;
     padding: 30px;
 }
+.common-info-box:hover {
+    box-shadow: -1px -1px 20px 0.5px rgb(0, 0, 0,0.2);
+}
 .common-info-box:hover .common-info-box-text {
     opacity: 1;
+    /* bottom: 0; */
+    transform: translateY(-60px);
 }
 .common-info-box:hover .common-info-box-title {
-    top: 40px;
+    /* top: 40px; */
+    transform: translateY(-75px); 
+    
 }
 .home-info-about:hover {
     background-color: rgb(251, 255, 128);
@@ -142,10 +156,7 @@
     background-color: rgb(165, 165, 246);
 }
 
-/* .common-link:hover, .common-icon:hover {
-    color: rgb(255, 247, 22);
-    cursor: url('MenuImg/cursorStarEmpty.png') 16 16, auto;
-} */
+
 .common-info-text {
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -159,13 +170,15 @@
     font-weight: 600;
     position: absolute;
     /* top: 40px; */
+    transition: transform 0.3s ease-out;
 }
 .common-info-box-text {
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 0.5px;
-    /* position: absolute; */
-    /* bottom: 50px; */
+    position: absolute;
+    bottom: 50px;
     opacity: 0;
+    transition: transform 0.3s ease-out;
 
 }
 .home-info-container {
