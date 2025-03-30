@@ -135,6 +135,34 @@
     position: relative;
     padding: 30px;
 }
+.common-info-box::before {
+    content: "\2191";
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    width: 70px;
+    height: 70px;
+    /* background-color: rgb(229, 228, 228); */
+    border-radius: 50px;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    transition: transform 0.3s ease;
+}
+.home-info-about::before {
+    background-color: #FFB6C1;
+}
+.home-info-project:before {
+    background-color: rgb(165, 165, 246);
+}
+.common-info-box:hover::before {
+    /* transform: rotateX(20deg); */
+    /* font-size: 120px; */
+    transform: rotate(90deg);
+}
 .common-info-box:hover {
     box-shadow: -1px -1px 20px 0.5px rgb(0, 0, 0,0.2);
 }
@@ -149,13 +177,15 @@
     
 }
 .home-info-about:hover {
-    background-color: rgb(251, 255, 128);
+    background-color: #FFB6C1;
     /* cursor: url('HomeImg/cursorStarEmpty.png') 16 16, auto; */
 }
 .home-info-project:hover {
     background-color: rgb(165, 165, 246);
 }
-
+.common-info-box:hover::before {
+    background-color: white;
+}
 
 .common-info-text {
     font-size: 18px;

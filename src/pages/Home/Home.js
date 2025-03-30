@@ -4,7 +4,7 @@ import Menu from '../Menu/Menu';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { ReactTyped } from 'react-typed';
-import { FaAngleDown, FaStar } from "react-icons/fa";
+import { FaAngleDown, FaStar, FaArrowUp, FaArrowRight } from "react-icons/fa";
 
 // 텍스트 타이핑 효과 컴포넌트
 const TextTyping = ({ text, onComplete }) => {
