@@ -17,6 +17,7 @@ const MenuNav = () => {
     )
 }
 
+// 이메일, 블로그, 깃허브 아이콘 표시 컴포넌트
 const MenuContact = () => {
     // 메뉴아이콘을 클릭하면, 해당아이콘에 맞는 링크를 menuLink안에 보여준다.
     const [menuLinkText, setMenuLinkText] = useState('');

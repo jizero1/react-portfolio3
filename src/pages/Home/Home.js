@@ -35,11 +35,20 @@ const HomeText = () => {
     }
 
 
+    // './images/cursor-star.png',
+    // './images/cursorStarEmpty.png',
+    // './images/cursor-star.png'
 
+    // '👋',
+    // '😎',
+    // '💻',
+    // '🥳',
+    // '⭐️',
+    // '🔍
     const imgSrc = [
-        './images/cursor-star.png',
-        './images/cursorStarEmpty.png',
-        './images/cursor-star.png'
+        '🥳',
+        '💻',
+        '🔍'
     ]
     const [homeImg, setHomeImg] = useState(imgSrc[0]); // 초기 이미지
     const [homeImgIndex, setHomeImgIndex] = useState(0); // 이미지 인덱스 상태 추가
@@ -53,7 +62,7 @@ const HomeText = () => {
                 const nextIndex = (prevIndex + 1) % imgSrc.length; // 배열 순환
 
                 console.log(nextIndex);
-                if (nextIndex === 0) {
+                if (nextIndex === 2) {
                     clearInterval(imgInterval); // nextIndex가 0이면 반복을 중지
                 }
 
@@ -62,7 +71,7 @@ const HomeText = () => {
                
 
             });
-        }, 3000); // 3초마다 이미지 변경
+        }, 4400); // 3초마다 이미지 변경
         return () => clearInterval(imgInterval); // 컴포넌트 언마운트 시 interval 정리
     }, []); // 빈 배열 넣으면 처음 마운트될 때만 실행
 
@@ -73,12 +82,11 @@ return (
         <div className="home-circle-box common-flex">
             {/* 텍스트 바뀌는 속도에 맞게 이미지도 교체됨 */}
             {/* 이미지 경로저장 변수를 만들고, 일정 속도가 지나면 이미지 경로를 변경 */}
-            <img src={homeImg}></img>
-            {/* <TextTyping text={["<img src='./images/cursor-star.png' alt='cursor' />", "<img src='./images/cursorStarEmpty.png' alt='cursor' />",   "<img src='./images/cursor-star.png' alt='cursor' />"]}
-                onComplete={() => handleTypingComplete()}></TextTyping> */}
+            {/* <img src={homeImg}></img> */}
+            <p className="home-circle-box-img">{homeImg}</p>
         </div>
         <div className="home-text">
-            <TextTyping text={["HELLO, I'M JIYOUNG", "FROUNT-END DEVELOPER", "VIEW MY PORTFOLIO"]}
+            <TextTyping text={["HELLO, I'M JIYOUNG", "FRONT-END DEVELOPER", "VIEW MY PORTFOLIO"]}
                 onComplete={() => handleTypingComplete()}></TextTyping>
         </div>
         {scrollIcon && (
