@@ -3,7 +3,7 @@ import './About.css';
 
 const About = () => {
     return (
-        <div>
+        <div className="common-background">
             About화면 입니다.
         </div>
     )

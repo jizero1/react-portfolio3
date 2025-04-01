@@ -3,7 +3,7 @@ import React from 'react';
 
 const Project = () => {
     return (
-        <div>
+        <div className="common-background">
             Project화면 입니다.
         </div>
     )

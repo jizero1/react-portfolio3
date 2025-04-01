@@ -7,6 +7,9 @@ import Project from './pages/Project/Project';
 import Menu from './pages/Menu/Menu';
 import { Provider } from 'react-redux';
 import store from './store';
+import Footer from './Footer.js';
+// import './Footer.css';
+
 
 const PageLogo = () => {
   const location = useLocation();
@@ -76,7 +79,11 @@ const MenuIcon = () => {
   );
 }
 
+
+
 function App() {
+
+
   return (
     <Provider store={store}>
       <Router>
@@ -88,6 +95,8 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/menu" element={<Menu />} />
         </Routes>
+        {/* ++++++++++++++++++ 현재 경로가 menu일경우, Footer은 표시하지 않음!  */}
+        <Footer/>
       </Router>
     </Provider>
   );
