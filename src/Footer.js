@@ -26,9 +26,6 @@ const Footer = () => {
         <p>2025.03 CHOI JIYOUNG PORTFOLIO</p>
       </div>
     )
-    // <div className="footer common-flex">
-    //   <p>2025.03 CHOI JIYOUNG PORTFOLIO</p>
-    // </div>
   )
 }
 

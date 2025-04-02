@@ -22,6 +22,7 @@ a {
   position: fixed;
   margin: 25px 0px 0px 90px;
   cursor: pointer;
+  z-index: 100;
 }
 .logoImg:hover {
   animation: logoRotateAni 2s infinite linear;
@@ -42,6 +43,7 @@ a {
   cursor: pointer;
   margin: 30px 0px 0px 30px;
   position: fixed;
+  z-index: 100;
 }
 .common-menu-line {
   width: 40px;
