@@ -4,110 +4,58 @@
     opacity: 0;
     transition: all 1s;
 }
-.common-textIcon {
-    position: fixed;
-    font-size: 150px;
-    /* background-color: yellow; */
-    /* opacity: 0; */
-    /* transform: all 1s;  */
-    /* transition: all 1s ease-in-out; */
-}
-.textIcon-container{
-    /* width: 30%; */
-    /* height: 100%; */
-    /* background-color: green; */
-    /* position: relative; */
-    /* width: 30%;
-    height: 100%;
-    background-color: green; */
-    /* width: 200px;
-    height: 300px;
-    background-color: green; */
-    /* position: fixed; */
-    /* right: 0; */
 
-}
-.icon1 {
-    /* position: absolute; */
-    /* top: 0; */
-    top: 70px;
-    right: 50px;
-
-    /* right: 0; */
-}
-.icon2 {
-    top: 300px;
-    right: 250px;
-    /* bottom: 0; */
-}
-.icon3 {
-    top: 550px;
-    right: 100px;
-}
-.home-container{
+.home-container {
     width: 100vw;
-    /* height: 100vh; */
-    /* background-color: rgb(239, 239, 239); */
     flex-direction: column;
 }
+
 .home-text-container {
     flex-direction: column;
-    /* background-color: grey; */
     width: 100%;
-    /* height: 100%; */
     height: 100vh;
-    /* position: relative; */
-
+    /* background-color: blue; */
 }
 
+/* ----------- 홈 화면 상단에 동그라미 박스 ----------- */
 .home-circle-box {
     width: 300px;
     height: 300px;
     background-color: rgba(117, 117, 117, 0.1);
     border-radius: 100%;
     margin-bottom: 50px;
-    /* border: 2px solid rgb(0, 0, 0,0.6); */
     font-size: 100px;
     position: relative;
 }
+
 .home-circle-box-img {
     animation: circleBoxImgAni 1.5s infinite;
     cursor: pointer;
 }
-/* .home-circle-box:hover::before {
-    opacity: 1;
-}
-.home-circle-box::before {
-    content: "";
-    width: 250px;
-    height: 55px;
-    border-radius: 20px;
-    background-color: white;
-    position: absolute;
-    bottom: 30px;
-    opacity: 0;
-} */
+
 @keyframes circleBoxImgAni {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
+
     100% {
         transform: translateY(0px);
     }
 }
-.home-text{
-    /* background-color: yellow; */
+
+
+/* ----------- 홈화면 텍스트 ----------- */
+.home-text {
     font-size: 90px;
     font-weight: 700;
     letter-spacing: 2px;
-    line-height: 130px;
-    /* margin-left: 50px;
-    position: absolute;
-    left: 50px; */
+    margin-top: 30px;
 }
+
 .home-scrollIcon {
     font-size: 50px;
     position: absolute;
@@ -119,42 +67,22 @@
     opacity: 0;
     transition: opacity 1s;
 }
+
 @keyframes scrollIconAni {
     0% {
         margin-bottom: 30px;
     }
+
     50% {
         margin-bottom: 50px;
     }
+
     100% {
         margin-bottom: 30px;
     }
 }
 
-
-.home-starIcon-container{
-    font-size: 50px;
-    /* position: relative; */
-}
-.home-starIcon-left {
-    /* position: absolute; */
-    left: 100px;
-    bottom: 200px;
-}
-.home-starIcon-right {
-    /* position: absolute; */
-    right: 100px;
-    top: 200px;
-}
-
-
-
-
-
-
-
-
-
+/* ----------- ABOUT과 PROJECT 박스 --------- */
 .common-info-box {
     width: 500px;
     height: 300px;
@@ -167,6 +95,7 @@
     padding: 30px;
     color: black;
 }
+
 .common-info-box::before {
     content: "\2191";
     font-size: 40px;
@@ -176,7 +105,6 @@
     font-weight: 800;
     width: 70px;
     height: 70px;
-    /* background-color: rgb(229, 228, 228); */
     border-radius: 50px;
     position: absolute;
     z-index: 1;
@@ -184,52 +112,59 @@
     right: 10px;
     transition: transform 0.3s ease;
 }
+
 .home-info-about::before {
     color: white;
     background-color: #FFB6C1;
 }
+
 .home-info-project:before {
     color: white;
     background-color: rgb(165, 165, 246);
 }
+
 .common-info-box:hover::before {
     background-color: white;
     color: black;
 }
+
 .common-info-box:hover::before {
-    /* transform: rotateX(20deg); */
-    /* font-size: 120px; */
     transform: rotate(90deg);
 }
+
 .common-info-box:hover {
-    box-shadow: -1px -1px 20px 0.5px rgb(0, 0, 0,0.2);
+    box-shadow: -1px -1px 20px 0.5px rgb(0, 0, 0, 0.2);
 }
+
 .common-info-box:hover .common-info-box-text {
     opacity: 1;
-    /* bottom: 0; */
     transform: translateY(-40px);
 }
+
 .common-info-box:hover .common-info-box-title {
-    /* top: 40px; */
-    transform: translateY(-75px); 
-    
+    transform: translateY(-75px);
 }
+
 .home-info-about:hover {
     background-color: #FFB6C1;
-    /* cursor: url('HomeImg/cursorStarEmpty.png') 16 16, auto; */
 }
+
 .home-info-project:hover {
     background-color: rgb(165, 165, 246);
 }
 
+
+/* ----------- overview부분 ----------- */
 .common-info-text {
     font-size: 18px;
     letter-spacing: 0.5px;
     line-height: 40px;
 }
+
 .common-info-spanText {
     font-weight: 800;
 }
+
 .common-info-box-title {
     font-size: 30px;
     font-weight: 600;
@@ -237,6 +172,7 @@
     /* top: 40px; */
     transition: transform 0.3s ease-out;
 }
+
 .common-info-box-text {
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -247,32 +183,114 @@
     text-align: center;
     line-height: 30px;
 }
+
 .home-info-container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
+    /* background-color: yellow; */
 }
+
 .home-info-header {
     width: 100%;
+    /* height: 70%; */
     /* background-color: grey; */
     padding-left: 80px;
     margin-bottom: 70px;
 }
+
 .home-info-header-line {
     width: 100%;
     margin-top: 20px;
     border: 0.8px solid rgb(77, 77, 77);
 }
+
 .home-info-title {
     font-size: 50px;
     font-weight: 800;
     margin-bottom: 20px;
-    
+
 }
 
 .home-info-navigation {
-    /* color: black; */
+    width: 100%;
+    /* background-color: blue; */
+    height: 100%;
+    flex-direction: row;
+    margin-bottom: 50px;
 }
-a {
-    /* color: black; */
+
+
+
+
+/* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
+@media screen and (max-width: 768px) {
+
+    /* 홈 동그라미 박스  */
+    .home-circle-box {
+        width: 220px;
+        height: 220px;
+        font-size: 80px;
+        margin-top: 50px;
+    }
+
+    /* 홈화면 메인 텍스트  */
+    .home-text {
+        width: 300px;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    /* 홈화면 스크롤 아이콘  */
+    .home-scrollIcon {
+        font-size: 30px;
+    }
+
+    /* about projects 박스 부분  */
+    .home-info-navigation {
+        flex-direction: column;
+    }
+
+    .common-info-box {
+        width: 350px;
+        height: 220px;
+    }
+
+    .common-info-box::before {
+        font-size: 27px;
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .common-info-box-title {
+        font-size: 26px;
+    }
+
+    .common-info-box-text {
+        font-size: 16px;
+        bottom: 25px;
+    }
+
+    .common-info-box:hover .common-info-box-title {
+        transform: translateY(-50px);
+    }
+
+    /* overview 부분  */
+    .home-info-header {
+        /* height: 600px; */
+        margin-bottom: 30px;
+        padding: 0px 40px 0px 40px;
+    }
+
+    .common-info-text {
+        font-size: 16px;
+        line-height: 35px;
+    }
+
+    .home-info-title {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
 }

@@ -6,9 +6,6 @@ import { motion } from "framer-motion";
 import { ReactTyped } from 'react-typed';
 import { FaAngleDown, FaStar, FaArrowUp, FaArrowRight } from "react-icons/fa";
 
-// import cursorStar from './HomeImg/cursorStar.png';
-// import cursorStarEmpty from './HomeImg/cursorStarEmpty.png';
-
 
 // 텍스트 타이핑 효과 컴포넌트
 const TextTyping = ({ text, onComplete }) => {
@@ -34,17 +31,6 @@ const HomeText = () => {
         setScrollIcon(true); // 마지막 텍스트까지 출력되면 스크롤아이콘 띄우기
     }
 
-
-    // './images/cursor-star.png',
-    // './images/cursorStarEmpty.png',
-    // './images/cursor-star.png'
-
-    // '👋',
-    // '😎',
-    // '💻',
-    // '🥳',
-    // '⭐️',
-    // '🔍
     const imgSrc = [
         '🥳',
         '💻',

@@ -1,3 +1,12 @@
+a {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 /* 공통으로 사용되는 속성 */
 .common-flex {
   display: flex;
@@ -7,25 +16,14 @@
 .common-background {
   background-color: rgb(239, 239, 237);
 }
-a {
-  text-decoration: none;
-}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* cursor: url('../public/images/cursorStar.png') 16 16, auto; */
-}
-
-/* 로고 */
+/* ----------- 별 로고 ----------- */
 .pageLogo {
   position: fixed;
   margin: 25px 0px 0px 90px;
   cursor: pointer;
 }
 .logoImg:hover {
-  /* cursor: pointer; */
   animation: logoRotateAni 2s infinite linear;
 }
 @keyframes logoRotateAni {
@@ -38,88 +36,29 @@ a {
 }
 
 
-/* 메뉴 */
+/* ----------- 메뉴 ----------- */
 .menu {
   width: 50px;
   cursor: pointer;
   margin: 30px 0px 0px 30px;
   position: fixed;
 }
-
 .common-menu-line {
   width: 40px;
-  height: 3.5px;
+  height: 3px;
   background-color: black;
   margin: 8px 0px 8px 0px;
   transition: all 0.3s ease;
-  /* transform: translateY(0,0) rotate(0);
-  cursor: pointer; */
 }
-
-
-
-
-
-@keyframes menuXLine1 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translateY(12px) rotate(40deg);
-  }
-}
-@keyframes menuXLine2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translateY(-11px) rotate(-40deg);
-  }
-}
-
-@keyframes menuLine1 {
-  0% {
-    transform: translateY(12px) rotate(40deg);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-@keyframes menuLine2 {
-  0% {
-    transform: translateY(-11px) rotate(-40deg);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-
-}
-
-
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  position: relative;
-  background-color: blue;
-}
-
 .active .common-menu-line:nth-child(1) {
-  transform: translateY(12px) rotate(40deg);
-  /* width: 43px; */
+  transform: translateY(11px) rotate(40deg);
   background-color: white;
 }
-
 .active .common-menu-line:nth-child(2) {
   opacity: 0;
 }
-
 .active .common-menu-line:nth-child(3) {
   transform: translateY(-11px) rotate(-40deg);
-  /* width: 43px; */
   background-color: white;
 }
 

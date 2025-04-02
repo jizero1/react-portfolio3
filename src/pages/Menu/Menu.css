@@ -23,7 +23,7 @@
     list-style: none;
     font-size: 60px;
     font-weight: 600;
-    line-height: 90px;
+    line-height: 110px;
     letter-spacing: 4px;
     flex-direction: column;
 }
@@ -89,8 +89,9 @@
 /* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
 @media screen and (max-width: 768px) {
     .menu-ul {
-        font-size: 50px;
-        line-height: 70px;
+        font-size: 40px;
+        line-height: 75px;
+        margin-top: 50px;
     }
     .menu-icons {
         width: 150px;
