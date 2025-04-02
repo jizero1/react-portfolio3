@@ -36,6 +36,8 @@ a {
     transform: rotate(360deg);
   }
 }
+
+
 /* 메뉴 */
 .menu {
   width: 50px;
@@ -50,23 +52,15 @@ a {
   background-color: black;
   margin: 8px 0px 8px 0px;
   transition: all 0.3s ease;
-  /* cursor: pointer; */
+  /* transform: translateY(0,0) rotate(0);
+  cursor: pointer; */
 }
 
-/* ----- 메뉴 클릭시 X자로 메뉴아이콘이 표시됨 ----- */
-.menu-line1 {
-  animation: menuLineAni1 0.5s forwards;
-}
 
-.menu-line2 {
-  opacity: 0;
-}
 
-.menu-line3 {
-  animation: menuLineAni3 0.5s forwards;
-}
 
-@keyframes menuLineAni1 {
+
+@keyframes menuXLine1 {
   0% {
     transform: translate(0, 0);
   }
@@ -74,8 +68,7 @@ a {
     transform: translateY(12px) rotate(40deg);
   }
 }
-
-@keyframes menuLineAni3 {
+@keyframes menuXLine2 {
   0% {
     transform: translate(0, 0);
   }
@@ -83,6 +76,53 @@ a {
     transform: translateY(-11px) rotate(-40deg);
   }
 }
+
+@keyframes menuLine1 {
+  0% {
+    transform: translateY(12px) rotate(40deg);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes menuLine2 {
+  0% {
+    transform: translateY(-11px) rotate(-40deg);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  background-color: blue;
+}
+
+.active .common-menu-line:nth-child(1) {
+  transform: translateY(12px) rotate(40deg);
+  /* width: 43px; */
+  background-color: white;
+}
+
+.active .common-menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.active .common-menu-line:nth-child(3) {
+  transform: translateY(-11px) rotate(-40deg);
+  /* width: 43px; */
+  background-color: white;
+}
+
 
 
 

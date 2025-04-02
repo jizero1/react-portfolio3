@@ -8,16 +8,14 @@ import Menu from './pages/Menu/Menu';
 import { Provider } from 'react-redux';
 import store from './store';
 import Footer from './Footer.js';
-// import './Footer.css';
+// import {slide as Menu} from 'react-burger-menu';
 
-
+// 상단에 Star Logo표시 컴포넌트
+// 기본 상태는 true로 하여 보이게하고, /menu페이지 접속시 false로 설정하여 보이지않게함
 const PageLogo = () => {
   const location = useLocation();
-
-  // 상단에 별 로고 화면에 표시 유무 (기본 상태는 true로 보이게함)
   const [logoView, setLogoView] = useState(true);
 
-  // 메뉴페이지에서는 별 로고를 표시하지 않음
   useEffect(() => {
     if (location.pathname === "/menu") {
       setLogoView(false);
@@ -26,54 +24,41 @@ const PageLogo = () => {
     }
   }, [location.pathname]);
 
-
   return (
     <div className="pageLogo">
       {logoView && (
         <Link to="/"><img className="logoImg" src="./images/cursor-star.png" alt="홈화면 로고"></img></Link>
       )}
-
     </div>
   )
 }
+
+// 메뉴아이콘을 표시 및 메뉴페이지로 이동을 관리하는 컴포넌트
+// 현재 경로가 /menu일경우, 메뉴를 X로 표시하고, /menu가 아닐경우, 일반 메뉴아이콘으로 변경함.
 const MenuIcon = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-
-  const [menuIcon, setMenuIcon] = useState(true);
-  // 메뉴 클릭시
+  const [isMenuClick, setIsMenuClick] = useState(true);
   const handleMenuClick = () => {
-    // 현재 경로가 /menu에 있을경우, 이전 페이지로 이동한다.
-    if (location.pathname === '/menu') {
-      navigate(-1); // 뒤로가기
-      setMenuIcon(false);
-    } else {
+    // 현재 경로가 menu가 아닐경우, menu페이지로 이동후, isMenuClick을 false로 설정한다.
+    if (location.pathname !== '/menu') {
       navigate('/menu');
-      setMenuIcon(true);
-    }
-  };
-
-  // 메뉴페이지에 들어오면 메뉴아이콘을 X로 변경
-  useEffect(() => {
-    if (location.pathname === '/menu') {
-      setMenuIcon(false); // 메뉴 페이지에 있을 때
     } else {
-      setMenuIcon(true); // 메뉴 페이지가 아닐 때
+      navigate(-1);
     }
-  }, [location.pathname]); // location.pathname이 변경될 때마다 실행
+  }
+  useEffect(() => {
+    setIsMenuClick(location.pathname !== '/menu');
 
-  const menuColor = {
-    backgroundColor: menuIcon === false ? 'white' : 'black',
-  };
-
+  }, [location.pathname]);
 
   return (
     <div className="menu common-flex" onClick={handleMenuClick}>
-      <div>
-        <div className={`common-menu-line ${menuIcon ? '' : 'menu-line1'}`} style={menuColor}></div>
-        <div className={`common-menu-line ${menuIcon ? '' : 'menu-line2'}`} style={menuColor}></div>
-        <div className={`common-menu-line ${menuIcon ? '' : 'menu-line3'}`} style={menuColor}></div>
+      <div className={isMenuClick ? "" : "active"}>
+        <div className={`common-menu-line`} style={{ backgroundColor: isMenuClick ? 'black' : 'white' }}></div>
+        <div className={`common-menu-line`}></div>
+        <div className={`common-menu-line`} style={{ backgroundColor: isMenuClick ? 'black' : 'white' }}></div>
       </div>
     </div>
   );
@@ -96,8 +81,7 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/menu" element={<Menu />} />
         </Routes>
-        {/* ++++++++++++++++++ 현재 경로가 menu일경우, Footer은 표시하지 않음!  */}
-        <Footer/>
+        <Footer />
       </Router>
     </Provider>
   );
