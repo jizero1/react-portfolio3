@@ -13,15 +13,15 @@ import './About.css';
 // 자기소개 컴포넌트
 const Introduction = () => {
     return (
-        <div className="intro-container common-flex">
-            <div className="common-flex" style={{flexDirection: 'row'}}>
-                <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
+        <div className="intro-container">
+            <div className="common-flex" style={{ flexDirection: 'row' }}>
                 <img src="./images/cursor-star.png" alt="별 아이콘" />
+                <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
             </div>
-            <p className="intro-description">어떤 웹 페이지를 만들지 구상하고, 디자인하고, 코드로 구현 해나갈때 제 눈이 반짝이고 있음을 느꼈습니다.
-                처음 코딩이라는 것을 접했을때처럼 여전히 설레고 즐거운 마음으로 프로젝트를 만들고, 새로운 기술을 배우고,
-                배운 기술을 적용해보고, 문제가 생기면 끈기있게 해결 하려고 합니다. 과거의 저는 꿈이 또렷한 사람이 아니었는데
-                프론트엔드 개발자라는 직업을 알게된 후에는 꿈이 또렷해졌습니다. 제 꿈은 제자리에 머무르지 않고 계속해서
+            <p className="intro-description">어떤 웹 페이지를 만들지 구상하고, 디자인하고, 코드로 구현 해나갈때 제 눈이 반짝이고 있음을 느꼈습니다. <br />
+                처음 코딩이라는 것을 접했을때처럼 여전히 설레고 즐거운 마음으로 프로젝트를 만들고, <br/>새로운 기술을 배우고,
+                배운 기술을 적용해보고, 문제가 생기면 끈기있게 해결 하려고 합니다. <br />과거의 저는 꿈이 또렷한 사람이 아니었는데
+                프론트엔드 개발자라는 직업을 알게된 후에는 꿈이 또렷해졌습니다. <br />제 꿈은 제자리에 머무르지 않고 계속해서
                 발전 해나가며 별처럼 빛이나는 프론트엔드 개발자가 되는 것입니다!
             </p>
         </div>
