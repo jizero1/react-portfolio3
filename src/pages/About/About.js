@@ -19,7 +19,7 @@ const Introduction = () => {
                 <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
             </div>
             <p className="intro-description">어떤 웹 페이지를 만들지 구상하고, 디자인하고, 코드로 구현 해나갈때 제 눈이 반짝이고 있음을 느꼈습니다. <br />
-                처음 코딩이라는 것을 접했을때처럼 여전히 설레고 즐거운 마음으로 프로젝트를 만들고, <br/>새로운 기술을 배우고,
+                처음 코딩이라는 것을 접했을때처럼 여전히 설레고 즐거운 마음으로 프로젝트를 만들고, <br />새로운 기술을 배우고,
                 배운 기술을 적용해보고, 문제가 생기면 끈기있게 해결 하려고 합니다. <br />과거의 저는 꿈이 또렷한 사람이 아니었는데
                 프론트엔드 개발자라는 직업을 알게된 후에는 꿈이 또렷해졌습니다. <br />제 꿈은 제자리에 머무르지 않고 계속해서
                 발전 해나가며 별처럼 빛이나는 프론트엔드 개발자가 되는 것입니다!
@@ -34,37 +34,16 @@ const Skills = () => {
         <div className="skills-container">
             <p className="skills-heading">SKILLS</p>
             <div className="common-flex">
-                <div className="common-skills-box">
-                    <p>개발 기술</p>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>React Native</li>
-                    </ul>
-                </div>
-                <div className="common-skills-box">
-                    <p>스타일링</p>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>Figma</li>
-                        <li>BootStrap</li>
-                    </ul>
-                </div>
-                <div className="common-skills-box">
-                    <p>형상관리 및 배포</p>
-                    <ul>
-                        <li>GitHub</li>
-                        <li>Vercel</li>
-                        <li>Netlify</li>
-                    </ul>
-                </div>
-                <div className="common-skills-box">
-                    <p>추가적으로 배우고 싶은 것</p>
-                    <ul>
-                        <li>TypeScript</li>
-                    </ul>
-                </div>
+                {skillsData.map((item) => (
+                    <div key={item.id} className="common-skills-box">
+                        <p>{item.skillTitle}</p>
+                        <ul>
+                            {item.skills.map((skill, index) => (
+                                <li key={index}>{skill}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </div>
         </div>
     )
@@ -83,7 +62,7 @@ const About = () => {
         <div className="about-container common-flex common-background">
             <p className="about-header">ABOUT</p>
             <Introduction />
-            <Skills/>
+            <Skills />
         </div>
     )
 }
