@@ -33,7 +33,7 @@ const HomeText = () => {
         '🥳',
         '💻',
         '🔍'
-    ]
+    ];
     const [homeImg, setHomeImg] = useState(imgSrc[0]); // 초기 이미지
     const [homeImgIndex, setHomeImgIndex] = useState(0); // 이미지 인덱스 상태 추가
 
