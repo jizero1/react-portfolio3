@@ -16,7 +16,7 @@ const Introduction = () => {
         <div className="intro-container common-flex">
             <div className="common-flex" style={{flexDirection: 'row'}}>
                 <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
-                <img src="/images/cursor-star.png" alt="별 아이콘" />
+                <img src="./images/cursor-star.png" alt="별 아이콘" />
             </div>
             <p className="intro-description">어떤 웹 페이지를 만들지 구상하고, 디자인하고, 코드로 구현 해나갈때 제 눈이 반짝이고 있음을 느꼈습니다.
                 처음 코딩이라는 것을 접했을때처럼 여전히 설레고 즐거운 마음으로 프로젝트를 만들고, 새로운 기술을 배우고,
