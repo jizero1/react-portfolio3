@@ -1,0 +1,37 @@
+[
+    {
+        "id": 0,
+        "skillTitle": "개발 기술",
+        "skills": [
+            "JavaScript",
+            "React",
+            "React Native"
+        ]
+    },
+    {
+        "id": 1,
+        "skillTitle": "스타일링",
+        "skills": [
+            "HTML5",
+            "CSS3",
+            "Figma",
+            "BootStrap"
+        ]
+    },
+    {
+        "id": 2,
+        "skillTitle": "형상관리 및 배포",
+        "skills": [
+            "GitHub",
+            "Vervel",
+            "Netlify"
+        ]
+    },
+    {
+        "id": 3,
+        "skillTitle": "추가적으로 배우고 싶은 것",
+        "skills": [
+            "TypeScript"
+        ]
+    }
+]

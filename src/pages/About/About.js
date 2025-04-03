@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-
+import skillsData from './skillsData.json';
 
 // 자기소개, 기술소개, 개발자로서 목표와 비전
 // 자기소개 : 어떤 사람인지, 어떤 계기로 프론트엔드를 선택했는지 ..
@@ -29,9 +29,43 @@ const Introduction = () => {
 }
 // 기술스택 컴포넌트
 const Skills = () => {
-    return (
-        <div>
 
+    return (
+        <div className="skills-container">
+            <p className="skills-heading">SKILLS</p>
+            <div className="common-flex">
+                <div className="common-skills-box">
+                    <p>개발 기술</p>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>React Native</li>
+                    </ul>
+                </div>
+                <div className="common-skills-box">
+                    <p>스타일링</p>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Figma</li>
+                        <li>BootStrap</li>
+                    </ul>
+                </div>
+                <div className="common-skills-box">
+                    <p>형상관리 및 배포</p>
+                    <ul>
+                        <li>GitHub</li>
+                        <li>Vercel</li>
+                        <li>Netlify</li>
+                    </ul>
+                </div>
+                <div className="common-skills-box">
+                    <p>추가적으로 배우고 싶은 것</p>
+                    <ul>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }
@@ -49,6 +83,7 @@ const About = () => {
         <div className="about-container common-flex common-background">
             <p className="about-header">ABOUT</p>
             <Introduction />
+            <Skills/>
         </div>
     )
 }
