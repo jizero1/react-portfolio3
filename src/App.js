@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Project from './pages/Project/Project';
@@ -8,14 +8,13 @@ import Menu from './pages/Menu/Menu';
 import { Provider } from 'react-redux';
 import store from './store';
 import Footer from './Footer.js';
-// import {slide as Menu} from 'react-burger-menu';
 
 // 상단에 Star Logo표시 컴포넌트
-// 기본 상태는 true로 하여 보이게하고, /menu페이지 접속시 false로 설정하여 보이지않게함
 const PageLogo = () => {
   const location = useLocation();
   const [logoView, setLogoView] = useState(true);
 
+  // 현재 위치가 /menu일경우, 로고(별로고)를 표시하지 않음
   useEffect(() => {
     if (location.pathname === "/menu") {
       setLogoView(false);
@@ -27,7 +26,7 @@ const PageLogo = () => {
   return (
     <div className="pageLogo">
       {logoView && (
-        <Link to="/"><img className="logoImg" src="./images/cursor-star.png" alt="홈화면 로고"></img></Link>
+        <Link to="/"><img className="logoImg" src="./images/cursor-star.png" alt="별 로고"></img></Link>
       )}
     </div>
   )
@@ -38,19 +37,21 @@ const PageLogo = () => {
 const MenuIcon = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
   const [isMenuClick, setIsMenuClick] = useState(true);
+
+  // 메뉴 아이콘 클릭시 실행되는 함수
+  // 현재경로가 /menu가 아니라면 /menu로 이동하고, /menu에 있다면 이전 페이지로 이동한다.
   const handleMenuClick = () => {
-    // 현재 경로가 menu가 아닐경우, menu페이지로 이동후, isMenuClick을 false로 설정한다.
     if (location.pathname !== '/menu') {
       navigate('/menu');
     } else {
       navigate(-1);
     }
   }
-  useEffect(() => {
-    setIsMenuClick(location.pathname !== '/menu');
 
+  useEffect(() => {
+    // 현재 경로가 /menu에 있으면 false, /menu가 아니라면 true로 isMenuClick의 상태를 변경함.
+    setIsMenuClick(location.pathname !== '/menu');
   }, [location.pathname]);
 
   return (
@@ -67,14 +68,11 @@ const MenuIcon = () => {
 
 
 function App() {
-
-
-
   return (
     <Provider store={store}>
       <Router>
         <PageLogo />
-        <MenuIcon /> {/* 메뉴 아이콘 컴포넌트 */}
+        <MenuIcon />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
