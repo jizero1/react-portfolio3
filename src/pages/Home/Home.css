@@ -14,7 +14,6 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    /* background-color: blue; */
 }
 
 /* ----------- 홈 화면 상단에 동그라미 박스 ----------- */
@@ -188,13 +187,10 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
-    /* background-color: yellow; */
 }
 
 .home-info-header {
     width: 100%;
-    /* height: 70%; */
-    /* background-color: grey; */
     padding-left: 80px;
     margin-bottom: 70px;
 }
@@ -214,13 +210,10 @@
 
 .home-info-navigation {
     width: 100%;
-    /* background-color: blue; */
     height: 100%;
     flex-direction: row;
     margin-bottom: 50px;
 }
-
-
 
 
 /* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
@@ -278,7 +271,6 @@
 
     /* overview 부분  */
     .home-info-header {
-        /* height: 600px; */
         margin-bottom: 30px;
         padding: 0px 35px 0px 35px;
     }
