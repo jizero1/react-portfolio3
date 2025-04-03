@@ -16,10 +16,6 @@ const Footer = () => {
     }
   }, [location.pathname]);
 
-
-
-
-
   return (
     footerView && (
       <div className="footer common-flex">

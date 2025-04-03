@@ -5,9 +5,9 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Project from './pages/Project/Project';
 import Menu from './pages/Menu/Menu';
+import Footer from './Footer.js';
 import { Provider } from 'react-redux';
 import store from './store';
-import Footer from './Footer.js';
 
 // 상단에 Star Logo표시 컴포넌트
 const PageLogo = () => {

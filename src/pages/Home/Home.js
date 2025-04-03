@@ -1,10 +1,8 @@
 import './Home.css';
 import React, { useState, useEffect } from 'react';
-import Menu from '../Menu/Menu';
 import { Link } from 'react-router-dom';
-import { motion } from "framer-motion";
 import { ReactTyped } from 'react-typed';
-import { FaAngleDown, FaStar, FaArrowUp, FaArrowRight } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 
 
 // 텍스트 타이핑 효과 컴포넌트
@@ -24,7 +22,7 @@ const TextTyping = ({ text, onComplete }) => {
     )
 }
 
-// 홈화면에 텍스트를 티이핑하고, 완료되면 스크롤 아이콘을 표시하는 컴포넌트
+// 홈화면에 텍스트를 타이핑하고, 완료되면 스크롤 아이콘을 표시하는 컴포넌트
 const HomeText = () => {
     const [scrollIcon, setScrollIcon] = useState(false);
     const handleTypingComplete = () => {
@@ -40,35 +38,25 @@ const HomeText = () => {
     const [homeImgIndex, setHomeImgIndex] = useState(0); // 이미지 인덱스 상태 추가
 
     useEffect(() => {
-        // 3초마다 이미지가 변경됨.
         const imgInterval = setInterval(() => {
             setHomeImgIndex((prevIndex) => {
                 // 이전 인덱스를 받아와 prevIndex를 사용해 새로운 인덱스를 계산함.
                 // imgSrc 배열 길이에 맞게 인덱스를 순차적으로 증가시킴.
                 const nextIndex = (prevIndex + 1) % imgSrc.length; // 배열 순환
-
                 console.log(nextIndex);
                 if (nextIndex === 2) {
                     clearInterval(imgInterval); // nextIndex가 0이면 반복을 중지
                 }
-
                 setHomeImg(imgSrc[nextIndex]); // 새로운 이미지 설정
                 return nextIndex; // 인덱스 업데이트
-               
-
             });
-        }, 4400); // 3초마다 이미지 변경
+        }, 4400);
         return () => clearInterval(imgInterval); // 컴포넌트 언마운트 시 interval 정리
     }, []); // 빈 배열 넣으면 처음 마운트될 때만 실행
-
-
 
 return (
     <div className="home-text-container common-flex">
         <div className="home-circle-box common-flex">
-            {/* 텍스트 바뀌는 속도에 맞게 이미지도 교체됨 */}
-            {/* 이미지 경로저장 변수를 만들고, 일정 속도가 지나면 이미지 경로를 변경 */}
-            {/* <img src={homeImg}></img> */}
             <p className="home-circle-box-img">{homeImg}</p>
         </div>
         <div className="home-text">
@@ -83,8 +71,6 @@ return (
 }
 
 const HomeInfo = () => {
-
-
     return (
         <div className="home-info-container common-flex">
             <div className="home-info-header">
@@ -95,7 +81,6 @@ const HomeInfo = () => {
             </div>
             {/* about과 projects 페이지로 이동하는 부분 */}
             <div className="home-info-navigation common-flex">
-                {/* 위쪽+왼쪽 그림자 주기 */}
                 <Link to="/about">
                     <div className="common-info-box home-info-about common-flex" >
                         <p className="common-info-box-title">ABOUT</p>
@@ -114,7 +99,6 @@ const HomeInfo = () => {
 }
 
 const Home = () => {
-
     return (
         <div className="home-container common-flex common-background">
             <HomeText />
