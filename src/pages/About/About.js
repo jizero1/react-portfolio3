@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import './About.css';
 import skillsData from './skillsData.json';
 
@@ -58,6 +58,7 @@ const GoalVision = () => {
 }
 
 const About = () => {
+
     return (
         <div className="about-container common-flex common-background">
             <p className="about-header">ABOUT</p>
