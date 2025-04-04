@@ -26,7 +26,7 @@ const PageLogo = () => {
   return (
     <div className="pageLogo">
       {logoView && (
-        <Link to="/"><img className="logoImg" src="./images/cursor-star.png" alt="별 로고"></img></Link>
+        <Link to="/"><img className="logoImg" src={process.env.PUBLIC_URL+"/images/cursor-star.png"} alt="별 로고"></img></Link>
       )}
     </div>
   )
