@@ -1,6 +1,11 @@
 import React, {useState, useRef, useEffect} from 'react';
 import './About.css';
 import skillsData from './skillsData.json';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 // 자기소개, 기술소개, 개발자로서 목표와 비전
 // 자기소개 : 어떤 사람인지, 어떤 계기로 프론트엔드를 선택했는지 ..
@@ -15,7 +20,6 @@ const Introduction = () => {
     return (
         <div className="intro-container">
             <div className="common-flex" style={{ flexDirection: 'row' }}>
-                <img src="./images/cursor-star.png" alt="별 아이콘" />
                 <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
             </div>
             <p className="intro-description">어떤 웹 페이지를 만들지 구상하고, 디자인하고, 코드로 구현 해나갈때 제 눈이 반짝이고 있음을 느꼈습니다. <br />
@@ -32,26 +36,6 @@ const Skills = () => {
 
     return (
         <div className="skills-container">
-            <p className="skills-heading">SKILLS</p>
-            <div className="common-flex">
-                {skillsData.map((item) => (
-                    <div key={item.id} className="common-skills-box">
-                        <p>{item.skillTitle}</p>
-                        <ul>
-                            {item.skills.map((skill, index) => (
-                                <li key={index}>{skill}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
-}
-// 프론트엔드 개발자로서의 목표와 비전 소개 컴포넌트
-const GoalVision = () => {
-    return (
-        <div>
 
         </div>
     )
@@ -60,7 +44,7 @@ const GoalVision = () => {
 const About = () => {
 
     return (
-        <div className="about-container common-flex common-background">
+        <div className="about-container common-background">
             <p className="about-header">ABOUT</p>
             <Introduction />
             <Skills />

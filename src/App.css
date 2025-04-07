@@ -5,8 +5,8 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
+
 /* 공통으로 사용되는 속성 */
 .common-flex {
   display: flex;

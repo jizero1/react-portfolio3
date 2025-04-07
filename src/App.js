@@ -54,6 +54,14 @@ const MenuIcon = () => {
     setIsMenuClick(location.pathname !== '/menu');
   }, [location.pathname]);
 
+
+
+
+  // 페이지 이동시, 스크롤 위치를 맨 뒤로 이동
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[location]);
+
   return (
     <div className="menu common-flex" onClick={handleMenuClick}>
       <div className={isMenuClick ? "" : "active"}>
@@ -64,8 +72,6 @@ const MenuIcon = () => {
     </div>
   );
 }
-
-
 
 function App() {
   return (
