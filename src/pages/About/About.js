@@ -53,16 +53,27 @@ const Skills = () => {
                     <directionalLight position={[-1, 0, 1]} intensity={0.5} />
                 </mesh>
                 {skillsData.map((item) => (
-                    <Text
-                    key={item.id}
-                    position={item.position}
-                    anchorX="center"
-                    anchorY="middle"
-                    fontSize={0.2}
-                    rotation={item.rotation}
-                    >
-                        {item.skillTitle}
-                    </Text>
+                    <React.Fragment key={item.id}>
+                        <Text
+                            position={item.positionTitle}
+                            anchorX="center"
+                            anchorY="middle"
+                            fontSize={0.2}
+                            rotation={item.rotation}
+                        >
+                            {item.skillTitle}
+                        </Text>
+                        <Text
+                            position={item.positionSkill}
+                            anchorX="center"
+                            anchorY="middle"
+                            fontSize={0.2}
+                            rotation={item.rotation}
+                        >
+                            {item.skills}
+                        </Text>
+                    </React.Fragment>
+
                 ))}
                 {/* <Text
                     position={[0, 0, 1.6]} // 텍스트의 위치 설정
