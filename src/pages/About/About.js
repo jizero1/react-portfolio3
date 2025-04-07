@@ -63,27 +63,24 @@ const Skills = () => {
                         >
                             {item.skillTitle}
                         </Text>
-                        <Text
-                            position={item.positionSkill}
+                        {item.skills.map((skill,index) => (
+                    
+                            <Text
+                            // 각 텍스트의 positionSkill의 x축, positionSkill y축 + index * 0.3,
+                            // positionSkill의 z축으로 새로운 좌표를 생성하여 텍스트들이 겹치지 않게함.
+                            position={[item.positionSkill[0], item.positionSkill[1] + index * 0.3 -0.4, item.positionSkill[2]]} // Y값을 index에 맞게 다르게 설정
+                            key={index}
                             anchorX="center"
                             anchorY="middle"
                             fontSize={0.2}
                             rotation={item.rotation}
                         >
-                            {item.skills}
+                            {skill}
                         </Text>
+                        ))}
                     </React.Fragment>
 
                 ))}
-                {/* <Text
-                    position={[0, 0, 1.6]} // 텍스트의 위치 설정
-                    fontSize={0.5} // 텍스트 크기 설정
-                    color="black" // 텍스트 색상 설정
-                    anchorX="center" // 텍스트의 수평 정렬 (center로 설정)
-                    anchorY="middle" // 텍스트의 수직 정렬 (middle로 설정)
-                >
-                    Box Text
-                </Text> */}
             </Canvas>
         </div>
     )

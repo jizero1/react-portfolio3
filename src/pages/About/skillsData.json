@@ -3,6 +3,7 @@
         "id": 0,
         "skillTitle": "개발 기술",
         "skills": [
+
             "JavaScript",
             "React",
             "React Native"
@@ -43,7 +44,7 @@
             "TypeScript"
         ],
         "positionTitle": [-1.7,1,0],
-        "positionSkill": [-1.7,0,0],
+        "positionSkill": [-1.7,0.4,0],
         "rotation": [0,-1.5708,0]
     }
 ]
