@@ -1,11 +1,11 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './About.css';
 import skillsData from './skillsData.json';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import {Canvas} from '@react-three/fiber';
-import {OrbitControls, Text} from '@react-three/drei';
-import {meshStandardMaterial} from 'three';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Text } from '@react-three/drei';
+import { meshStandardMaterial } from 'three';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,17 +41,38 @@ const Skills = () => {
         <div className="skills-container">
             <Canvas camera={{ position: [6, 3, 6], fov: 35 }}>
                 {/* 확대/축소 비활성, 자동 회전 설정*/}
-                <OrbitControls enableZoom={false} autoRotate={true}/> 
+                <OrbitControls enableZoom={false} autoRotate={true} />
                 <mesh>
                     {/* 3D 박스 생성, 크기 설정 */}
-                    <boxGeometry args={[3.3,3,3]} />
+                    <boxGeometry args={[3.3, 3, 3]} />
                     {/* meterial을 mesh에 연결*/}
-                    <meshStandardMaterial attach="material" color={0xa3b18a}/>
+                    <meshStandardMaterial attach="material" color={0xa3b18a} />
                     {/* 전체적으로 균일하게 빛 설정*/}
-                    <ambientLight intensity={1} /> 
+                    <ambientLight intensity={1} />
                     {/* 빛 방향 설정 및 강도 설정 */}
                     <directionalLight position={[-1, 0, 1]} intensity={0.5} />
                 </mesh>
+                {skillsData.map((item) => (
+                    <Text
+                    key={item.id}
+                    position={item.position}
+                    anchorX="center"
+                    anchorY="middle"
+                    fontSize={0.2}
+                    rotation={item.rotation}
+                    >
+                        {item.skillTitle}
+                    </Text>
+                ))}
+                {/* <Text
+                    position={[0, 0, 1.6]} // 텍스트의 위치 설정
+                    fontSize={0.5} // 텍스트 크기 설정
+                    color="black" // 텍스트 색상 설정
+                    anchorX="center" // 텍스트의 수평 정렬 (center로 설정)
+                    anchorY="middle" // 텍스트의 수직 정렬 (middle로 설정)
+                >
+                    Box Text
+                </Text> */}
             </Canvas>
         </div>
     )
