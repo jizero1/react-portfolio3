@@ -3,6 +3,9 @@ import './About.css';
 import skillsData from './skillsData.json';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import {Canvas} from '@react-three/fiber';
+import {OrbitControls, Text} from '@react-three/drei';
+import {meshStandardMaterial} from 'three';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +39,20 @@ const Skills = () => {
 
     return (
         <div className="skills-container">
-
+            <Canvas camera={{ position: [6, 3, 6], fov: 35 }}>
+                {/* 확대/축소 비활성, 자동 회전 설정*/}
+                <OrbitControls enableZoom={false} autoRotate={true}/> 
+                <mesh>
+                    {/* 3D 박스 생성, 크기 설정 */}
+                    <boxGeometry args={[3.3,3,3]} />
+                    {/* meterial을 mesh에 연결*/}
+                    <meshStandardMaterial attach="material" color={0xa3b18a}/>
+                    {/* 전체적으로 균일하게 빛 설정*/}
+                    <ambientLight intensity={1} /> 
+                    {/* 빛 방향 설정 및 강도 설정 */}
+                    <directionalLight position={[-1, 0, 1]} intensity={0.5} />
+                </mesh>
+            </Canvas>
         </div>
     )
 }
