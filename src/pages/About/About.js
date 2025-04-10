@@ -38,50 +38,8 @@ const Introduction = () => {
 const Skills = () => {
 
     return (
-        <div className="skills-container">
-            <Canvas camera={{ position: [6, 3, 6], fov: 35 }}>
-                {/* 확대/축소 비활성, 자동 회전 설정*/}
-                <OrbitControls enableZoom={false} autoRotate={true} />
-                <mesh>
-                    {/* 3D 박스 생성, 크기 설정 */}
-                    <boxGeometry args={[3.3, 3, 3]} />
-                    {/* meterial을 mesh에 연결*/}
-                    <meshStandardMaterial attach="material" color={0xa3b18a} />
-                    {/* 전체적으로 균일하게 빛 설정*/}
-                    <ambientLight intensity={1} />
-                    {/* 빛 방향 설정 및 강도 설정 */}
-                    <directionalLight position={[-1, 0, 1]} intensity={0.5} />
-                </mesh>
-                {skillsData.map((item) => (
-                    <React.Fragment key={item.id}>
-                        <Text
-                            position={item.positionTitle}
-                            anchorX="center"
-                            anchorY="middle"
-                            fontSize={0.2}
-                            rotation={item.rotation}
-                        >
-                            {item.skillTitle}
-                        </Text>
-                        {item.skills.map((skill,index) => (
-                    
-                            <Text
-                            // 각 텍스트의 positionSkill의 x축, positionSkill y축 + index * 0.3,
-                            // positionSkill의 z축으로 새로운 좌표를 생성하여 텍스트들이 겹치지 않게함.
-                            position={[item.positionSkill[0], item.positionSkill[1] + index * 0.3 -0.4, item.positionSkill[2]]} // Y값을 index에 맞게 다르게 설정
-                            key={index}
-                            anchorX="center"
-                            anchorY="middle"
-                            fontSize={0.2}
-                            rotation={item.rotation}
-                        >
-                            {skill}
-                        </Text>
-                        ))}
-                    </React.Fragment>
-
-                ))}
-            </Canvas>
+        <div className="skills-container common-flex">
+            <div className="skills-card"></div>     
         </div>
     )
 }

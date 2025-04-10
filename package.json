@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://jizero1.github.com/react-portfolio3",
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.13.3",
     "@react-three/drei": "^10.0.6",
     "@react-three/fiber": "^9.1.2",
     "@reduxjs/toolkit": "^2.6.1",
@@ -13,6 +14,7 @@
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
+    "lottie-react": "^2.4.1",
     "react": "^19.0.0",
     "react-burger-menu": "^3.1.0",
     "react-dom": "^19.0.0",

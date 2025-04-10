@@ -8,6 +8,8 @@ import Menu from './pages/Menu/Menu';
 import Footer from './Footer.js';
 import { Provider } from 'react-redux';
 import store from './store';
+import Lottie from "lottie-react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 // 상단에 Star Logo표시 컴포넌트
 const PageLogo = () => {
@@ -55,8 +57,6 @@ const MenuIcon = () => {
   }, [location.pathname]);
 
 
-
-
   // 페이지 이동시, 스크롤 위치를 맨 뒤로 이동
   useEffect(() => {
     window.scrollTo(0,0);
@@ -74,6 +74,7 @@ const MenuIcon = () => {
 }
 
 function App() {
+
   return (
     <Provider store={store}>
       <Router>

@@ -10,11 +10,11 @@
     flex-direction: column;
 }
 
-.home-text-container {
+/* .home-text-container {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-}
+} */
 
 /* ----------- 홈 화면 상단에 동그라미 박스 ----------- */
 .home-circle-box {
@@ -48,7 +48,62 @@
 
 
 /* ----------- 홈화면 텍스트 ----------- */
-.home-text {
+.home-text-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    flex-direction: column;
+}
+.home-text-container .home-text-title-container {
+    width: 70%;
+    height: 450px;
+    /* background-color: green; */
+    flex-direction: column;
+    position: relative;
+}
+.home-text-title-container .common-home-text-title {
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 120px;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+.home-text-title-container .home-text-title-small {
+    font-size: 28px;
+    position: absolute;
+    bottom: 15px;
+}
+.home-text-container .home-text-scrollIcon-container {
+    width: 50px;
+    height: 80px;
+    /* background-color: blue; */
+    font-size: 35px;
+    position: absolute;
+    bottom: 30px;
+    animation: scrollIconAni 1.2s infinite linear;
+}
+@keyframes scrollIconAni {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.home-text-container .home-text-shiningStar{
+    width: 550px;
+    height: 400px;
+    position: absolute;
+    /* background-color: green; */
+}
+
+/* .home-text {
+    width: 1100px;
+    height: 100px;
+    text-align: center;
     font-size: 90px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -79,7 +134,7 @@
     100% {
         margin-bottom: 30px;
     }
-}
+} */
 
 /* ----------- ABOUT과 PROJECT 박스 --------- */
 .common-info-box {

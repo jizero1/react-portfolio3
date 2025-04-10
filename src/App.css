@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&display=swap');
 a {
   text-decoration: none;
 }
@@ -5,7 +6,9 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
+
 
 /* 공통으로 사용되는 속성 */
 .common-flex {
@@ -14,7 +17,7 @@ a {
   align-items: center;
 }
 .common-background {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(238, 239, 240);
 }
 
 /* ----------- 별 로고 ----------- */

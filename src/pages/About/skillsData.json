@@ -7,10 +7,7 @@
             "JavaScript",
             "React",
             "React Native"
-        ],
-        "positionTitle": [0,1,1.55],
-        "positionSkill": [0,0,1.55],
-        "rotation": [0,0,0]
+        ]
     },
     {
         "id": 1,
@@ -20,10 +17,7 @@
             "CSS3",
             "Figma",
             "BootStrap"
-        ],
-        "positionTitle": [0,1,-1.55],
-        "positionSkill": [0,0,-1.55],
-        "rotation": [0,3.14159,0]
+        ]
     },
     {
         "id": 2,
@@ -32,19 +26,13 @@
             "GitHub",
             "Vervel",
             "Netlify"
-        ],
-        "positionTitle": [1.7,1,0],
-        "positionSkill": [1.7,0,0],
-        "rotation": [0,1.5708,0]
+        ]
     },
     {
         "id": 3,
         "skillTitle": "추가적으로 배우고 싶은 것",
         "skills": [
             "TypeScript"
-        ],
-        "positionTitle": [-1.7,1,0],
-        "positionSkill": [-1.7,0.4,0],
-        "rotation": [0,-1.5708,0]
+        ]
     }
 ]

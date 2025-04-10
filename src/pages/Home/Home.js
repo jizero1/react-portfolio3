@@ -1,75 +1,31 @@
 import './Home.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ReactTyped } from 'react-typed';
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDoubleDown } from "react-icons/fa";
+import Lottie from 'lottie-react';
+import shiningStar from '../../assets/lottie/shiningStar.json';
 
-
-// 텍스트 타이핑 효과 컴포넌트
-const TextTyping = ({ text, onComplete }) => {
+const HomeText = () => {
     return (
-        <ReactTyped
-            strings={text} // 타이핑 텍스트
-            typeSpeed={90} // 타이핑 속도
-            backSpeed={50} // 지우기 속도
-            backDelay={500} // 지운 후 대기 시간
-            startDelay={500} // 시작 전 대기 시간
-            loop={false} // 반복 표시여부
-            showCursor={true} // 커서 표시여부
-            onComplete={onComplete} // 타이핑 완료되면 실행되는 콜백함수
-        >
-        </ReactTyped>
+        <div className="home-text-container common-flex">
+            <div className="home-text-title-container common-flex">
+                <p className="common-home-text-title">CHOI JIYOUNG</p>
+                <p className="common-home-text-title">PORTFOLIO</p>
+                <p className="home-text-title-small">FRONT-END DEVELOPER</p>
+            </div>
+            <div className="home-text-scrollIcon-container common-flex">
+                <FaAngleDoubleDown />
+            </div>
+            <Lottie
+                animationData={shiningStar}
+                autoplay
+                loop
+                className="home-text-shiningStar"
+            />
+            
+        </div>
     )
 }
-
-// 홈화면에 텍스트를 타이핑하고, 완료되면 스크롤 아이콘을 표시하는 컴포넌트
-const HomeText = () => {
-    const [scrollIcon, setScrollIcon] = useState(false);
-    const handleTypingComplete = () => {
-        setScrollIcon(true); // 마지막 텍스트까지 출력되면 스크롤아이콘 띄우기
-    }
-
-    const imgSrc = [
-        '🥳',
-        '💻',
-        '🔍'
-    ];
-    const [homeImg, setHomeImg] = useState(imgSrc[0]); // 초기 이미지
-    const [homeImgIndex, setHomeImgIndex] = useState(0); // 이미지 인덱스 상태 추가
-
-    useEffect(() => {
-        const imgInterval = setInterval(() => {
-            setHomeImgIndex((prevIndex) => {
-                // 이전 인덱스를 받아와 prevIndex를 사용해 새로운 인덱스를 계산함.
-                // imgSrc 배열 길이에 맞게 인덱스를 순차적으로 증가시킴.
-                const nextIndex = (prevIndex + 1) % imgSrc.length; // 배열 순환
-                console.log(nextIndex);
-                if (nextIndex === 2) {
-                    clearInterval(imgInterval); // nextIndex가 0이면 반복을 중지
-                }
-                setHomeImg(imgSrc[nextIndex]); // 새로운 이미지 설정
-                return nextIndex; // 인덱스 업데이트
-            });
-        }, 4400);
-        return () => clearInterval(imgInterval); // 컴포넌트 언마운트 시 interval 정리
-    }, []); // 빈 배열 넣으면 처음 마운트될 때만 실행
-
-return (
-    <div className="home-text-container common-flex">
-        <div className="home-circle-box common-flex">
-            <p className="home-circle-box-img">{homeImg}</p>
-        </div>
-        <div className="home-text">
-            <TextTyping text={["HELLO, I'M JIYOUNG", "FRONT-END DEVELOPER", "VIEW MY PORTFOLIO"]}
-                onComplete={() => handleTypingComplete()}></TextTyping>
-        </div>
-        {scrollIcon && (
-            <FaAngleDown className="home-scrollIcon" style={{ opacity: scrollIcon ? 1 : 0 }} />
-        )}
-    </div>
-)
-}
-
 const HomeInfo = () => {
     return (
         <div className="home-info-container common-flex">
