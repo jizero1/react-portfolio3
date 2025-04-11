@@ -10,6 +10,9 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Lottie from "lottie-react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { FaAngleUp } from "react-icons/fa";
+
+
 
 // 상단에 Star Logo표시 컴포넌트
 const PageLogo = () => {
@@ -73,6 +76,32 @@ const MenuIcon = () => {
   );
 }
 
+// 모든 페이지 하단에 항상 떠있는 버튼으로, 누르면 페이지 상단으로 이동함.
+const ScrollTop = () => {
+  const location = useLocation();
+  const [scrollBtn, setScrollBtn] = useState(true);
+  const handleScrollClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  // 메뉴페이지에서는 스크롤 버튼을 표시하지 않음.
+  useEffect(() => {
+    if (location.pathname === "/menu") {
+      setScrollBtn(false);
+    } else {
+      setScrollBtn(true);
+    }
+  }, [location.pathname]);
+  return (
+    scrollBtn &&
+    <div className="scrollTop common-flex" onClick={handleScrollClick}>
+      <FaAngleUp/>
+    </div>
+  )
+}
+
 function App() {
 
   return (
@@ -80,6 +109,7 @@ function App() {
       <Router>
         <PageLogo />
         <MenuIcon />
+        <ScrollTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
