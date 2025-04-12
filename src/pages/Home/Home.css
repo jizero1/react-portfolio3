@@ -66,12 +66,27 @@
 }
 
 /* ----------- ABOUT과 PROJECT 박스 --------- */
+.home-info-navigation {
+    width: 100%;
+    flex-direction: row;
+    /* height: 45vh; */
+    /* background-color: blue; */
+    /* background-color: blue; */
+
+}
 .common-info-box {
-    width: 500px;
-    height: 300px;
+    /* width: 450px;
+    height: 270px; */
+    /* width: 35vw;
+    min-width: 300px;
+    max-width: 700px; */
+    width: clamp(280px, 40vw, 600px);
+    /* height: clamp(100px, 35vh, 400px); */
+    height: 270px;
+    /* height: 300px; */
     background-color: white;
     margin: 20px;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
     flex-direction: column;
     position: relative;
@@ -81,13 +96,13 @@
 
 .common-info-box::before {
     content: "\2191";
-    font-size: 40px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 800;
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     border-radius: 50px;
     position: absolute;
     z-index: 1;
@@ -116,7 +131,7 @@
 }
 
 .common-info-box:hover {
-    box-shadow: -1px -1px 20px 0.5px rgb(0, 0, 0, 0.2);
+    box-shadow: -1px -1px 5px 0.5px rgb(0, 0, 0, 0.2);
 }
 
 .common-info-box:hover .common-info-box-text {
@@ -169,14 +184,20 @@
 
 .home-info-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    /* height: 1000px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
 .home-info-header {
     width: 100%;
+    /* height: 300px; */
     padding-left: 80px;
-    margin-bottom: 70px;
+    margin-bottom: 5%;
+    /* background-color: pink; */
 }
 
 .home-info-header-line {
@@ -192,44 +213,21 @@
 
 }
 
-.home-info-navigation {
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    margin-bottom: 50px;
-}
-
 
 /* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
 @media screen and (max-width: 768px) {
 
-    /* 홈 동그라미 박스  */
-    .home-circle-box {
-        width: 220px;
-        height: 220px;
-        font-size: 80px;
+    .home-info-container {
+        height: 900px;
     }
-
-    /* 홈화면 메인 텍스트  */
-    .home-text {
-        width: 300px;
-        font-size: 35px;
-        text-align: center;
-    }
-
-    /* 홈화면 스크롤 아이콘  */
-    .home-scrollIcon {
-        font-size: 30px;
-    }
-
     /* about projects 박스 부분  */
     .home-info-navigation {
         flex-direction: column;
     }
 
     .common-info-box {
-        width: 320px;
-        height: 220px;
+        /* width: 320px; */
+        height: 200px;
     }
 
     .common-info-box::before {

@@ -28,7 +28,7 @@ const HomeText = () => {
 }
 const HomeInfo = () => {
     return (
-        <div className="home-info-container common-flex">
+        <div className="home-info-container">
             <div className="home-info-header">
                 <p className="home-info-title">OVERVIEW</p>
                 <p className="common-info-text"><span className="common-info-spanText">ABOUT</span>에는 자기소개, 사용하는 기술, 그리고 프론트엔드 개발자로서의 목표와 비전 대한 내용이 담겨있습니다.</p>
