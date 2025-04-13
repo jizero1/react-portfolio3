@@ -3,36 +3,34 @@
         "id": 0,
         "skillTitle": "개발 기술",
         "skills": [
-
-            "JavaScript",
-            "React",
-            "React Native"
+            {"name": "JavaScript", "image": "/images/js.svg"},
+            {"name": "React", "image": "/images/react.svg"}
         ]
     },
     {
         "id": 1,
-        "skillTitle": "스타일링",
+        "skillTitle": "스타일링 및 마크업",
         "skills": [
-            "HTML5",
-            "CSS3",
-            "Figma",
-            "BootStrap"
+            {"name": "HTML5", "image": "/images/html5.svg"},
+            {"name": "CSS3", "image": "/images/css3.svg"},
+            {"name": "Figma", "image": "/images/figma.svg"}
         ]
     },
     {
         "id": 2,
         "skillTitle": "형상관리 및 배포",
         "skills": [
-            "GitHub",
-            "Vervel",
-            "Netlify"
+            {"name": "GitHub", "image": "/images/github.svg"},
+            {"name": "Vercel", "image": "/images/vercel.svg"},
+            {"name": "Netlify", "image": "images/netlify.svg"}
         ]
     },
     {
         "id": 3,
         "skillTitle": "추가적으로 배우고 싶은 것",
         "skills": [
-            "TypeScript"
+            {"name": "TypeScript", "image": "/images/typeScript.svg"},
+            {"name": "Tailwind", "image": "/images/tailWind.svg"}
         ]
     }
 ]

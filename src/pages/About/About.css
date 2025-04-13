@@ -6,7 +6,9 @@
     flex-direction: column;
     display: flex;
     align-items: center;
+    padding: 20px;
 }
+
 .about-container .about-header {
     font-size: 55px;
     font-weight: 700;
@@ -14,6 +16,7 @@
     padding: 120px 0px 10px 30px;
     position: relative;
 }
+
 .about-container .about-header::before {
     content: "";
     width: 0px;
@@ -23,10 +26,12 @@
     bottom: 0px;
     animation: headerLineAni 0.8s ease-out forwards;
 }
+
 @keyframes headerLineAni {
     0% {
         width: 0px;
     }
+
     100% {
         width: 250px;
     }
@@ -44,12 +49,18 @@
     padding: 50px;
     border-radius: 30px;
 }
+.intro-container .intro-headingContainer {
+    /* width: 100%; */
+    /* height: 200px; */
+    /* background-color: blue; */
+}
 .intro-container .intro-heading {
     font-size: 30px;
     /* background-color: white; */
     /* margin-left: 15px; */
     font-weight: 700;
 }
+
 .intro-container .intro-description {
     margin-top: 50px;
     line-height: 38px;
@@ -63,12 +74,192 @@
 /* Skills 컴포넌트 스타일  */
 .skills-container {
     width: 100%;
-    height: 600px;
-    /* background-color: blue; */
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: green; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
-.skills-card {
-    width: 400px;
-    height: 500px;
-    background-color: green;
+
+.skills-container .skills-header {
+    font-size: 40px;
+    font-weight: 800;
+    /* margin-bottom: 20px; */
+    width: 100%;
+    /* background-color: green; */
+    padding-left: 30px;
+    margin-bottom: 25px;
+
+}
+
+.skills-container .skills-boxContainer {
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: blue; */
+    /* flex-wrap: wrap; */
+    padding: 15px;
+}
+
+.skills-container .skills-box {
+    width: 100%;
+    height: 260px;
     border-radius: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(85, 85, 85);
+    color: white;
+    margin: 10px;
+
+    position: relative;
+    /* padding-left: 40px; */
+}
+
+.skills-box .skills-boxSkillTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 0px 15px 0px;
+    /* position: absolute;
+    top: 20px; */
+
+}
+
+.skills-box .skills-boxSkillsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* background-color: pink; */
+}
+
+.skills-box .skills-boxSkills {
+    width: 80px;
+    height: 62px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: blue; */
+    margin: 0px 10px 20px 10px;
+}
+
+.skills-boxSkills .skills-boxSkillsImg {
+    width: 35px;
+}
+
+
+/* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
+@media screen and (max-width: 768px) {
+
+    .about-container {
+        height: 3000px;
+    }
+
+    .about-container .about-header {
+        font-size: 45px;
+        padding: 80px 0px 15px 30px;
+    }
+
+    .about-container .about-header::before {
+        height: 2.0px;
+    }
+
+    .intro-container {
+        height: 700px;
+        padding: 30px;
+        position: relative;
+    }
+    .intro-container .intro-headingContainer {
+        width: 80%; 
+        height: 70px;
+        position: absolute;
+        top: 40px;
+    }
+    .intro-container .intro-heading {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .intro-container .intro-description {
+        /* margin-top: 10px; */
+        line-height: 33px;
+        letter-spacing: 0.6px;
+        font-size: 15px;
+        position: absolute;
+        top: 80px;
+        width: 80%;
+    }
+    
+    
+
+
+
+
+
+
+
+
+    /* 기술스택 부분  */
+    .skills-container .skills-header {
+        font-size: 30px;
+        height: 70px;
+        margin-top: 60px;
+    }
+
+    .skills-container {
+        width: 100%;
+        height: 900px;
+        /* background-color: blue; */
+    }
+
+    .skills-container .skills-boxContainer {
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        /* background-color: pink; */
+    }
+    
+
+    .skills-container .skills-box {
+        height: 150px;
+    }
+
+    .skills-box .skills-boxSkillTitle {
+        font-size: 16px;
+    }
+
+    .skills-box .skills-boxSkillsContainer {
+        flex-wrap: nowrap;
+        /* background-color: pink; */
+    }
+    .skills-box .skills-boxSkills {
+        width: 60px;
+        height: 45px;
+        margin: 0px 5px 0px 5px;
+    }
+
+    /* .skills-box .skills-boxSkills {
+        width: 80px;
+        height: 62px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px 10px 20px 10px;
+    } */
+
+    .skills-boxSkills .skills-boxSkillsImg {
+        width: 25px;
+    }
+
 }

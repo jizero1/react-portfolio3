@@ -22,7 +22,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Introduction = () => {
     return (
         <div className="intro-container">
-            <div className="common-flex" style={{ flexDirection: 'row' }}>
+            <div className="intro-headingContainer common-flex" style={{ flexDirection: 'row' }}>
                 <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
             </div>
             <p className="intro-description">어떤 웹 페이지를 만들지 구상하고, 디자인하고, 코드로 구현 해나갈때 제 눈이 반짝이고 있음을 느꼈습니다. <br />
@@ -38,8 +38,22 @@ const Introduction = () => {
 const Skills = () => {
 
     return (
-        <div className="skills-container common-flex">
-            <div className="skills-card"></div>     
+        <div className="skills-container">
+            <p className="skills-header">SKILLS</p>
+            <div className="skills-boxContainer common-flex">
+            {skillsData.map(item => (
+                <div key={item} className="skills-box">
+                    <p className="skills-boxSkillTitle"> {item.skillTitle}</p>
+                    <div className="skills-boxSkillsContainer common-flex">
+                    {item.skills.map((skill, index) => (
+                        <div key={index} className="skills-boxSkills common-flex">
+                            <img className="skills-boxSkillsImg"src={process.env.PUBLIC_URL+skill.image} alt={skill.name}></img>
+                        </div>
+                    ))}
+                    </div>
+                </div>
+            ))}
+            </div>
         </div>
     )
 }
