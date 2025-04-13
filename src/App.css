@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&display=swap');
+
 a {
   text-decoration: none;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +19,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .common-background {
   background-color: rgb(244, 244, 248);
 }
@@ -28,13 +31,16 @@ a {
   cursor: pointer;
   z-index: 100;
 }
+
 .logoImg:hover {
   animation: logoRotateAni 2s infinite linear;
 }
+
 @keyframes logoRotateAni {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -49,6 +55,7 @@ a {
   position: fixed;
   z-index: 100;
 }
+
 .common-menu-line {
   width: 40px;
   height: 3px;
@@ -56,13 +63,16 @@ a {
   margin: 8px 0px 8px 0px;
   transition: all 0.3s ease;
 }
+
 .active .common-menu-line:nth-child(1) {
   transform: translateY(11px) rotate(40deg);
   background-color: white;
 }
+
 .active .common-menu-line:nth-child(2) {
   opacity: 0;
 }
+
 .active .common-menu-line:nth-child(3) {
   transform: translateY(-11px) rotate(-40deg);
   background-color: white;
@@ -84,3 +94,11 @@ a {
 }
 
 
+/* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
+@media screen and (max-width: 768px) {
+
+  /* 별 로고 */
+  .pageLogo {
+    overflow-y: hidden;
+  }
+}
