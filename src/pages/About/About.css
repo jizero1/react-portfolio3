@@ -20,7 +20,7 @@
 .about-container .about-header::before {
     content: "";
     width: 0px;
-    height: 2.5px;
+    height: 1.8px;
     background-color: rgb(48, 48, 48);
     position: absolute;
     bottom: 0px;
@@ -96,8 +96,11 @@
 }
 .common-header-detailText {
     width: 100%;
-    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
     margin-bottom: 20px;
+    font-weight: 500;
     /* background-color: grey; */
 }
 

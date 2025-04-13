@@ -6,6 +6,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Text } from '@react-three/drei';
 import { meshStandardMaterial } from 'three';
+import { FaPlay, FaRegStar, FaCircle } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +44,7 @@ const Skills = () => {
     return (
         <div className="skills-container">
             <p className="common-header">SKILLS</p>
-            <p className="common-header-detailText">스킬 소개</p>
+            <p className="common-header-detailText"><FaCircle style={{marginRight: 10, fontSize: 6}}/>프론트엔드에 대해 공부하며 배운 스킬 소개</p>
             <div className="skills-boxContainer common-flex">
             {skillsData.map(item => (
                 <div key={item} className="skills-box">
@@ -63,7 +67,7 @@ const Vision = () => {
     return (
         <div className="vision-container">
             <p className="common-header">VISION</p>
-            <p className="common-header-detailText">비전 소개</p>
+            <p className="common-header-detailText"><FaCircle style={{marginRight: 10, fontSize: 6}}/>프론트엔드 개발자로서의 단기 및 장기 목표 소개</p>
         </div>
     )
 }

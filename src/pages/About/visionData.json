@@ -1,0 +1,39 @@
+[
+    {
+        "id": 0,
+        "visionType": "단기 목표",
+        "vision" : [
+            {
+                "number": 1,
+                "content": "단기목표 내용~~~~"
+            },
+            {
+                "nunber": 2,
+                "content": "단기목표 내용!!!"
+            },
+            {
+                "nunber": 3,
+                "content": "단기목표 내용!!!"
+            }
+        ]
+
+    },
+    {
+        "id": 1,
+        "visionType": "장기 목표",
+        "vision" : [
+            {
+                "number": 1,
+                "content": "장기 목표 내용!~~"
+            },
+            {
+                "number": 2,
+                "content": "장기 목표 내용~~~"
+            },
+            {
+                "number": 3,
+                "content": "장기 목표 내용~~~~"
+            }
+        ]
+    }
+]
