@@ -22,7 +22,7 @@
         "skills": [
             {"name": "GitHub", "image": "/images/github.svg"},
             {"name": "Vercel", "image": "/images/vercel.svg"},
-            {"name": "Netlify", "image": "images/netlify.svg"}
+            {"name": "Netlify", "image": "/images/netlify.svg"}
         ]
     },
     {
