@@ -68,7 +68,7 @@ const Vision = () => {
     return (
         <div className="vision-container">
             <p className="common-header">VISION</p>
-            <p className="common-header-detailText"><FaCircle style={{ marginRight: 10, fontSize: 6 }} />프론트엔드 개발자로서의 단기 및 장기 목표 소개</p>
+            <p className="common-header-detailText" style={{marginBottom: 20}}><FaCircle style={{ marginRight: 10, fontSize: 6 }} />프론트엔드 개발자로서의 단기 및 장기 목표 소개</p>
             <div className="vision-boxContainer common-flex">
                 {visionData.map(item => (
                     <div className="vision-box">
