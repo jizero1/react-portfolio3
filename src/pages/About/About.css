@@ -96,16 +96,19 @@
 }
 .common-header-detailText {
     width: 100%;
+    height: 50px;
     display: flex;
     align-items: center;
     padding-left: 30px;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-size: 15px;
+    /* font-weight: 500; */
     /* background-color: grey; */
 }
 
 .skills-container .skills-boxContainer {
     width: 100%;
+    
     /* height: 100%; */
     /* background-color: blue; */
     /* flex-wrap: wrap; */
@@ -114,7 +117,7 @@
 
 .skills-container .skills-box {
     width: 100%;
-    height: 260px;
+    height: 240px;
     border-radius: 30px;
     display: flex;
     justify-content: start;
@@ -129,7 +132,7 @@
 }
 
 .skills-box .skills-boxSkillTitle {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin: 25px 0px 15px 0px;
     /* position: absolute;
@@ -140,10 +143,12 @@
 .skills-box .skills-boxSkillsContainer {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
     padding: 10px;
+    overflow-y: hidden;
     /* background-color: pink; */
+    
 }
 
 .skills-box .skills-boxSkills {
@@ -172,7 +177,45 @@
     justify-content: center;
     align-items: start; */
 }
-
+.vision-boxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 16px;
+    width: 95%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+}
+.vision-boxContainer .vision-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.vision-box .vision-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+.vision-box .vision-text {
+    background-color: #f3f3f3;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+}
+/* 
+  .vision-box > p {
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .vision-text {
+    background-color: #f3f3f3;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+   */
 /* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
 @media screen and (max-width: 768px) {
 

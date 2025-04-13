@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './About.css';
 import skillsData from './skillsData.json';
+import visionData from './visionData.json';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Canvas } from '@react-three/fiber';
@@ -44,20 +45,20 @@ const Skills = () => {
     return (
         <div className="skills-container">
             <p className="common-header">SKILLS</p>
-            <p className="common-header-detailText"><FaCircle style={{marginRight: 10, fontSize: 6}}/>프론트엔드에 대해 공부하며 배운 스킬 소개</p>
+            <p className="common-header-detailText"><FaCircle style={{ marginRight: 10, fontSize: 6 }} />프론트엔드에 대해 공부하며 배운 스킬 소개</p>
             <div className="skills-boxContainer common-flex">
-            {skillsData.map(item => (
-                <div key={item} className="skills-box">
-                    <p className="skills-boxSkillTitle"> {item.skillTitle}</p>
-                    <div className="skills-boxSkillsContainer common-flex">
-                    {item.skills.map((skill, index) => (
-                        <div key={index} className="skills-boxSkills common-flex">
-                            <img className="skills-boxSkillsImg"src={process.env.PUBLIC_URL+skill.image} alt={skill.name}></img>
+                {skillsData.map(item => (
+                    <div key={item} className="skills-box">
+                        <p className="skills-boxSkillTitle"> {item.skillTitle}</p>
+                        <div className="skills-boxSkillsContainer common-flex">
+                            {item.skills.map((skill, index) => (
+                                <div key={index} className="skills-boxSkills common-flex">
+                                    <img className="skills-boxSkillsImg" src={process.env.PUBLIC_URL + skill.image} alt={skill.name}></img>
+                                </div>
+                            ))}
                         </div>
-                    ))}
                     </div>
-                </div>
-            ))}
+                ))}
             </div>
         </div>
     )
@@ -67,7 +68,19 @@ const Vision = () => {
     return (
         <div className="vision-container">
             <p className="common-header">VISION</p>
-            <p className="common-header-detailText"><FaCircle style={{marginRight: 10, fontSize: 6}}/>프론트엔드 개발자로서의 단기 및 장기 목표 소개</p>
+            <p className="common-header-detailText"><FaCircle style={{ marginRight: 10, fontSize: 6 }} />프론트엔드 개발자로서의 단기 및 장기 목표 소개</p>
+            <div className="vision-boxContainer common-flex">
+                {visionData.map(item => (
+                    <div className="vision-box">
+                        <p className="vision-title">{item.visionType}</p>
+                        {item.vision.map((vision, index) => (
+                            <div key={index} className="vision-text">
+                                <p>{vision.content}</p>
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
@@ -79,7 +92,7 @@ const About = () => {
             <p className="about-header">ABOUT</p>
             <Introduction />
             <Skills />
-            <Vision/>
+            <Vision />
         </div>
     )
 }
