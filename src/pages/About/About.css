@@ -72,28 +72,33 @@
 
 
 /* Skills 컴포넌트 스타일  */
-.skills-container {
+.skills-container, .vision-container {
     width: 100%;
     height: 500px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    /* background-color: green; */
+    /* background-color: blue; */
     /* display: flex;
     justify-content: center;
     align-items: center; */
 }
 
-.skills-container .skills-header {
+.common-header {
     font-size: 40px;
     font-weight: 800;
     /* margin-bottom: 20px; */
     width: 100%;
     /* background-color: green; */
     padding-left: 30px;
-    margin-bottom: 25px;
-
+    margin-bottom: 10px;
+}
+.common-header-detailText {
+    width: 100%;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    /* background-color: grey; */
 }
 
 .skills-container .skills-boxContainer {
@@ -156,6 +161,15 @@
 }
 
 
+
+
+/* vision 부분  */
+.vision-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: start; */
+}
+
 /* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
 @media screen and (max-width: 768px) {
 
@@ -209,7 +223,7 @@
 
     /* 기술스택 부분  */
     
-    .skills-container .skills-header {
+    .common-header {
         font-size: 30px;
         height: 70px;
         margin-top: 60px;

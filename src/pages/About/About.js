@@ -39,7 +39,8 @@ const Skills = () => {
 
     return (
         <div className="skills-container">
-            <p className="skills-header">SKILLS</p>
+            <p className="common-header">SKILLS</p>
+            <p className="common-header-detailText">스킬 소개</p>
             <div className="skills-boxContainer common-flex">
             {skillsData.map(item => (
                 <div key={item} className="skills-box">
@@ -58,6 +59,15 @@ const Skills = () => {
     )
 }
 
+const Vision = () => {
+    return (
+        <div className="vision-container">
+            <p className="common-header">VISION</p>
+            <p className="common-header-detailText">비전 소개</p>
+        </div>
+    )
+}
+
 const About = () => {
 
     return (
@@ -65,6 +75,7 @@ const About = () => {
             <p className="about-header">ABOUT</p>
             <Introduction />
             <Skills />
+            <Vision/>
         </div>
     )
 }
