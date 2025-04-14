@@ -49,7 +49,7 @@ const Skills = () => {
             <div className="skills-boxContainer common-flex">
                 {skillsData.map(item => (
                     <div key={item} className="skills-box">
-                        <p className="skills-boxSkillTitle"> {item.skillTitle}</p>
+                        <p className="skills-boxSkillTitle common-flex"> {item.skillTitle}</p>
                         <div className="skills-boxSkillsContainer common-flex">
                             {item.skills.map((skill, index) => (
                                 <div key={index} className="skills-boxSkills common-flex">

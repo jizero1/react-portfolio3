@@ -6,19 +6,15 @@
     flex-direction: column;
     display: flex;
     align-items: center;
-    /* justify-content: start; */
     padding: 50px;
 }
 
 .about-container .about-header {
     font-size: 55px;
-    font-weight: 700;
+    font-weight: 500;
     width: 100%;
-    padding: 120px 0px 10px 0px;
     position: relative;
-    display: flex;
-    /* text-align: center; */
-    /* background-color: lightgrey; */
+    padding: 80px 0px 10px 0px;
 }
 
 .about-container .about-header::before {
@@ -44,31 +40,13 @@
 /* Introduction 컴포넌트 스타일 */
 .intro-container {
     width: 100%;
-    /* min-width: 300px;
-    max-width: 1000px;
-    padding: 40px;
-    height: 570px; */
-    /* height: 450px;
-    min-height: 19%;
-    max-height: 23%; */
-    /* height: 17%; */
-    /* min-height: 690px; */
-    /* min-height: 690px; */
-    /* max-height: 600px; */
-    /* text-align: center; */
-    /* background-color: rgba(148, 148, 148, 0.1); */
     flex-direction: column;
     margin: 80px 0px 30px 0px;
-    /* padding: 50px; */
-    /* border-radius: 30px; */
 }
 
 .intro-container .intro-heading {
     font-size: 30px;
-    /* background-color: white; */
-    /* margin-left: 15px; */
     font-weight: 600;
-    /* background-color: blue; */
 }
 
 .intro-container .intro-description {
@@ -76,55 +54,39 @@
     line-height: 38px;
     letter-spacing: 0.8px;
     font-size: 18px;
-    /* margin: 30px; */
-    /* padding: 30px; */
-    /* text-align: center; */
 }
 
 
 
 /* Skills 컴포넌트 스타일  */
-.skills-container, .vision-container {
+.skills-container,
+.vision-container {
     width: 100%;
     height: 470px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: blue; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .common-header {
     font-size: 40px;
     font-weight: 800;
-    /* margin-bottom: 20px; */
     width: 100%;
-    /* background-color: green; */
-    padding-left: 30px;
     margin-bottom: 10px;
 }
+
 .common-header-detailText {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
-    padding-left: 30px;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
     font-size: 16px;
-    /* font-weight: 500; */
-    /* background-color: grey; */
 }
 
 .skills-container .skills-boxContainer {
     width: 100%;
-    
-    /* height: 100%; */
-    /* background-color: blue; */
-    /* flex-wrap: wrap; */
-    padding: 0px;
 }
 
 .skills-container .skills-box {
@@ -137,37 +99,29 @@
     flex-direction: column;
     background-color: rgb(85, 85, 85);
     color: white;
-    margin: 7px;
+    margin-right: 8px;
     position: relative;
-    /* padding-left: 40px; */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .skills-box .skills-boxSkillTitle {
+    width: 100%;
     height: 35px;
     font-size: 17px;
     font-weight: 600;
     margin: 23px 0px 13px 0px;
-    /* position: absolute;
-    top: 20px; */
-
 }
 
 .skills-box .skills-boxSkillsContainer {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* height: 100%; */
     flex-wrap: wrap;
     padding: 10px;
     overflow-y: hidden;
-    /* background-color: pink; */
-    
 }
 
 .skills-box .skills-boxSkills {
     width: 80px;
-    /* width: 38%; */
     height: 62px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
@@ -175,7 +129,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* background-color: blue; */
     margin: 0px 10px 20px 10px;
 }
 
@@ -186,134 +139,112 @@
 
 
 
-/* vision 부분  */
-.vision-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: start; */
-}
-.vision-boxContainer {
+/* vision 컴포넌트 스타일  */
+.vision-container .vision-boxContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 16px;
     width: 95%;
     padding: 15px;
     border-radius: 10px;
     background-color: rgba(148, 148, 148, 0.1);
-    /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
 }
+
 .vision-boxContainer .vision-box {
-    /* width: 100%; */
-    /* height: 320px; */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .vision-box .vision-title {
     font-weight: bold;
     margin-bottom: 15px;
     padding-left: 5px;
 }
+
 .vision-box .vision-text {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     background-color: #f3f3f3;
     margin-bottom: 10px;
     padding: 8px 12px;
 }
-/* 
-  .vision-box > p {
-    font-weight: bold;
-    margin-bottom: 12px;
-  }
-  
-  .vision-text {
-    background-color: #f3f3f3;
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    border-radius: 8px;
-  }
-   */
+
+
+/* ---------------- 1024px, 768px, 480px --------------- */
+
+/* 화면 너비가 1024px 이하일때 적용되는 반응형 스타일  */
+@media screen and (max-width: 1024px) {
+
+   /* skills 부분 반응형 스타일  */
+    .skills-box .skills-boxSkills {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .skills-container .skills-box {
+        height: 210px;
+    }
+
+    .skills-box .skills-boxSkillTitle {
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+}
+
 /* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
 @media screen and (max-width: 768px) {
 
+    /* about 부분 헤더랑 텍스트 부분 반응형 스타일  */
     .about-container {
         height: 3000px;
     }
 
     .about-container .about-header {
         font-size: 45px;
-        padding: 80px 0px 15px 30px;
     }
 
     .about-container .about-header::before {
         height: 2.0px;
     }
-
-    .intro-container {
-        /* width: 100%; */
-        /* height: 500px; */
-        /* height: 17%; */
-        /* height: 600px; */
-        /* height: 690px; */
-        /* height: 450px;
-        min-height: 16%;
-        max-height: 25%; */
-        /* padding: 30px; */
-        /* position: relative; */
-    }
-    /* .intro-container .intro-headingContainer {
-        width: 80%; 
-        height: 70px;
-        position: absolute;
-        top: 40px;
-        background-color: blue;
-    } */
     .intro-container .intro-heading {
         font-size: 18px;
         font-weight: 700;
     }
-    
+
     .intro-container .intro-description {
-        /* margin-top: 10px; */
         line-height: 33px;
         letter-spacing: 0.6px;
         font-size: 15px;
-        /* position: absolute;
-        top: 80px;
-        width: 80%; */
     }
-    
-    
 
 
 
 
 
-
-
-
-    /* 기술스택 부분  */
-    
+    /* skills 부분 반응형 스타일 */
     .common-header {
         font-size: 30px;
         height: 70px;
         margin-top: 60px;
-        /* background-color: blue; */
     }
 
     .skills-container {
         width: 100%;
         height: 900px;
-        /* background-color: pink; */
     }
 
     .skills-container .skills-boxContainer {
-        width: 100%;
+        width: 70%;
         height: 100%;
         flex-wrap: wrap;
-        /* background-color: pink; */
     }
-    
+
 
     .skills-container .skills-box {
         height: 150px;
@@ -325,28 +256,56 @@
 
     .skills-box .skills-boxSkillsContainer {
         flex-wrap: nowrap;
-        /* background-color: pink; */
     }
+
     .skills-box .skills-boxSkills {
         width: 60px;
         height: 45px;
         margin: 0px 5px 0px 5px;
     }
 
-    /* .skills-box .skills-boxSkills {
-        width: 80px;
-        height: 62px;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 0px 10px 20px 10px;
-    } */
-
     .skills-boxSkills .skills-boxSkillsImg {
         width: 25px;
     }
 
+    .common-header-detailText {
+        height: 60px;
+    }
+
+
+
+
+
+
+    /* vision 부분  */
+
+    .vision-container {
+        height: 970px;
+    }
+
+    .vision-container .vision-boxContainer {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .vision-box .vision-text {
+        width: 100%;
+        height: 85px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
+
+
+
+/* 화면 너비가 480px 이하일때 적용되는 반응형 스타일 */
+@media screen and (max-width: 480px) {
+
+    /* skills 부분  */
+    .skills-container .skills-boxContainer {
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
 }
