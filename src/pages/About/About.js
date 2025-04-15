@@ -1,15 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, form } from 'react';
 import './About.css';
 import skillsData from './skillsData.json';
 import visionData from './visionData.json';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Text } from '@react-three/drei';
-import { meshStandardMaterial } from 'three';
-import { FaPlay, FaRegStar, FaCircle } from "react-icons/fa";
-import { FaStar } from "react-icons/fa6";
-
+import { FaCircle } from "react-icons/fa";
+import emailjs from 'emailjs-com';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +24,7 @@ const Introduction = () => {
     return (
         <div className="intro-container">
             {/* <div className="intro-headingContainer"> */}
-                <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
+            <p className="intro-heading">별처럼 빛나는 프론트엔드 개발자가 되겠습니다.</p>
             {/* </div> */}
             <p className="intro-description">어떤 웹 페이지를 만들지 구상하고, 디자인하고, 코드로 구현 해나갈때 제 눈이 반짝이고 있음을 느꼈습니다.
                 처음 코딩이라는 것을 접했을때처럼 여전히 설레고 즐거운 마음으로 프로젝트를 만들고, 새로운 기술을 배우고,
@@ -68,7 +64,7 @@ const Vision = () => {
     return (
         <div className="vision-container">
             <p className="common-header">VISION</p>
-            <p className="common-header-detailText" style={{marginBottom: 20}}><FaCircle style={{ marginRight: 10, fontSize: 6 }} />프론트엔드 개발자로서의 단기 및 장기 목표 소개</p>
+            <p className="common-header-detailText" style={{ marginBottom: 20 }}><FaCircle style={{ marginRight: 10, fontSize: 6 }} />프론트엔드 개발자로서의 단기 및 장기 목표 소개</p>
             <div className="vision-boxContainer common-flex">
                 {visionData.map(item => (
                     <div className="vision-box">
@@ -85,6 +81,42 @@ const Vision = () => {
     )
 }
 
+const Contact = () => {
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault(); // 전송 버튼 누를때 새로고침 되는걸 방지함.
+        emailjs.sendForm(
+            'wlduddl4101@gmail.com',
+            'template_7fnp05r',
+            form.current,
+            'c_dLDW_nZl8DJ_1ir'
+        )
+        .then((result) => {
+            console.log(result.text);
+            alert("메일 전송 성공!");
+
+        }, (error) => {
+            console.log(error.text);
+            alert("메일 전송 실패");
+        });
+    };
+    return (
+        <div className="contact-container">
+            <p className="common-header">CONTACT</p>
+            <form ref={form} onSubmit={sendEmail}>
+                <label>성함</label>
+                <input type="text" name="from_name" required />
+                <label>이메일</label>
+                <input type="email" name="email" required />
+                <label>메시지</label>
+                <textarea name="message" required />
+                <button type="submit">전송하기</button>
+            </form>
+        </div >
+    )
+}
+
 const About = () => {
 
     return (
@@ -93,6 +125,7 @@ const About = () => {
             <Introduction />
             <Skills />
             <Vision />
+            <Contact />
         </div>
     )
 }

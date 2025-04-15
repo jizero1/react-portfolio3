@@ -15,6 +15,7 @@
     width: 100%;
     position: relative;
     padding: 80px 0px 10px 0px;
+    overflow-y: hidden;
 }
 
 .about-container .about-header::before {
@@ -42,6 +43,7 @@
     width: 100%;
     flex-direction: column;
     margin: 80px 0px 30px 0px;
+    overflow-y: hidden;
 }
 
 .intro-container .intro-heading {
@@ -59,21 +61,29 @@
 
 
 /* Skills 컴포넌트 스타일  */
+/* skills, vision, contact 부모 컨테이너 스타일 */
 .skills-container,
-.vision-container {
+.vision-container,
+.contact-container {
     width: 100%;
     height: 470px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    
+    /* background-color: blue; */
+    margin-bottom: 10px;
 }
 
 .common-header {
+    /* background-color: grey; */
     font-size: 40px;
     font-weight: 800;
     width: 100%;
-    margin-bottom: 10px;
+    overflow-y: hidden;
+    /* margin-bottom: 10px; */
 }
 
 .common-header-detailText {
@@ -104,11 +114,12 @@
 }
 
 .skills-box .skills-boxSkillTitle {
-    width: 100%;
+    /* width: 100%; */
     height: 35px;
     font-size: 17px;
     font-weight: 600;
-    margin: 23px 0px 13px 0px;
+    margin: 23px 0px 25px 0px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 .skills-box .skills-boxSkillsContainer {
@@ -125,11 +136,11 @@
     height: 62px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 0px 10px 20px 10px;
+    margin: 0px 5px 8px 5px;
 }
 
 .skills-boxSkills .skills-boxSkillsImg {
@@ -175,6 +186,13 @@
 }
 
 
+
+/* Contact 컴포넌트 스타일  */
+.contact-container {
+    height: 600px;
+}
+
+
 /* ---------------- 1024px, 768px, 480px --------------- */
 
 /* 화면 너비가 1024px 이하일때 적용되는 반응형 스타일  */
@@ -202,7 +220,8 @@
 
     /* about 부분 헤더랑 텍스트 부분 반응형 스타일  */
     .about-container {
-        height: 3000px;
+        /* background-color: yellow; */
+        height: 3700px;
     }
 
     .about-container .about-header {
@@ -252,6 +271,7 @@
 
     .skills-box .skills-boxSkillTitle {
         font-size: 16px;
+        /* margin: 23px 0px 3px 0px; */
     }
 
     .skills-box .skills-boxSkillsContainer {
@@ -277,7 +297,7 @@
 
 
 
-    /* vision 부분  */
+    /* vision 부분 반응형 스타일 */
 
     .vision-container {
         height: 970px;
@@ -302,7 +322,7 @@
 /* 화면 너비가 480px 이하일때 적용되는 반응형 스타일 */
 @media screen and (max-width: 480px) {
 
-    /* skills 부분  */
+    /* skills 부분 반응형 스타일 */
     .skills-container .skills-boxContainer {
         width: 100%;
         height: 100%;
