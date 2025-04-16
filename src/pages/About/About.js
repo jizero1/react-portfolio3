@@ -104,22 +104,30 @@ const Contact = () => {
     return (
         <div className="contact-container">
             <p className="common-header">CONTACT</p>
-            <form ref={form} onSubmit={sendEmail} className="contact-form common-flex">
-                <div className="common-contact common-flex">
-                    <label className="common-contact-label common-flex">성함</label>
-                    <input type="text" name="from_name" required className="contact-input common-contact-write"/>
-                </div>
-                <div className="common-contact common-flex">
-                    <label className="common-contact-label common-flex">이메일</label>
-                    <input type="email" name="email" required className="contact-input common-contact-write"/>
-                </div>
-                <div className="common-contact common-flex">
-                    <label className="common-contact-label common-flex">내용</label>
-                    <textarea name="message" required className="contact-textarea common-contact-write"/>
-                </div>
+            <div className="common-flex" style={{flexDirection:'row', marginTop: 50}}>
+                <form ref={form} onSubmit={sendEmail} className="contact-form common-flex">
+                    <p className="contact-title">Contact Me</p>
+                    <div className="common-contact common-flex">
+                        <label className="common-contact-label common-flex">성함</label>
+                        <input type="text" name="from_name" placeholder='성함을 입력 해주세요.' required className="contact-input common-contact-write " />
+                    </div>
+                    <div className="common-contact common-flex">
+                        <label className="common-contact-label common-flex">이메일</label>
+                        <input type="email" name="email" placeholder='이메일을 입력 해주세요.' required className="contact-input common-contact-write" />
+                    </div>
+                    <div className="common-contact common-flex">
+                        <label className="common-contact-label common-flex">내용</label>
+                        <textarea name="message" placeholder='보내실 내용을 입력 해주세요.' required className="contact-textarea common-contact-write" />
+                    </div>
 
-                <button type="submit" className="contact-submitBtn">전송하기</button>
-            </form>
+                    <button type="submit" className="contact-submitBtn">전송하기</button>
+                </form>
+                <div className="contact-infoCard common-flex">
+                    <img src={process.env.PUBLIC_URL+"/images/cursorStar.png"} style={{marginBottom: 20}}></img>
+                    <p>제 포트폴리오에 대해 더 궁금하신점이 있으시다면, 언제든지 연락 주세요!</p>
+                </div>
+            </div>
+
         </div >
     )
 }
