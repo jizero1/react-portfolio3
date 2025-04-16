@@ -190,9 +190,70 @@
 /* Contact 컴포넌트 스타일  */
 .contact-container {
     height: 600px;
+    /* 나머지 스타일은 skills랑 vision의 스타일과 동일 */
 }
+.contact-container .contact-form {
+    width: 550px;
+    height: 430px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    flex-direction: column;
+}   
+.contact-form .common-contact {
+    width:100%;
+    /* height: 80px; */
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+    /* background-color: green; */
+}
+.contact-form .common-contact input {
+    height: 38px;
+    
+}
+.contact-form .common-contact textarea {
+    height: 140px;
+}
+.contact-form .common-contact-label {
+    font-size: 16px;
+    /* position: absolute;
+    left: 10px; */
+    margin-right: 10px;
+    width: 70px;
+    /* background-color: pink; */
 
-
+}
+.common-contact .common-contact-write {
+    width: 90%;
+    border-radius: 6px;
+    border: 1.5px solid rgb(162, 162, 162);
+    padding: 10px;
+    font-size: 15px;
+}
+.common-contact .contact-input {
+    height: 40px;
+}
+.common-contact .contact-textarea {
+    resize: none;
+}
+.common-contact .common-contact-write:focus {
+    /* border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    outline: none; */
+    outline: none;
+    border-color: rgb(3, 161, 228);
+    box-shadow: 5px 5px 4px rgba(74, 144, 226, 0.2);
+}
+.contact-form .contact-submitBtn {
+    border-style: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: pink;
+    font-size: 16px;
+}
 /* ---------------- 1024px, 768px, 480px --------------- */
 
 /* 화면 너비가 1024px 이하일때 적용되는 반응형 스타일  */
@@ -214,6 +275,9 @@
         margin-bottom: 3px;
     }
 }
+
+
+
 
 /* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
 @media screen and (max-width: 768px) {

@@ -92,26 +92,33 @@ const Contact = () => {
             form.current,
             'c_dLDW_nZl8DJ_1ir'
         )
-        .then((result) => {
-            console.log(result.text);
-            alert("메일 전송 성공!");
+            .then((result) => {
+                console.log(result.text);
+                alert("메일 전송 성공!");
 
-        }, (error) => {
-            console.log(error.text);
-            alert("메일 전송 실패");
-        });
+            }, (error) => {
+                console.log(error.text);
+                alert("메일 전송 실패");
+            });
     };
     return (
         <div className="contact-container">
             <p className="common-header">CONTACT</p>
-            <form ref={form} onSubmit={sendEmail}>
-                <label>성함</label>
-                <input type="text" name="from_name" required />
-                <label>이메일</label>
-                <input type="email" name="email" required />
-                <label>메시지</label>
-                <textarea name="message" required />
-                <button type="submit">전송하기</button>
+            <form ref={form} onSubmit={sendEmail} className="contact-form common-flex">
+                <div className="common-contact common-flex">
+                    <label className="common-contact-label common-flex">성함</label>
+                    <input type="text" name="from_name" required className="contact-input common-contact-write"/>
+                </div>
+                <div className="common-contact common-flex">
+                    <label className="common-contact-label common-flex">이메일</label>
+                    <input type="email" name="email" required className="contact-input common-contact-write"/>
+                </div>
+                <div className="common-contact common-flex">
+                    <label className="common-contact-label common-flex">내용</label>
+                    <textarea name="message" required className="contact-textarea common-contact-write"/>
+                </div>
+
+                <button type="submit" className="contact-submitBtn">전송하기</button>
             </form>
         </div >
     )
