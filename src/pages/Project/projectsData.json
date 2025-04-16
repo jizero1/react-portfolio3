@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "projectName": "프로젝트 1",
+        "projectImg": "/images/projects/project1.png",
+        "projectReadMore": "",
+        "projectLink": "naver.com"
+    },
+    {
+        "id": 0,
+        "projectName": "프로젝트 2",
+        "projectImg": "/images/projects/project1.png",
+        "projectReadMore": "",
+        "projectLink": ""
+    },
+    {
+        "id": 0,
+        "projectName": "프로젝트 3",
+        "projectImg": "/images/projects/project1.png",
+        "projectReadMore": "",
+        "projectLink": ""
+    },
+    {
+        "id": 0,
+        "projectName": "프로젝트 4",
+        "projectImg": "/images/projects/project1.png",
+        "projectReadMore": "",
+        "projectLink": ""
+    }
+]

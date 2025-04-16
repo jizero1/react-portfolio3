@@ -1,6 +1,22 @@
 import './Project.css';
-import React from 'react';
+import React, { useState } from 'react';
+import projectsData from './projectsData.json';
+import { FaTimes } from "react-icons/fa";
 
+const ProjectView = ({ isClick, handleProjectOpenClose }) => {
+
+    return (
+        <>
+            {isClick && (
+                <div className="projectView-container-black">
+                    <div className="projectView-container-white">
+                        <button className="projectView-closeBtn common-flex" onClick={handleProjectOpenClose}><FaTimes /></button>
+                    </div>
+                </div>
+            )}
+        </>
+    )
+}
 const ProjectHeader = () => {
     return (
         <div className="project-header-container">
@@ -9,10 +25,42 @@ const ProjectHeader = () => {
         </div>
     )
 }
+const Projects = ({ isClick, handleProjectOpenClose }) => {
+    const projectsLinkClick = (link) => {
+        window.open(link, '_blank');
+        alert("클릭")
+    }
+    return (
+        <div className="projects-container common-flex">
+            {projectsData.map(item => (
+                <div key={item.id} className="projects-box-container common-flex">
+                    <div className="projects-box common-flex">
+                        <img className="projects-box-img" src={process.env.PUBLIC_URL + item.projectImg} alt={item.projectName}></img>
+                        <div className="projects-box-btn-container common-flex">
+                            <button className="projects-box-btn" onClick={() => {
+                                handleProjectOpenClose();
+                                projectData();
+                            }}>자세히보기</button>
+                            <button className="projects-box-btn" onClick={() => projectsLinkClick(item.projectLink)}>프로젝트 링크</button>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    )
+}
 const Project = () => {
+
+    const [isClick, setIsClick] = useState(false);
+    const handleProjectOpenClose = () => {
+        setIsClick(!isClick);
+    }
+
     return (
         <div className="project-container common-background">
-            <ProjectHeader/>
+            <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} />
+            <ProjectHeader />
+            <Projects isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} />
         </div>
     )
 }

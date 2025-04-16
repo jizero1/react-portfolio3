@@ -1,15 +1,109 @@
 .project-container{
     width: 100vw;
-    height: 3000px;
+    height: 2500px;
     padding: 50px;
+    position: relative;
 }
+/* project 헤더 부분 디자인  */
 .project-header-container {
     width: 100%;
     height: 230px;
-    /* background-color: green; */
-    /* position: relative; */
 }
 .project-header-container .project-header-text {
     margin-top: 25px;
     font-size: 16px;
+}
+
+
+
+/* projects 디자인 (프로젝트들 모아둔 중앙 부분)  */
+.projects-container {
+    width: 100%;
+    /* height: 1200px; */
+    margin-top: 70px;
+    /* background-color: grey; */
+    flex-wrap: wrap;
+}
+.projects-container .projects-box-container {
+    width: 390px;
+    height: 500px;
+    /* background-color: pink; */
+    margin: 20px;
+    flex-direction: column;
+}
+.projects-box-container .projects-box {
+    width: 95%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    flex-direction: column;
+    position: relative;
+}
+.projects-box .projects-box-img {
+    width: 90%;
+    height: 220px;
+    position: absolute;
+    top: 50px;
+    border-radius: 10px;
+}
+.projects-box .projects-box-btn-container {
+    width: 100%;
+    height: 100px;
+    /* background-color: blue; */
+    position: absolute;
+    bottom: 10px;
+}
+.projects-box-btn-container .projects-box-btn {
+    width: 130px;
+    height: 45px;
+    margin: 10px;
+    border-radius: 15px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.projects-box-container .project-box-projectName {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+
+
+
+/* projects 자세히보기 클릭시 뜨는 모달창 디자인  */
+.projectView-container-black {
+    position: fixed;     /* 전체화면 기준으로 고정 */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* 어두운 반투명 배경 */
+    z-index: 1000;
+    padding: 40px;
+    /* overflow-y: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.projectView-container-white {
+    width: 700px;
+    height: 1300px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+}
+.projectView-closeBtn {
+    width: 50px;
+    height: 35px;
+    border-radius: 15px;
+    border-style: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
 }
