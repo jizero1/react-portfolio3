@@ -9,7 +9,7 @@
     padding: 50px;
 }
 
-.about-container .about-header {
+/* .about-container .about-header {
     font-size: 55px;
     font-weight: 500;
     width: 100%;
@@ -36,7 +36,7 @@
     100% {
         width: 190px;
     }
-}
+} */
 
 /* Introduction 컴포넌트 스타일 */
 .intro-container {

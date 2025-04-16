@@ -23,7 +23,33 @@ a {
 .common-background {
   background-color: rgb(244, 244, 248);
 }
+.headerLine{
+  font-size: 55px;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  padding: 80px 0px 10px 0px;
+  overflow-y: hidden;
+}
+.headerLine::before {
+  content: "";
+  width: 0px;
+  height: 1.7px;
+  background-color: rgb(48, 48, 48);
+  position: absolute;
+  bottom: 0px;
+  animation: headerLineAni 1.0s ease-out forwards;
+}
 
+@keyframes headerLineAni {
+  0% {
+      width: 0px;
+  }
+
+  100% {
+      width: 300px;
+  }
+}
 /* ----------- 별 로고 ----------- */
 .pageLogo {
   position: fixed;

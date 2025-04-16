@@ -138,7 +138,7 @@ const About = () => {
 
     return (
         <div className="about-container common-background">
-            <p className="about-header">ABOUT</p>
+            <p className="about-header headerLine">ABOUT</p>
             <Introduction />
             <Skills />
             <Vision />
