@@ -95,12 +95,14 @@ const Contact = () => {
             .then((result) => {
                 console.log(result.text);
                 alert("메일 전송 성공!");
+                form.current.reset();
 
             }, (error) => {
                 console.log(error.text);
                 alert("메일 전송 실패");
             });
     };
+
     return (
         <div className="contact-container">
             <p className="common-header">CONTACT</p>
