@@ -115,12 +115,14 @@
 
 .home-info-about::before {
     color: white;
-    background-color: #FFB6C1;
+    /* background-color: #FFB6C1; */
+    background-color: rgb(180, 215, 244);
 }
 
 .home-info-project:before {
     color: white;
-    background-color: rgb(165, 165, 246);
+    /* background-color: rgb(165, 165, 246); */
+    background-color: rgb(253, 230, 99);
 }
 
 .common-info-box:hover::before {
@@ -141,11 +143,13 @@
 }
 
 .home-info-about:hover {
-    background-color: #FFB6C1;
+    /* background-color: #FFB6C1; */
+    background-color: rgb(180, 215, 244);
 }
 
 .home-info-project:hover {
-    background-color: rgb(165, 165, 246);
+    /* background-color: rgb(165, 165, 246); */
+    background-color: rgb(253, 230, 99);
 }
 
 

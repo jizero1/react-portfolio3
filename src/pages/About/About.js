@@ -104,7 +104,7 @@ const Contact = () => {
     return (
         <div className="contact-container">
             <p className="common-header">CONTACT</p>
-            <div className="common-flex" style={{flexDirection:'row', marginTop: 50}}>
+            <div className="contact-formAndinfoCard common-flex">
                 <form ref={form} onSubmit={sendEmail} className="contact-form common-flex">
                     <p className="contact-title">Contact Me</p>
                     <div className="common-contact common-flex">
