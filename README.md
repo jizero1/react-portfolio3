@@ -19,6 +19,9 @@ React / React Router(페이지이동) / Figma(포트폴리오 디자인시 활�
 
 3. 홈화면 글자 타이핑효과
 - react-typed 라이브러리를 이용하여 타이핑 효과를 구현함.
+
+4. Contact에 메일 보내는 기능 추가
+- emailJs를 이용하여 사용자가 이름, 이메일, 메시지를 입력하면 내 메일로 전송 오도록 구현함.
   
 ## 문제 해결
 - 메뉴페이지 menu.js
@@ -41,3 +44,4 @@ React / React Router(페이지이동) / Figma(포트폴리오 디자인시 활�
 - navigator.clipboard.writeText() API를 이용하여 링크복사하는 방법을 알게됨.
 - react-typed 타이핑 효과 구현하는 방법
 - HashRouter사용시 이미지 경로를 안전하게 처리하는 방법
+- emailJs를 이용하여 사용자가 입력한 내용을 이메일로 받는 방법
