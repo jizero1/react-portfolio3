@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import projectsData from './projectsData.json';
 import { FaTimes } from "react-icons/fa";
 
-const ProjectView = ({ isClick, handleProjectOpenClose }) => {
+const ProjectView = ({ isClick, handleProjectOpenClose, data }) => {
 
     return (
         <>
@@ -11,6 +11,7 @@ const ProjectView = ({ isClick, handleProjectOpenClose }) => {
                 <div className="projectView-container-black">
                     <div className="projectView-container-white">
                         <button className="projectView-closeBtn common-flex" onClick={handleProjectOpenClose}><FaTimes /></button>
+                        <p>{data}</p>
                     </div>
                 </div>
             )}
@@ -25,11 +26,17 @@ const ProjectHeader = () => {
         </div>
     )
 }
-const Projects = ({ isClick, handleProjectOpenClose }) => {
+const Projects = ({handleProjectOpenClose, projectData }) => {
     const projectsLinkClick = (link) => {
         window.open(link, '_blank');
         alert("클릭")
     }
+    // 자세히보기 버튼을 누르면 모달창 내부에 전달된 내용들이 떠야함.
+    // 자세히보기 함수를 통해 모달창 내용을 전달하고,
+    // 그 내용들은 ProjectView 컴포넌트안의 모달창에 떠야함.
+    // const projectData = (data) => {
+    //     console.log(data);
+    // }
     return (
         <div className="projects-container common-flex">
             {projectsData.map(item => (
@@ -39,7 +46,7 @@ const Projects = ({ isClick, handleProjectOpenClose }) => {
                         <div className="projects-box-btn-container common-flex">
                             <button className="projects-box-btn" onClick={() => {
                                 handleProjectOpenClose();
-                                projectData();
+                                projectData(item.projectName);
                             }}>자세히보기</button>
                             <button className="projects-box-btn" onClick={() => projectsLinkClick(item.projectLink)}>프로젝트 링크</button>
                         </div>
@@ -56,11 +63,16 @@ const Project = () => {
         setIsClick(!isClick);
     }
 
+    const [data, setData] = useState("");
+     const projectData = (data) => {
+        console.log(data);
+        setData(data);
+    }
     return (
         <div className="project-container common-background">
-            <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} />
+            <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} data={data}/>
             <ProjectHeader />
-            <Projects isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} />
+            <Projects handleProjectOpenClose={handleProjectOpenClose} projectData={projectData}/>
         </div>
     )
 }
