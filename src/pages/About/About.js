@@ -126,7 +126,7 @@ const Contact = () => {
                 </form>
                 <div className="contact-infoCard common-flex">
                     <img src={process.env.PUBLIC_URL+"/images/cursorStar.png"} style={{marginBottom: 20}}></img>
-                    <p>제 포트폴리오에 대해 더 궁금하신점이 있으시다면, 언제든지 연락 주세요!</p>
+                    <p style={{lineHeight: 1.7}}>제 포트폴리오에 대해 더 궁금하신 점이 있으시다면 언제든지 연락 주세요. 성실히 답변 드리겠습니다. 감사합니다!</p>
                 </div>
             </div>
 
