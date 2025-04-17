@@ -3,28 +3,68 @@
         "id": 0,
         "projectName": "프로젝트 1",
         "projectImg": "/images/projects/project1.png",
-        "projectReadMore": "",
+        "projectReadMore": [
+            {
+                "name": "프로젝트 1",
+                "description": "프로젝트 1 설명 ~~",
+                "date": "2025~~",
+                "developer": "최지영",
+                "tools": "react, css",
+                "functions": "핵심 기능~~",
+                "challenges": "문제해결~~"
+            }
+        ],
         "projectLink": "naver.com"
     },
     {
         "id": 0,
         "projectName": "프로젝트 2",
         "projectImg": "/images/projects/project1.png",
-        "projectReadMore": "",
+        "projectReadMore": [
+            {
+                "name": "프로젝트 2",
+                "description": "프로젝트 2 설명 ~~",
+                "date": "2025~~",
+                "developer": "최지영",
+                "tools": "react, css",
+                "functions": "핵심 기능~~",
+                "challenges": "문제해결~~"
+            }
+        ],
         "projectLink": ""
     },
     {
         "id": 0,
         "projectName": "프로젝트 3",
         "projectImg": "/images/projects/project1.png",
-        "projectReadMore": "",
+        "projectReadMore": [
+            {
+                "name": "프로젝트 3",
+                "description": "프로젝트 3 설명 ~~",
+                "date": "2025~~",
+                "developer": "최지영",
+                "tools": "react, css",
+                "functions": "핵심 기능~~",
+                "challenges": "문제해결~~"
+            }
+        ],
         "projectLink": ""
     },
     {
         "id": 0,
         "projectName": "프로젝트 4",
         "projectImg": "/images/projects/project1.png",
-        "projectReadMore": "",
+        "projectReadMore": [
+            {
+                "name": "프로젝트 4",
+                "description": "프로젝트 4 설명 ~~",
+                "date": "2025~~",
+                "developer": "최지영",
+                "tools": "react, css",
+                "functions": "핵심 기능~~",
+                "challenges": "문제해결~~"
+            }
+        ],
         "projectLink": ""
     }
 ]

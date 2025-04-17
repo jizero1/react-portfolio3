@@ -3,16 +3,23 @@ import React, { useState } from 'react';
 import projectsData from './projectsData.json';
 import { FaTimes } from "react-icons/fa";
 
-const ProjectView = ({ isClick, handleProjectOpenClose, data }) => {
+const ProjectView = ({ isClick, handleProjectOpenClose, selectedProject }) => {
+
 
     return (
         <>
             {isClick && (
                 <div className="projectView-container-black">
-                    <div className="projectView-container-white">
-                        <button className="projectView-closeBtn common-flex" onClick={handleProjectOpenClose}><FaTimes /></button>
-                        <p>{data}</p>
-                    </div>
+
+                        <div className="projectView-container-white">
+                            <button className="projectView-closeBtn common-flex" onClick={handleProjectOpenClose}><FaTimes /></button>
+                            {selectedProject.projectReadMore.map((data, index) => (
+                                <div key={index}>
+                                    <p>{data.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                
                 </div>
             )}
         </>
@@ -26,17 +33,11 @@ const ProjectHeader = () => {
         </div>
     )
 }
-const Projects = ({handleProjectOpenClose, projectData }) => {
+const Projects = ({ handleProjectOpenClose, setSelectedProject }) => {
     const projectsLinkClick = (link) => {
         window.open(link, '_blank');
         alert("클릭")
     }
-    // 자세히보기 버튼을 누르면 모달창 내부에 전달된 내용들이 떠야함.
-    // 자세히보기 함수를 통해 모달창 내용을 전달하고,
-    // 그 내용들은 ProjectView 컴포넌트안의 모달창에 떠야함.
-    // const projectData = (data) => {
-    //     console.log(data);
-    // }
     return (
         <div className="projects-container common-flex">
             {projectsData.map(item => (
@@ -46,7 +47,7 @@ const Projects = ({handleProjectOpenClose, projectData }) => {
                         <div className="projects-box-btn-container common-flex">
                             <button className="projects-box-btn" onClick={() => {
                                 handleProjectOpenClose();
-                                projectData(item.projectName);
+                                setSelectedProject(item);
                             }}>자세히보기</button>
                             <button className="projects-box-btn" onClick={() => projectsLinkClick(item.projectLink)}>프로젝트 링크</button>
                         </div>
@@ -61,18 +62,21 @@ const Project = () => {
     const [isClick, setIsClick] = useState(false);
     const handleProjectOpenClose = () => {
         setIsClick(!isClick);
+        console.log(isClick);
     }
 
-    const [data, setData] = useState("");
-     const projectData = (data) => {
-        console.log(data);
-        setData(data);
-    }
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    // const [data, setData] = useState("");
+    // const projectData = (data) => {
+    //     console.log(data);
+    //     setData(data);
+    // }
     return (
         <div className="project-container common-background">
-            <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} data={data}/>
+            <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} selectedProject={selectedProject}/>
             <ProjectHeader />
-            <Projects handleProjectOpenClose={handleProjectOpenClose} projectData={projectData}/>
+            <Projects handleProjectOpenClose={handleProjectOpenClose} setSelectedProject={setSelectedProject}/>
         </div>
     )
 }
