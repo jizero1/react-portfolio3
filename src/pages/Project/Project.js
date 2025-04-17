@@ -11,16 +11,47 @@ const ProjectView = ({ isClick, handleProjectOpenClose, selectedProject }) => {
             {isClick && (
                 <div className="projectView-container-black">
 
-                        <div className="projectView-container-white">
-                            <button className="projectView-closeBtn common-flex" onClick={handleProjectOpenClose}><FaTimes /></button>
-                            {selectedProject.projectReadMore.map((data, index) => (
-                                <div key={index}>
-                                    <p>{data.name}</p>
+                    <div className="projectView-container-white">
+                        <button className="projectView-closeBtn common-flex" onClick={handleProjectOpenClose}><FaTimes /></button>
+                        {/* Projects 컴포넌트 내에서 현재 클릭한 프로젝트 데이터를 selectedProject에 저장했고, 해당 데이터를 map함수를 이용하여 출력함 */}
+                        {selectedProject.projectReadMore.map((data, index) => (
+                            <div key={index} className="readMore-container common-flex">
+                                <div className="readMore-title-container common-flex">
+                                    <p className="readMore-name">{data.name}</p>
+                                    <p className="readMore-date">{data.date}</p>
                                 </div>
-                            ))}
-                        </div>
-                
+                                <div className="common-readMore-text">
+                                    <p className="common-readMore-text-title">📌 프로젝트 소개</p>
+                                    <p className="readMore-description">{data.description}</p>
+                                </div>
+                                <div className="common-readMore-text">
+                                    <p className="common-readMore-text-title">👩‍💻 개발자</p>
+                                    <p>{data.developer}</p>
+                                </div>
+                                <div className="common-readMore-text">
+                                    <p className="common-readMore-text-title">🛠 개발 기술</p>
+                                    <p>{data.tools}</p>
+                                </div>
+                                <div className="common-readMore-text">
+                                    <p className="common-readMore-text-title">🔗 링크 모음</p>
+                                    <div style={{ display: 'flex' }}>
+                                        <p>{data.githubLink}</p>
+                                        <p>{data.projectLink}</p>
+                                    </div>
+                                </div>
+                                <div className="common-readMore-text">
+                                    <p className="common-readMore-text-title">✨ 프로젝트의 주요 기능</p>
+                                    <p>{data.functions}</p>
+                                </div>
+                                <div className="common-readMore-text">
+                                    <p className="common-readMore-text-title">🧩 문제 해결 경험 / 배운 점</p>
+                                    <p>{data.challenges}</p>
+                                </div>
+                            </div>
+                        ))}
                 </div>
+
+                </div >
             )}
         </>
     )
@@ -74,9 +105,9 @@ const Project = () => {
     // }
     return (
         <div className="project-container common-background">
-            <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} selectedProject={selectedProject}/>
+            <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} selectedProject={selectedProject} />
             <ProjectHeader />
-            <Projects handleProjectOpenClose={handleProjectOpenClose} setSelectedProject={setSelectedProject}/>
+            <Projects handleProjectOpenClose={handleProjectOpenClose} setSelectedProject={setSelectedProject} />
         </div>
     )
 }

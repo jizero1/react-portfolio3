@@ -95,15 +95,56 @@
     background-color: white;
     border-radius: 15px;
     position: relative;
+    /* padding: 45px; */
 }
 .projectView-closeBtn {
-    width: 50px;
-    height: 35px;
+    width: 42px;
+    height: 28px;
     border-radius: 15px;
     border-style: none;
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
+    background-color: white;
+}
+
+
+
+
+
+/* 모달창 내부 프로젝트 데이터 디자인  */
+.readMore-container {
+    flex-direction: column;
+}
+.readMore-container .readMore-title-container {
+    width: 100%;
+    background-color: pink;
+    flex-direction: column;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+.readMore-title-container .readMore-name {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.readMore-title-container .readMore-date {
+    font-size: 14px;
+        /* margin-bottom: 30px; */
+}
+.readMore-container .common-readMore-text {
+    width: 100%;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.common-readMore-text .common-readMore-text-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }

@@ -6,12 +6,14 @@
         "projectReadMore": [
             {
                 "name": "프로젝트 1",
+                "date": "2025.00~00",
                 "description": "프로젝트 1 설명 ~~",
-                "date": "2025~~",
                 "developer": "최지영",
                 "tools": "react, css",
+                "githubLink": "깃헙링크~!",
+                "projectLink":"프로젝트 링크~~!",
                 "functions": "핵심 기능~~",
-                "challenges": "문제해결~~"
+                "challenges": "문제해결한거~~"
             }
         ],
         "projectLink": "naver.com"
