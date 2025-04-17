@@ -1,72 +1,116 @@
 [
     {
-        "id": 0,
-        "projectName": "프로젝트 1",
+        "id": 1,
+        "projectName": "퍼스널컬러 테스트",
         "projectImg": "/images/projects/project1.png",
         "projectReadMore": [
             {
-                "name": "프로젝트 1",
+                "name": "퍼스널컬러 테스트",
+                "date": "2025.02~03",
+                "description": "퍼스널컬러에 대한 소개와 퍼스널컬러 테스트를 할 수 있는 홈페이지 입니다. 총 6개의 질문에 선택을 하면 테스트 결과가 나타납니다. 테스트를 통해 사용자는 자신의 퍼스널 컬러는 무엇인지, 그리고 어울리는 색상 및 스타일링 등에 대한 정보를 얻을 수 있습니다.",
+                "developer": "최지영",
+                "tools": "React / React Router",
+                "githubLink": "https://github.com/jizero1/project-personal",
+                "projectLink": "https://jizero1.github.io/project-personal/",
+                "functions": [
+                    {
+                        "number": "1. 퍼스널 컬러 소개",
+                        "content": "About 페이지에서는 퍼스널 컬러에 대한 의미, 종류, 활용 등에 대한 정보를 확인 할 수 있습니다."
+                    },
+                    {
+                        "number": "2. 퍼스널 컬러 테스트",
+                        "content": "총 6가지 질문으로 구성되어있으며, 1-3번 질문은 웜/쿨 구분을 위한 테스트이며 4-6번 질문은 웜 또는 쿨의 세부 테스트로 진행 됩니다. 모든 테스트가 완료되면 테스트 결과가 나오게 되는데 해당 퍼스널컬러에 대한 특징 / 추천하는 컬러팔레트 / 스타일링 팁 등을 확인 할 수 있습니다."
+                    }
+                ],
+                "images": [
+                    {
+                        "name": "이미지1",
+                        "img": "/images/projects/project1.png"
+                    },
+                    {
+                        "name": "이미지2",
+                        "img": "/images/projects/project1.png"
+                    }
+                ],
+                "challenges": "문제해결한거~~"
+            }
+        ],
+        "projectLink": "https://jizero1.github.io/project-personal/"
+    },
+    {
+        "id": 2,
+        "projectName": "실시간 날씨",
+        "projectImg": "/images/projects/project2.png",
+        "projectReadMore": [
+            {
+                "name": "프로젝트 2",
                 "date": "2025.00~00",
-                "description": "프로젝트 1 설명 ~~",
+                "description": "프로젝트 2 설명 ~~",
                 "developer": "최지영",
                 "tools": "react, css",
-                "githubLink": "깃헙링크~!",
-                "projectLink":"프로젝트 링크~~!",
+                "githubLink": "https://github.com/jizero1/weather",
+                "projectLink": "https://weather-project-peach-xi.vercel.app",
                 "functions": "핵심 기능~~",
                 "challenges": "문제해결한거~~"
             }
         ],
-        "projectLink": "naver.com"
+        "projectLink": "https://weather-project-peach-xi.vercel.app"
     },
     {
-        "id": 0,
-        "projectName": "프로젝트 2",
-        "projectImg": "/images/projects/project1.png",
-        "projectReadMore": [
-            {
-                "name": "프로젝트 2",
-                "description": "프로젝트 2 설명 ~~",
-                "date": "2025~~",
-                "developer": "최지영",
-                "tools": "react, css",
-                "functions": "핵심 기능~~",
-                "challenges": "문제해결~~"
-            }
-        ],
-        "projectLink": ""
-    },
-    {
-        "id": 0,
-        "projectName": "프로젝트 3",
-        "projectImg": "/images/projects/project1.png",
+        "id": 3,
+        "projectName": "달력 일기",
+        "projectImg": "/images/projects/project3.png",
         "projectReadMore": [
             {
                 "name": "프로젝트 3",
+                "date": "2025.00~00",
                 "description": "프로젝트 3 설명 ~~",
-                "date": "2025~~",
                 "developer": "최지영",
                 "tools": "react, css",
+                "githubLink": "https://github.com/jizero1/CalendarDiary",
+                "projectLink": "https://jizero1.github.io/CalendarDiary/",
                 "functions": "핵심 기능~~",
-                "challenges": "문제해결~~"
+                "challenges": "문제해결한거~~"
             }
         ],
-        "projectLink": ""
+        "projectLink": "https://jizero1.github.io/CalendarDiary/"
     },
     {
-        "id": 0,
-        "projectName": "프로젝트 4",
-        "projectImg": "/images/projects/project1.png",
+        "id": 4,
+        "projectName": "하루 토마토",
+        "projectImg": "/images/projects/project4.png",
         "projectReadMore": [
             {
                 "name": "프로젝트 4",
+                "date": "2025.00~00",
                 "description": "프로젝트 4 설명 ~~",
-                "date": "2025~~",
                 "developer": "최지영",
                 "tools": "react, css",
+                "githubLink": "깃헙링크~!",
+                "projectLink": "https://play.google.com/store/apps/details?id=com.jizerotodo",
                 "functions": "핵심 기능~~",
-                "challenges": "문제해결~~"
+                "challenges": "문제해결한거~~"
             }
         ],
-        "projectLink": ""
+        "projectLink": "https://play.google.com/store/apps/details?id=com.jizerotodo"
+    },
+    {
+        "id": 5,
+        "projectName": "최지영의 포트폴리오",
+        "projectImg": "/images/projects/project5.png",
+        "projectReadMore": [
+            {
+                "name": "프로젝트 5",
+                "date": "2025.00~00",
+                "description": "프로젝트 5 설명 ~~",
+                "developer": "최지영",
+                "tools": "react, css",
+                "githubLink": "https://github.com/jizero1/react-portfolio3",
+                "projectLink": "https://jizero1.github.io/react-portfolio3/",
+                "functions": "핵심 기능~~",
+                "challenges": "문제해결한거~~"
+            }
+        ],
+        "projectLink": "https://jizero1.github.io/react-portfolio3/"
     }
 ]

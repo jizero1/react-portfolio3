@@ -20,36 +20,50 @@ const ProjectView = ({ isClick, handleProjectOpenClose, selectedProject }) => {
                                     <p className="readMore-name">{data.name}</p>
                                     <p className="readMore-date">{data.date}</p>
                                 </div>
-                                <div className="common-readMore-text">
+                                <div className="common-readMore-text-container">
                                     <p className="common-readMore-text-title">📌 프로젝트 소개</p>
-                                    <p className="readMore-description">{data.description}</p>
+                                    <p className="readMore-description common-readMore-text">{data.description}</p>
                                 </div>
-                                <div className="common-readMore-text">
+                                <div className="common-readMore-text-container">
                                     <p className="common-readMore-text-title">👩‍💻 개발자</p>
-                                    <p>{data.developer}</p>
+                                    <p className="common-readMore-text">{data.developer}</p>
                                 </div>
-                                <div className="common-readMore-text">
+                                <div className="common-readMore-text-container">
                                     <p className="common-readMore-text-title">🛠 개발 기술</p>
-                                    <p>{data.tools}</p>
+                                    <p className="common-readMore-text">{data.tools}</p>
                                 </div>
-                                <div className="common-readMore-text">
+                                <div className="common-readMore-text-container">
+                                    <p className="common-readMore-text-title">✨ 주요 기능</p>
+                                    {data.functions.map((functionNumber, index) => (
+                                        <div key={index}>
+                                            <p className="common-readMore-text-number">{functionNumber.number}</p>
+                                            <p className="functionNumber-text common-readMore-text">{functionNumber.content}</p>
+                                        </div>
+
+                                    ))}
+
+                                </div>
+                                <div className="common-readMore-text-container">
+                                    {data.images.map((image, index) => (
+                                        <div key={index} className="readMore-image-container">
+                                            <img src={process.env.PUBLIC_URL + image.img} alt={image.name} style={{width: '290px', height:'180px'}}></img>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="common-readMore-text-container">
+                                    <p className="common-readMore-text-title">🧩 문제 해결 경험 / 배운 점</p>
+                                    <p className="common-readMore-text">{data.challenges}</p>
+                                </div>
+                                <div className="common-readMore-text-container">
                                     <p className="common-readMore-text-title">🔗 링크 모음</p>
                                     <div style={{ display: 'flex' }}>
                                         <p>{data.githubLink}</p>
                                         <p>{data.projectLink}</p>
                                     </div>
                                 </div>
-                                <div className="common-readMore-text">
-                                    <p className="common-readMore-text-title">✨ 프로젝트의 주요 기능</p>
-                                    <p>{data.functions}</p>
-                                </div>
-                                <div className="common-readMore-text">
-                                    <p className="common-readMore-text-title">🧩 문제 해결 경험 / 배운 점</p>
-                                    <p>{data.challenges}</p>
-                                </div>
                             </div>
                         ))}
-                </div>
+                    </div>
 
                 </div >
             )}
@@ -67,7 +81,7 @@ const ProjectHeader = () => {
 const Projects = ({ handleProjectOpenClose, setSelectedProject }) => {
     const projectsLinkClick = (link) => {
         window.open(link, '_blank');
-        alert("클릭")
+        // alert("클릭")
     }
     return (
         <div className="projects-container common-flex">
@@ -75,6 +89,7 @@ const Projects = ({ handleProjectOpenClose, setSelectedProject }) => {
                 <div key={item.id} className="projects-box-container common-flex">
                     <div className="projects-box common-flex">
                         <img className="projects-box-img" src={process.env.PUBLIC_URL + item.projectImg} alt={item.projectName}></img>
+                        <p className="project-box-name">{item.projectName}</p>
                         <div className="projects-box-btn-container common-flex">
                             <button className="projects-box-btn" onClick={() => {
                                 handleProjectOpenClose();
