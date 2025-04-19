@@ -1,38 +1,57 @@
 [
     {
         "id": 1,
-        "projectName": "퍼스널컬러 테스트",
+        "projectName": "퍼스널 컬러 테스트",
+        "shortDescription": "퍼스널 컬러에 대한 소개 및 테스트 페이지",
         "projectImg": "/images/projects/project1.png",
+        "projectTools": [
+            {
+                "tool": "React"
+            },
+            {
+                "tool": "CSS"
+            },
+            {
+                "tool": "React Router"
+            }
+        ],
         "projectReadMore": [
             {
-                "name": "퍼스널컬러 테스트",
+                "name": "퍼스널 컬러 테스트",
                 "date": "2025.02~03",
-                "description": "퍼스널컬러에 대한 소개와 퍼스널컬러 테스트를 할 수 있는 홈페이지 입니다. 총 6개의 질문에 선택을 하면 테스트 결과가 나타납니다. 테스트를 통해 사용자는 자신의 퍼스널 컬러는 무엇인지, 그리고 어울리는 색상 및 스타일링 등에 대한 정보를 얻을 수 있습니다.",
+                "description": "퍼스널 컬러에 대한 소개와 퍼스널 컬러 테스트를 할 수 있는 홈페이지 입니다. 총 6개의 질문으로 테스트가 진행되고, 테스트가 완료되면 퍼스널 컬러 결과를 확인 할 수 있습니다. 테스트를 통해 사용자는 자신의 퍼스널 컬러는 무엇이고, 어울리는 색상 및 스타일링은 어떻게 되는지에 대한 다양한 정보들을 얻을 수 있습니다.",
                 "developer": "최지영",
-                "tools": "React / React Router",
+                "tools": "React / CSS / React Router",
                 "githubLink": "https://github.com/jizero1/project-personal",
                 "projectLink": "https://jizero1.github.io/project-personal/",
+                "titleColor": "rgb(96,60,177)",
+                "titleTextColor": "white",
                 "functions": [
                     {
-                        "number": "1. 퍼스널 컬러 소개",
+                        "number": "• 퍼스널 컬러 소개",
                         "content": "About 페이지에서는 퍼스널 컬러에 대한 의미, 종류, 활용 등에 대한 정보를 확인 할 수 있습니다."
                     },
                     {
-                        "number": "2. 퍼스널 컬러 테스트",
+                        "number": "• 퍼스널 컬러 테스트",
                         "content": "총 6가지 질문으로 구성되어있으며, 1-3번 질문은 웜/쿨 구분을 위한 테스트이며 4-6번 질문은 웜 또는 쿨의 세부 테스트로 진행 됩니다. 모든 테스트가 완료되면 테스트 결과가 나오게 되는데 해당 퍼스널컬러에 대한 특징 / 추천하는 컬러팔레트 / 스타일링 팁 등을 확인 할 수 있습니다."
                     }
                 ],
                 "images": [
                     {
                         "name": "이미지1",
-                        "img": "/images/projects/project1.png"
+                        "img": "/images/projects/project1Detail1.png"
                     },
                     {
                         "name": "이미지2",
-                        "img": "/images/projects/project1.png"
+                        "img": "/images/projects/project1Detail2.png"
                     }
                 ],
-                "challenges": "문제해결한거~~"
+                "challenges": [
+                    {
+                        "number": "• 퍼스널 컬러 테스트에서 사용자의 선택 저장",
+                        "content": "퍼스널 컬러 테스트 기능을 구현할 때, 사용자의 선택을 저장하고 결과를 비교하는 과정에서 어려움을 겪었습니다. 사용자가 선택 할 때마다 값이 비동기적으로 업데이트 되면서, 값 비교가 예상과 다르게 작동하는 문제가 발생했습니다. 이를 해결하기 위해 상태 업데이트 직후에 바로 값 비교를 하는 것 보다는, useEffect를 사용해서 선택 값의 길이를 감지하고, 모든 선택이 완료된 시점에만 결과 비교를 하도록 했습니다. 이 문제를 해결 하면서 React에서의 상태관리와, 비동기적인 상태 업데이트의 타이밍이 코드 동작에 얼마나 중요한 것인지 알게 되었습니다."
+                    }
+                ]
             }
         ],
         "projectLink": "https://jizero1.github.io/project-personal/"
@@ -40,18 +59,60 @@
     {
         "id": 2,
         "projectName": "실시간 날씨",
+        "shortDescription": "실시간 날씨 데이터를 확인할 수 있는 웹 앱",
         "projectImg": "/images/projects/project2.png",
+        "projectTools": [
+            {
+                "tool": "React"
+            },
+            {
+                "tool": "CSS"
+            },
+            {
+                "tool": "OpenWeather API"
+            }
+        ],
         "projectReadMore": [
             {
-                "name": "프로젝트 2",
-                "date": "2025.00~00",
-                "description": "프로젝트 2 설명 ~~",
+                "name": "실시간 날씨 ⛅",
+                "date": "2024.12~2025.01",
+                "description": "사용자의 현재 위치 기반으로 다양한 날씨 정보를 제공 하는 페이지",
                 "developer": "최지영",
-                "tools": "react, css",
+                "tools": "React / CSS / OpenWeather API",
                 "githubLink": "https://github.com/jizero1/weather",
                 "projectLink": "https://weather-project-peach-xi.vercel.app",
-                "functions": "핵심 기능~~",
-                "challenges": "문제해결한거~~"
+                "titleColor": "rgb(98,109,157)",
+                "titleTextColor": "white",
+                "functions": [
+                    {
+                        "number": "• 실시간 날씨 정보 표시",
+                        "content": "OpenWeather Api를 통해 사용자의 현재 위치에 맞는 날씨 정보를 제공 합니다. 사용자가 이해하기 쉽도록 적절한 텍스트(ex. 맑음)와 날씨 아이콘(ex. 상태코드 800은 햇빛 아이콘)을 표시해주었고, 그밖에도 구름의 양 / 습도 / 바람 속도 등 다양한 날씨 관련 정보들을 표시해주었습니다."
+                    },
+                    {
+                        "number": "• .gitignore 파일로 보안 유지",
+                        "content": "API를 외부에 노출 하지 않기 위해 환경변수로 관리하며, .gitignore파일을 생성하여 주요 정보가 github에 업로드 되지 않도록 하였습니다."
+                    },
+                    {
+                        "number": "• Node.js로 서버 구축",
+                        "content": "비동기 데이터 처리 및 API연동을 위해 Node.js를 이용하여 서버를 구축 하였습니다."
+                    }
+                ],
+                "images": [
+                    {
+                        "name": "이미지1",
+                        "img": "/images/projects/project2Detail1.png"
+                    }
+                ],
+                "challenges": [
+                    {
+                        "number": "• Node.js로 API서버 구축이 처음이라 겪은 문제",
+                        "content": "OpenWeather API를 사용할 때 CORS 에러로 날씨 정보가 표시되지 않아, Node.js와 Express로 서버를 구축해 프록시 방식으로 문제를 해결했습니다. 이 과정에서 .env 파일로 API 키를 안전하게 관리하고, 위치 접근 거부 시 예외 처리도 구현했습니다. 날씨 상태 코드를 텍스트와 아이콘으로 변환하며 UI 연동도 경험했고, 프론트와 백엔드 연결에 대한 이해를 높일 수 있었습니다."
+                    },
+                    {
+                        "number": "• 날씨 코드(800, 801) 등을 사용자가 알아보기 쉽게 변환하는 과정",
+                        "content": "OpenWeather에서 제공되는 날씨 상태코드는 숫자로 되어있는데 각 상태코드마다 해당되는 아이콘을 보여주기 위해 switch문을 이용하여 변환해주었습니다."
+                    }
+                ]
             }
         ],
         "projectLink": "https://weather-project-peach-xi.vercel.app"
@@ -59,18 +120,48 @@
     {
         "id": 3,
         "projectName": "달력 일기",
+        "shortDescription": "달력 기반의 감정 일기 앱",
         "projectImg": "/images/projects/project3.png",
+        "projectTools": [
+            {
+                "tool": "React"
+            },
+            {
+                "tool": "CSS"
+            },
+            {
+                "tool": "Local Storage"
+            }
+        ],
         "projectReadMore": [
             {
-                "name": "프로젝트 3",
+                "name": "달력 일기",
                 "date": "2025.00~00",
-                "description": "프로젝트 3 설명 ~~",
+                "description": "감정을 기록할 수 있는 달력 일기 앱입니다.",
                 "developer": "최지영",
-                "tools": "react, css",
+                "tools": "React / CSS / LocalStorage",
                 "githubLink": "https://github.com/jizero1/CalendarDiary",
                 "projectLink": "https://jizero1.github.io/CalendarDiary/",
-                "functions": "핵심 기능~~",
-                "challenges": "문제해결한거~~"
+                "titleColor": "rgb(96,60,177)",
+                "titleTextColor": "white",
+                "functions": [
+                    {
+                        "number": "• 감정 기록 기능",
+                        "content": "사용자가 날짜별로 감정을 기록하고 조회할 수 있습니다."
+                    }
+                ],
+                "images": [
+                    {
+                        "name": "이미지1",
+                        "img": "/images/projects/project3Detail1.png"
+                    }
+                ],
+                "challenges": [
+                    {
+                        "number": "• 로컬스토리지 데이터 관리",
+                        "content": "데이터를 날짜별로 저장/불러오는 구조를 설계하고 예외 처리를 구현했습니다."
+                    }
+                ]
             }
         ],
         "projectLink": "https://jizero1.github.io/CalendarDiary/"
@@ -78,18 +169,48 @@
     {
         "id": 4,
         "projectName": "하루 토마토",
+        "shortDescription": "Pomodoro 타이머 기반의 할 일 관리 앱",
         "projectImg": "/images/projects/project4.png",
+        "projectTools": [
+            {
+                "tool": "React Native"
+            },
+            {
+                "tool": "Expo"
+            },
+            {
+                "tool": "AsyncStorage"
+            }
+        ],
         "projectReadMore": [
             {
-                "name": "프로젝트 4",
+                "name": "하루 토마토",
                 "date": "2025.00~00",
-                "description": "프로젝트 4 설명 ~~",
+                "description": "Pomodoro 기법을 기반으로 한 하루 할 일 관리 앱입니다.",
                 "developer": "최지영",
-                "tools": "react, css",
-                "githubLink": "깃헙링크~!",
+                "tools": "React Native / Expo / AsyncStorage",
+                "githubLink": "https://github.com/jizero1/tomato-app",
                 "projectLink": "https://play.google.com/store/apps/details?id=com.jizerotodo",
-                "functions": "핵심 기능~~",
-                "challenges": "문제해결한거~~"
+                "titleColor": "rgb(96,60,177)",
+                "titleTextColor": "white",
+                "functions": [
+                    {
+                        "number": "• Pomodoro 타이머",
+                        "content": "25분 집중 / 5분 휴식을 반복하는 타이머 기능을 제공합니다."
+                    }
+                ],
+                "images": [
+                    {
+                        "name": "이미지1",
+                        "img": "/images/projects/project4Detail1.png"
+                    }
+                ],
+                "challenges": [
+                    {
+                        "number": "• 모바일 환경에서 타이머 유지",
+                        "content": "백그라운드 전환 시 타이머가 멈추는 이슈를 해결했습니다."
+                    }
+                ]
             }
         ],
         "projectLink": "https://play.google.com/store/apps/details?id=com.jizerotodo"
@@ -97,18 +218,54 @@
     {
         "id": 5,
         "projectName": "최지영의 포트폴리오",
+        "shortDescription": "개인 포트폴리오 웹사이트",
         "projectImg": "/images/projects/project5.png",
+        "projectTools": [
+            {
+                "tool": "React"
+            },
+            {
+                "tool": "CSS"
+            },
+            {
+                "tool": "React Router"
+            },
+            {
+                "tool": "emailJs"
+            },
+            {
+                "tool": "Lottie"
+            }
+        ],
         "projectReadMore": [
             {
-                "name": "프로젝트 5",
+                "name": "최지영의 포트폴리오",
                 "date": "2025.00~00",
-                "description": "프로젝트 5 설명 ~~",
+                "description": "최지영 개발자의 포트폴리오 웹사이트입니다.",
                 "developer": "최지영",
-                "tools": "react, css",
+                "tools": "React / CSS / React Router / emailJs / Lottie",
                 "githubLink": "https://github.com/jizero1/react-portfolio3",
                 "projectLink": "https://jizero1.github.io/react-portfolio3/",
-                "functions": "핵심 기능~~",
-                "challenges": "문제해결한거~~"
+                "titleColor": "rgb(96,60,177)",
+                "titleTextColor": "white",
+                "functions": [
+                    {
+                        "number": "• 프로젝트 소개",
+                        "content": "각 프로젝트에 대한 상세 내용을 카드 형태로 확인할 수 있습니다."
+                    }
+                ],
+                "images": [
+                    {
+                        "name": "이미지1",
+                        "img": "/images/projects/project5Detail1.png"
+                    }
+                ],
+                "challenges": [
+                    {
+                        "number": "• GSAP과 Three.js 연동",
+                        "content": "애니메이션과 3D 요소를 함께 다루는 과정에서 렌더링 성능 문제를 해결했습니다."
+                    }
+                ]
             }
         ],
         "projectLink": "https://jizero1.github.io/react-portfolio3/"

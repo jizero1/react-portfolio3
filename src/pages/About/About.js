@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect, form } from 'react';
 import './About.css';
 import skillsData from './skillsData.json';
 import visionData from './visionData.json';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+// import gsap from 'gsap';
+// import ScrollTrigger from 'gsap/ScrollTrigger';
 import { FaCircle } from "react-icons/fa";
 import emailjs from 'emailjs-com';
 
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 
 // 자기소개, 기술소개, 개발자로서 목표와 비전

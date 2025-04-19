@@ -8,8 +8,8 @@ import Menu from './pages/Menu/Menu';
 import Footer from './Footer.js';
 import { Provider } from 'react-redux';
 import store from './store';
-import Lottie from "lottie-react";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+// import Lottie from "lottie-react";
+// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { FaAngleUp } from "react-icons/fa";
 
 

@@ -1,17 +1,22 @@
-.project-container{
+.project-container {
     width: 100vw;
     /* height: 2500px; */
     padding: 50px;
     position: relative;
 }
+
 /* project 헤더 부분 디자인  */
 .project-header-container {
     width: 100%;
-    height: 230px;
+    /* height: 20px; */
 }
+
 .project-header-container .project-header-text {
     margin-top: 25px;
     font-size: 16px;
+    line-height: 26px;
+    /* background-color: pink; */
+    margin-bottom: 40px;
 }
 
 
@@ -24,56 +29,115 @@
     /* background-color: grey; */
     flex-wrap: wrap;
 }
+
 .projects-container .projects-box-container {
-    width: 390px;
-    height: 430px;
+    width: 420px;
+    height: 470px;
     /* background-color: pink; */
-    margin: 10px;
+    margin: 30px 16px 50px 16px;
     flex-direction: column;
-}
-.projects-box-container .projects-box {
-    width: 95%;
-    height: 400px;
-    background-color: white;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
     border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-box-container .projects-box {
+    width: 100%;
+    /* height: 500px; */
+    height: 100%;
+    background-color: white;
+    
     flex-direction: column;
     position: relative;
+    /* padding: 40px; */
 }
+
 .projects-box .projects-box-img {
-    width: 90%;
-    height: 210px;
+    width: 100%;
+    /* height: 200px; */
     position: absolute;
-    top: 30px;
-    border-radius: 10px;
+    top: 0px;
+    /* border-radius: 10px; */
+}
+.projects-box .proejcts-box-content {
+    width: 100%;
+    /* height: 50%; */
+    position: absolute;
+    bottom: 0px;
+    /* background-color: skyblue; */
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 20px 30px;
 }
 .projects-box .project-box-name {
-    position: absolute;
-    bottom: 105px;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    /* position: absolute;
+    top: 230px;
+    left: 30px; */
+    /* bottom: 105px; */
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    /* letter-spacing: 1px; */
 }
+
+.projects-box .project-box-shortDescription {
+    /* position: absolute;
+    top: 270px;
+    left: 30px; */
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
 .projects-box .projects-box-btn-container {
     width: 100%;
-    height: 100px;
+    /* height: 100px; */
     /* background-color: blue; */
-    position: absolute;
-    bottom: 5px;
+    /* position: absolute;
+    bottom: 5px; */
 }
-.projects-box-btn-container .projects-box-btn {
-    width: 130px;
-    height: 45px;
-    margin: 10px;
+
+.projects-box .project-box-toolsContainer {
+    /* position: absolute; */
+    /* bottom: 80px; */
+    display: flex;
+    /* position: absolute;
+    bottom: 95px;
+    left: 30px; */
+    margin-bottom: 20px;
+    width: 100%;
+    /* background-color: pink; */
+    /* flex-wrap: wrap; */
+
+}
+
+.project-box-toolsContainer .project-box-tools {
+    padding: 4px 8px 4px 8px;
+    background-color: rgb(242, 242, 242);
     border-radius: 15px;
+    /* margin-right: 17px; */
+    font-size: 13px;
+    /* margin-bottom: 5px; */
+    margin: 0px 10px 9px 0px;
+
+}
+
+.projects-box-btn-container .projects-box-btn {
+    width: 145px;
+    height: 44px;
+    margin: 0px 10px 10px 10px;
+    border-radius: 10px;
     border-style: none;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+    background-color: white;
+    border: 2px solid rgb(82,82,82);
 }
+
 .projects-box-btn-container .projects-box-btn:hover {
-    box-shadow: 2px 2px 4px rgb(0, 0, 0,0.2);
+    background-color: rgb(82,82,82);
+    color: white;
 }
+
 .projects-box-container .project-box-projectName {
     font-size: 17px;
     font-weight: 500;
@@ -85,12 +149,14 @@
 
 /* projects 자세히보기 클릭시 뜨는 모달창 디자인  */
 .projectView-container-black {
-    position: fixed;     /* 전체화면 기준으로 고정 */
+    position: fixed;
+    /* 전체화면 기준으로 고정 */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);  /* 어두운 반투명 배경 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 어두운 반투명 배경 */
     z-index: 1000;
     padding: 40px;
     /* overflow-y: auto; */
@@ -107,6 +173,7 @@
     position: relative;
     /* padding: 45px; */
 }
+
 .projectView-closeBtn {
     width: 42px;
     height: 28px;
@@ -128,22 +195,27 @@
 .readMore-container {
     flex-direction: column;
 }
+
 .readMore-container .readMore-title-container {
     width: 100%;
-    background-color: pink;
+    /* background-color: pink; */
     flex-direction: column;
-    padding: 40px;
-    margin-bottom: 20px;
+    padding: 50px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
 }
+
 .readMore-title-container .readMore-name {
     font-size: 35px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
+
 .readMore-title-container .readMore-date {
     font-size: 14px;
-        /* margin-bottom: 30px; */
+    /* margin-bottom: 30px; */
 }
+
 .readMore-container .common-readMore-text-container {
     width: 100%;
     /* background-color: skyblue; */
@@ -152,26 +224,61 @@
     padding: 17px 45px 17px 45px;
     margin-bottom: 10px;
 }
+
 .common-readMore-text-container .common-readMore-text {
     font-size: 15px;
     line-height: 25px;
     letter-spacing: 0.5px;
 }
+
 .common-readMore-text-container .common-readMore-text-title {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
     overflow-y: hidden;
 }
+
 .common-readMore-text-container .common-readMore-text-number {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
 }
+
 .common-readMore-text-container .functionNumber-text {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-.common-readMore-text-container .readMore-image-container {
+
+.readMore-container .readMore-image-container {
     display: flex;
-    background-color: blue;
+    width: 90%;
+    flex-direction: row;
+    /* background-color: blue; */
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.readMore-container .readMore-image-container img {
+    margin: 0px 10px 0px 10px;
+    border-radius: 12px;
+}
+
+.common-readMore-text-container .readMore-linkBtn {
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    background-color: rgb(206, 217, 253);
+    border-radius: 15px;
+    /* border: 1.5px solid black; */
+    border-style: none;
+    margin-right: 15px;
+    box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.common-readMore-text-container .readMore-linkBtn a {
+    color: black;
+
+}
+
+.common-readMore-text-container .readMore-linkBtn:hover {
+    background-color: rgb(181, 194, 226);
 }
