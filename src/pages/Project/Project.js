@@ -37,7 +37,7 @@ const ProjectView = ({ isClick, handleProjectOpenClose, selectedProject }) => {
                                     {data.functions.map((functionNumber, index) => (
                                         <div key={index}>
                                             <p className="common-readMore-text-number">{functionNumber.number}</p>
-                                            <p className="functionNumber-text common-readMore-text">{functionNumber.content}</p>
+                                            <p className="common-readMore-text">{functionNumber.content}</p>
                                         </div>
 
                                     ))}
@@ -46,7 +46,7 @@ const ProjectView = ({ isClick, handleProjectOpenClose, selectedProject }) => {
                                 <div className="readMore-image-container common-readMore-text-container common-flex">
                                     {data.images.map((image, index) => (
                                         <div key={index}>
-                                            <img src={process.env.PUBLIC_URL + image.img} alt={image.name} style={{ width: '96%', height: '175px' }}></img>
+                                            <img src={process.env.PUBLIC_URL + image.img} alt={image.name}></img>
                                         </div>
                                     ))}
                                 </div>
