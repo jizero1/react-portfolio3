@@ -182,7 +182,7 @@
         "id": 4,
         "projectName": "하루 토마토",
         "shortDescription": "할일을 기록/관리하는 ToDoList 앱",
-        "projectImg": "/images/projects/project4.png",
+        "projectImg": "/images/projects/project4.jpeg",
         "projectTools": [
             {
                 "tool": "React Native"
@@ -200,7 +200,7 @@
                 "tools": "React Native / AsyncStorage",
                 "githubLink": "https://github.com/jizero1/tomato-app",
                 "projectLink": "https://play.google.com/store/apps/details?id=com.jizerotodo",
-                "titleColor": "rgb(96,60,177)",
+                "titleColor": "rgb(202,106,90)",
                 "titleTextColor": "white",
                 "functions": [
                     {
@@ -215,11 +215,11 @@
                 "images": [
                     {
                         "name": "토마토 앱 이미지1",
-                        "img": "/images/projects/project4Detail1.png"
+                        "img": "/images/projects/project4Detail1.jpeg"
                     },
                     {
                         "name": "토마토 앱 이미지2",
-                        "img": "/images/projects/project4Detail2.png"
+                        "img": "/images/projects/project4Detail2.jpeg"
                     }
                 ],
                 "challenges": [

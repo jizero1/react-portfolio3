@@ -45,7 +45,7 @@ const ProjectView = ({ isClick, handleProjectOpenClose, selectedProject }) => {
                                 </div>
                                 <div className="readMore-image-container common-readMore-text-container common-flex">
                                     {data.images.map((image, index) => (
-                                        <div key={index}>
+                                        <div key={index} style={{display: 'flex'}}>
                                             <img src={process.env.PUBLIC_URL + image.img} alt={image.name}></img>
                                         </div>
                                     ))}
