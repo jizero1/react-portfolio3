@@ -127,4 +127,20 @@ a {
   .pageLogo {
     overflow-y: hidden;
   }
+
+  .headerLine{
+    font-size: 45px;
+  }
+  .headerLine::before {
+    animation: headerLineAni 1.0s ease-out forwards;
+  }
+  @keyframes headerLineAni {
+    0% {
+        width: 0px;
+    }
+  
+    100% {
+        width: 250px;
+    }
+  }
 }

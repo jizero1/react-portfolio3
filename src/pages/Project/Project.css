@@ -285,3 +285,93 @@
 .common-readMore-text-container .readMore-linkBtn:hover {
     background-color: rgb(181, 194, 226);
 }
+
+
+
+
+
+
+
+/* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
+@media screen and (max-width: 768px) {
+
+    /* project의 헤더 부분 반응형 스타일  */
+    .project-container {
+        padding: 25px;
+    }
+    .project-header-container .project-header-text {
+        font-size: 15px;
+    }
+    
+    /* projects 카드 반응형 스타일  */
+    .projects-container .projects-box-container {
+        width: 100%;
+        height: 420px;
+        /* background-color: pink; */
+        margin: 20px 0px 20px 0px;
+        /* flex-direction: column; */
+        /* border-radius: 15px; */
+        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); */
+    }
+    .projects-box .projects-box-img {
+        /* width: 100%; */
+        height: 190px;
+        /* position: absolute; */
+        /* top: 0px; */
+        /* border-radius: 10px; */
+    }
+    .projects-box .proejcts-box-content {
+        /* width: 100%; */
+        /* height: 50%; */
+        /* position: absolute; */
+        /* bottom: 0px; */
+        /* background-color: skyblue; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        padding: 13px;
+    }
+    .projects-box .project-box-name {
+        /* position: absolute;
+        top: 230px;
+        left: 30px; */
+        /* bottom: 105px; */
+        font-size: 18px;
+        /* font-weight: 600; */
+        margin-bottom: 10px;
+        /* letter-spacing: 1px; */
+    }
+    .projects-box .project-box-shortDescription {
+        /* position: absolute;
+        top: 270px;
+        left: 30px; */
+        font-size: 13px;
+        /* margin-bottom: 20px; */
+    }
+    .projects-box .project-box-toolsContainer {
+        /* position: absolute; */
+        /* bottom: 80px; */
+        /* display: flex; */
+        /* position: absolute;
+        bottom: 95px;
+        left: 30px; */
+        margin-bottom: 10px;
+        /* width: 100%; */
+        /* background-color: pink; */
+        flex-wrap: wrap;
+    
+    }
+    
+.projects-box-btn-container .projects-box-btn {
+    width: 120px;
+    height: 28x;
+    margin: 0px 10px 5px 10px;
+    /* border-radius: 10px; */
+    /* border-style: none; */
+    font-size: 13px;
+    /* font-weight: 600; */
+    /* cursor: pointer; */
+    /* background-color: white; */
+    border: 1px solid rgb(82,82,82);
+}
+
+}

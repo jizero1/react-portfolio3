@@ -335,13 +335,13 @@
         padding: 25px;
     }
 
-    .about-container .about-header {
+    /* .about-container .about-header {
         font-size: 45px;
     }
 
     .about-container .about-header::before {
         height: 2.0px;
-    }
+    } */
 
     .intro-container .intro-heading {
         font-size: 18px;
