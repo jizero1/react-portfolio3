@@ -57,6 +57,7 @@
     top: 0px;
     /* border-radius: 10px; */
 }
+
 .projects-box .proejcts-box-content {
     width: 100%;
     /* height: 50%; */
@@ -67,6 +68,7 @@
     flex-direction: column;
     padding: 30px 30px 20px 30px;
 }
+
 .projects-box .project-box-name {
     /* position: absolute;
     top: 230px;
@@ -129,11 +131,11 @@
     font-weight: 600;
     cursor: pointer;
     background-color: white;
-    border: 2px solid rgb(82,82,82);
+    border: 1.5px solid rgb(82, 82, 82);
 }
 
 .projects-box-btn-container .projects-box-btn:hover {
-    background-color: rgb(82,82,82);
+    background-color: rgb(82, 82, 82);
     color: white;
 }
 
@@ -202,7 +204,7 @@
     padding: 70px 50px 50px 50px;
     margin-bottom: 25px;
     letter-spacing: 1px;
-    box-shadow: 3px 0px 5px rgb(0, 0, 0,0.2);
+    box-shadow: 3px 0px 5px rgb(0, 0, 0, 0.2);
 }
 
 .readMore-title-container .readMore-name {
@@ -223,6 +225,7 @@
     flex-direction: column;
     padding: 17px 45px 0px 45px;
     margin-bottom: 2px;
+    
 }
 
 .common-readMore-text-container .common-readMore-text {
@@ -289,30 +292,39 @@
 
 
 
+/* ---------------- 1024px, 768px, 480px --------------- */
+
+/* 화면 너비가 1024px 이하일때 적용되는 반응형 스타일  */
+@media screen and (max-width: 1024px) {
+
+    .projects-box .projects-box-img {
+        /* width: 100%; */
+        height: 230px;
+        /* position: absolute; */
+        /* top: 0px; */
+        /* border-radius: 10px; */
+    }
+}
 
 
-
-/* 화면 너비가 768px이하일때 적용되는 반응형 스타일 */
-@media screen and (max-width: 768px) {
+/* 화면 너비가 480px이하일때 적용되는 반응형 스타일 */
+@media screen and (max-width: 480px) {
 
     /* project의 헤더 부분 반응형 스타일  */
     .project-container {
         padding: 25px;
     }
+
     .project-header-container .project-header-text {
         font-size: 15px;
     }
-    
+
     /* projects 카드 반응형 스타일  */
     .projects-container .projects-box-container {
-        width: 100%;
         height: 420px;
-        /* background-color: pink; */
         margin: 20px 0px 20px 0px;
-        /* flex-direction: column; */
-        /* border-radius: 15px; */
-        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); */
     }
+
     .projects-box .projects-box-img {
         /* width: 100%; */
         height: 190px;
@@ -320,6 +332,7 @@
         /* top: 0px; */
         /* border-radius: 10px; */
     }
+
     .projects-box .proejcts-box-content {
         /* width: 100%; */
         /* height: 50%; */
@@ -328,8 +341,9 @@
         /* background-color: skyblue; */
         /* display: flex; */
         /* flex-direction: column; */
-        padding: 13px;
+        padding: 18px;
     }
+
     .projects-box .project-box-name {
         /* position: absolute;
         top: 230px;
@@ -340,6 +354,7 @@
         margin-bottom: 10px;
         /* letter-spacing: 1px; */
     }
+
     .projects-box .project-box-shortDescription {
         /* position: absolute;
         top: 270px;
@@ -347,6 +362,7 @@
         font-size: 13px;
         /* margin-bottom: 20px; */
     }
+
     .projects-box .project-box-toolsContainer {
         /* position: absolute; */
         /* bottom: 80px; */
@@ -358,20 +374,94 @@
         /* width: 100%; */
         /* background-color: pink; */
         flex-wrap: wrap;
-    
+
+    }
+
+    .projects-box-btn-container .projects-box-btn {
+        width: 140px;
+        height: 20x;
+        margin: 0px 10px 0px 10px;
+        /* border-radius: 10px; */
+        /* border-style: none; */
+        font-size: 13px;
+        /* font-weight: 600; */
+        /* cursor: pointer; */
+        /* background-color: white; */
+        border: 1px solid rgb(82, 82, 82);
+    }
+
+
+
+    /* 프로젝트 자세히보기 클릭시 나오는 모달창 반응형 디자인 */
+    .readMore-container .readMore-title-container {
+        /* width: 100%; */
+        /* background-color: pink; */
+        /* flex-direction: column; */
+        padding: 70px 25px 40px 25px;
+        /* margin-bottom: 25px; */
+        /* letter-spacing: 1px; */
+        /* box-shadow: 3px 0px 5px rgb(0, 0, 0,0.2); */
+    }
+    .readMore-title-container .readMore-name {
+        font-size: 22px;
+        /* font-weight: 600; */
+        /* margin-bottom: 20px; */
+    }
+    .readMore-container .common-readMore-text-container {
+        /* width: 100%; */
+        /* background-color: skyblue; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        padding: 17px 23px 0px 23px;
+        /* margin-bottom: 2px; */
+    }
+    .common-readMore-text-container .common-readMore-text {
+        font-size: 14px;
+        line-height: 24px;
+        /* letter-spacing: 0.5px; */
+        /* margin-bottom: 20px; */
     }
     
-.projects-box-btn-container .projects-box-btn {
-    width: 120px;
-    height: 28x;
-    margin: 0px 10px 5px 10px;
-    /* border-radius: 10px; */
-    /* border-style: none; */
-    font-size: 13px;
-    /* font-weight: 600; */
-    /* cursor: pointer; */
-    /* background-color: white; */
-    border: 1px solid rgb(82,82,82);
-}
-
+    .common-readMore-text-container .common-readMore-text-title {
+        font-size: 18px;
+        /* font-weight: 600; */
+        /* margin-bottom: 20px; */
+        /* overflow-y: hidden; */
+    }
+    .readMore-container .readMore-image-container {
+        display: flex;
+        flex-direction: column;
+        /* background-color: blue; */
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+    
+    .readMore-container .readMore-image-container img {
+        /* width: 99%; */
+        height: 150px;
+        margin: 20px 15px 0px 15px;
+        /* border-radius: 10px; */
+        /* box-shadow: 2px 1px 5px rgb(0,0,0,0.2); */
+    }
+    .common-readMore-text-container .readMore-linkBtn {
+        padding: 8px 10px 8px 10px;
+        /* cursor: pointer; */
+        /* background-color: rgb(206, 217, 253); */
+        border-radius: 10px;
+    }
+    
+    /* 모달창 닫기 버튼 반응형 디자인 */
+    .projectView-closeBtn {
+        width: 24px;
+        height: 18px;
+        /* border-radius: 15px; */
+        /* border-style: none; */
+        /* position: absolute; */
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+        /* cursor: pointer; */
+        /* background-color: white; */
+    }
+    
 }
