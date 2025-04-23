@@ -1,6 +1,5 @@
 .project-container {
     width: 100vw;
-    /* height: 2500px; */
     padding: 50px;
     position: relative;
 }
@@ -8,14 +7,12 @@
 /* project 헤더 부분 디자인  */
 .project-header-container {
     width: 100%;
-    /* height: 20px; */
 }
 
 .project-header-container .project-header-text {
     margin-top: 25px;
     font-size: 16px;
     line-height: 26px;
-    /* background-color: pink; */
     margin-bottom: 40px;
 }
 
@@ -24,16 +21,12 @@
 /* projects 디자인 (프로젝트들 모아둔 중앙 부분)  */
 .projects-container {
     width: 100%;
-    /* height: 1200px; */
-    /* margin-top: 70px; */
-    /* background-color: grey; */
     flex-wrap: wrap;
 }
 
 .projects-container .projects-box-container {
     width: 420px;
     height: 470px;
-    /* background-color: pink; */
     margin: 30px 16px 50px 16px;
     flex-direction: column;
     border-radius: 15px;
@@ -42,12 +35,10 @@
 
 .projects-box-container .projects-box {
     width: 100%;
-    /* height: 500px; */
     height: 100%;
     background-color: white;
     flex-direction: column;
     position: relative;
-    /* padding: 40px; */
 }
 
 .projects-box .projects-box-img {
@@ -55,68 +46,43 @@
     height: 245px;
     position: absolute;
     top: 0px;
-    /* border-radius: 10px; */
 }
 
 .projects-box .proejcts-box-content {
     width: 100%;
-    /* height: 50%; */
     position: absolute;
     bottom: 0px;
-    /* background-color: skyblue; */
     display: flex;
     flex-direction: column;
     padding: 30px 30px 20px 30px;
 }
 
 .projects-box .project-box-name {
-    /* position: absolute;
-    top: 230px;
-    left: 30px; */
-    /* bottom: 105px; */
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
-    /* letter-spacing: 1px; */
 }
 
 .projects-box .project-box-shortDescription {
-    /* position: absolute;
-    top: 270px;
-    left: 30px; */
     font-size: 14px;
     margin-bottom: 20px;
 }
 
 .projects-box .projects-box-btn-container {
     width: 100%;
-    /* height: 100px; */
-    /* background-color: blue; */
-    /* position: absolute;
-    bottom: 5px; */
 }
 
 .projects-box .project-box-toolsContainer {
-    /* position: absolute; */
-    /* bottom: 80px; */
     display: flex;
-    /* position: absolute;
-    bottom: 95px;
-    left: 30px; */
     margin-bottom: 20px;
     width: 100%;
-    /* background-color: pink; */
-    /* flex-wrap: wrap; */
-
 }
 
 .project-box-toolsContainer .project-box-tools {
     padding: 4px 8px 4px 8px;
     background-color: rgb(242, 242, 242);
     border-radius: 15px;
-    /* margin-right: 17px; */
     font-size: 13px;
-    /* margin-bottom: 5px; */
     margin: 0px 10px 9px 0px;
 
 }
@@ -151,16 +117,13 @@
 /* projects 자세히보기 클릭시 뜨는 모달창 디자인  */
 .projectView-container-black {
     position: fixed;
-    /* 전체화면 기준으로 고정 */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* 어두운 반투명 배경 */
     z-index: 1000;
     padding: 40px;
-    /* overflow-y: auto; */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -168,11 +131,9 @@
 
 .projectView-container-white {
     width: 750px;
-    /* height: 1300px; */
     background-color: white;
     border-radius: 15px;
     position: relative;
-    /* padding: 45px; */
 }
 
 .projectView-closeBtn {
@@ -192,14 +153,13 @@
 
 
 
-/* 모달창 내부 프로젝트 데이터 디자인  */
+/* projects 자세히보기 클릭시 뜨는 모달창 [[ 내부 ]] 디자인  */
 .readMore-container {
     flex-direction: column;
 }
 
 .readMore-container .readMore-title-container {
     width: 100%;
-    /* background-color: pink; */
     flex-direction: column;
     padding: 70px 50px 50px 50px;
     margin-bottom: 25px;
@@ -215,17 +175,14 @@
 
 .readMore-title-container .readMore-date {
     font-size: 14px;
-    /* margin-bottom: 30px; */
 }
 
 .readMore-container .common-readMore-text-container {
     width: 100%;
-    /* background-color: skyblue; */
     display: flex;
     flex-direction: column;
     padding: 17px 45px 0px 45px;
     margin-bottom: 2px;
-    
 }
 
 .common-readMore-text-container .common-readMore-text {
@@ -248,14 +205,9 @@
     margin-bottom: 10px;
 }
 
-/* .common-readMore-text-container .functionNumber-text {
-    margin-bottom: 20px;
-} */
-
 .readMore-container .readMore-image-container {
     display: flex;
     flex-direction: row;
-    /* background-color: blue; */
     padding: 0px;
     margin-bottom: 40px;
 }
@@ -265,7 +217,6 @@
     height: 180px;
     margin: 20px 10px 0px 10px;
     border-radius: 10px;
-    /* box-shadow: 2px 1px 5px rgb(0,0,0,0.2); */
 }
 
 .common-readMore-text-container .readMore-linkBtn {
@@ -273,7 +224,6 @@
     cursor: pointer;
     background-color: rgb(206, 217, 253);
     border-radius: 15px;
-    /* border: 1.5px solid black; */
     border-style: none;
     margin-right: 15px;
     box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.1);
@@ -282,7 +232,6 @@
 
 .common-readMore-text-container .readMore-linkBtn a {
     color: black;
-
 }
 
 .common-readMore-text-container .readMore-linkBtn:hover {
@@ -298,12 +247,18 @@
 @media screen and (max-width: 1024px) {
 
     .projects-box .projects-box-img {
-        /* width: 100%; */
         height: 230px;
-        /* position: absolute; */
-        /* top: 0px; */
-        /* border-radius: 10px; */
     }
+
+    /* projects 자세히보기 클릭시 뜨는 모달창 [[ 내부 ]] 반응형 디자인  */
+    .readMore-container .readMore-image-container {
+        flex-direction: column;
+    }
+    .readMore-container .readMore-image-container img {
+        height: 170px;
+        margin: 20px 20px 0px 20px;
+    }
+
 }
 
 
@@ -326,127 +281,69 @@
     }
 
     .projects-box .projects-box-img {
-        /* width: 100%; */
         height: 190px;
-        /* position: absolute; */
-        /* top: 0px; */
-        /* border-radius: 10px; */
     }
 
     .projects-box .proejcts-box-content {
-        /* width: 100%; */
-        /* height: 50%; */
-        /* position: absolute; */
-        /* bottom: 0px; */
-        /* background-color: skyblue; */
-        /* display: flex; */
-        /* flex-direction: column; */
         padding: 18px;
     }
 
     .projects-box .project-box-name {
-        /* position: absolute;
-        top: 230px;
-        left: 30px; */
-        /* bottom: 105px; */
         font-size: 18px;
-        /* font-weight: 600; */
         margin-bottom: 10px;
-        /* letter-spacing: 1px; */
     }
 
     .projects-box .project-box-shortDescription {
-        /* position: absolute;
-        top: 270px;
-        left: 30px; */
         font-size: 13px;
-        /* margin-bottom: 20px; */
     }
 
     .projects-box .project-box-toolsContainer {
-        /* position: absolute; */
-        /* bottom: 80px; */
-        /* display: flex; */
-        /* position: absolute;
-        bottom: 95px;
-        left: 30px; */
         margin-bottom: 10px;
-        /* width: 100%; */
-        /* background-color: pink; */
         flex-wrap: wrap;
 
     }
-
+    
     .projects-box-btn-container .projects-box-btn {
         width: 140px;
         height: 20x;
         margin: 0px 10px 0px 10px;
-        /* border-radius: 10px; */
-        /* border-style: none; */
         font-size: 13px;
-        /* font-weight: 600; */
-        /* cursor: pointer; */
-        /* background-color: white; */
         border: 1px solid rgb(82, 82, 82);
     }
 
 
+    .projectView-container-black {
+        padding: 40px 23px 23px 23px;
+    }
 
-    /* 프로젝트 자세히보기 클릭시 나오는 모달창 반응형 디자인 */
+    /* projects 자세히보기 클릭시 뜨는 모달창 [[ 내부 ]] 디자인  */
     .readMore-container .readMore-title-container {
-        /* width: 100%; */
-        /* background-color: pink; */
-        /* flex-direction: column; */
         padding: 70px 25px 40px 25px;
-        /* margin-bottom: 25px; */
-        /* letter-spacing: 1px; */
-        /* box-shadow: 3px 0px 5px rgb(0, 0, 0,0.2); */
     }
     .readMore-title-container .readMore-name {
         font-size: 22px;
-        /* font-weight: 600; */
-        /* margin-bottom: 20px; */
     }
     .readMore-container .common-readMore-text-container {
-        /* width: 100%; */
-        /* background-color: skyblue; */
-        /* display: flex; */
-        /* flex-direction: column; */
         padding: 17px 23px 0px 23px;
-        /* margin-bottom: 2px; */
     }
     .common-readMore-text-container .common-readMore-text {
         font-size: 14px;
         line-height: 24px;
-        /* letter-spacing: 0.5px; */
-        /* margin-bottom: 20px; */
     }
     
     .common-readMore-text-container .common-readMore-text-title {
         font-size: 18px;
-        /* font-weight: 600; */
-        /* margin-bottom: 20px; */
-        /* overflow-y: hidden; */
     }
     .readMore-container .readMore-image-container {
-        display: flex;
         flex-direction: column;
-        /* background-color: blue; */
-        padding: 0px;
-        margin-bottom: 40px;
     }
     
     .readMore-container .readMore-image-container img {
-        /* width: 99%; */
         height: 150px;
         margin: 20px 15px 0px 15px;
-        /* border-radius: 10px; */
-        /* box-shadow: 2px 1px 5px rgb(0,0,0,0.2); */
     }
     .common-readMore-text-container .readMore-linkBtn {
         padding: 8px 10px 8px 10px;
-        /* cursor: pointer; */
-        /* background-color: rgb(206, 217, 253); */
         border-radius: 10px;
     }
     
@@ -454,14 +351,9 @@
     .projectView-closeBtn {
         width: 24px;
         height: 18px;
-        /* border-radius: 15px; */
-        /* border-style: none; */
-        /* position: absolute; */
         top: 10px;
         right: 10px;
         font-size: 12px;
-        /* cursor: pointer; */
-        /* background-color: white; */
     }
     
 }
