@@ -1,5 +1,5 @@
 import './Home.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaAngleDoubleDown } from "react-icons/fa";
 import Lottie from 'lottie-react';

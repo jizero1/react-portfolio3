@@ -127,11 +127,6 @@ const Project = () => {
 
     const [selectedProject, setSelectedProject] = useState(null);
 
-    // const [data, setData] = useState("");
-    // const projectData = (data) => {
-    //     console.log(data);
-    //     setData(data);
-    // }
     return (
         <div className="project-container common-background">
             <ProjectView isClick={isClick} handleProjectOpenClose={handleProjectOpenClose} selectedProject={selectedProject} />

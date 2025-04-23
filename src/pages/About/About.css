@@ -9,25 +9,6 @@
     padding: 50px;
 }
 
-/* .about-container .about-header {
-    font-size: 55px;
-    font-weight: 500;
-    width: 100%;
-    position: relative;
-    padding: 80px 0px 10px 0px;
-    overflow-y: hidden;
-}
-
-.about-container .about-header::before {
-    content: "";
-    width: 0px;
-    height: 1.7px;
-    background-color: rgb(48, 48, 48);
-    position: absolute;
-    bottom: 0px;
-    animation: headerLineAni 1.0s ease-out forwards;
-}
-
 @keyframes headerLineAni {
     0% {
         width: 0px;
@@ -76,12 +57,10 @@
 }
 
 .common-header {
-    /* background-color: grey; */
     font-size: 40px;
     font-weight: 800;
     width: 100%;
     overflow-y: hidden;
-    /* margin-bottom: 10px; */
 }
 
 .common-header-detailText {
@@ -112,7 +91,6 @@
 }
 
 .skills-box .skills-boxSkillTitle {
-    /* width: 100%; */
     height: 35px;
     font-size: 17px;
     font-weight: 600;
@@ -134,7 +112,6 @@
     height: 62px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    /* margin-bottom: 20px; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -189,8 +166,6 @@
 .contact-container {
     height: 650px;
     margin-top: 20px;
-    /* background-color: grey; */
-    /* 나머지 스타일은 skills랑 vision의 스타일과 동일 */
 }
 
 .contact-container .contact-form {
@@ -213,16 +188,13 @@
 
 .contact-form .common-contact {
     width: 100%;
-    /* height: 80px; */
     margin-bottom: 10px;
     padding: 10px;
     position: relative;
-    /* background-color: green; */
 }
 
 .contact-form .common-contact input {
     height: 38px;
-
 }
 
 .contact-form .common-contact textarea {
@@ -231,11 +203,8 @@
 
 .contact-form .common-contact-label {
     font-size: 16px;
-    /* position: absolute;
-    left: 10px; */
     margin-right: 10px;
     width: 70px;
-    /* background-color: pink; */
 }
 
 .common-contact .common-contact-write {
@@ -255,12 +224,8 @@
 }
 
 .common-contact .common-contact-write:focus {
-    /* border-color: #4a90e2;
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
-    outline: none; */
     outline: none;
     border-color: rgb(3, 161, 228);
-    /* box-shadow: 5px 5px 4px rgba(74, 144, 226, 0.2); */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -271,10 +236,8 @@
     border-radius: 15px;
     background-color: rgb(180, 215, 244);
     font-size: 16px;
-    /* font-weight: 500; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    /* margin-top: 20px; */
     position: absolute;
     bottom: 30px;
 }
@@ -282,8 +245,6 @@
 .contact-container .contact-formAndinfoCard {
     width: 100%;
     height: 100%;
-    /* background-color: green; */
-    /* style={{flexDirection:'row', marginTop: 50}} */
     flex-direction: row;
     margin-top: 50px;
 }
@@ -292,9 +253,6 @@
 .contact-formAndinfoCard .contact-infoCard {
     width: 320px;
     height: 230px;
-    /* padding: 20px;
-    background-color: rgb(180, 215, 244);
-    border-radius: 15px; */
     margin-left: 50px;
     text-align: center;
     flex-direction: column;
@@ -330,18 +288,9 @@
 
     /* about 부분 헤더랑 텍스트 부분 반응형 스타일  */
     .about-container {
-        /* background-color: yellow; */
         height: 3200px;
         padding: 25px;
     }
-
-    /* .about-container .about-header {
-        font-size: 45px;
-    }
-
-    .about-container .about-header::before {
-        height: 2.0px;
-    } */
 
     .intro-container .intro-heading {
         font-size: 18px;
@@ -353,8 +302,6 @@
         letter-spacing: 0.6px;
         font-size: 15px;
     }
-
-
 
 
 
@@ -383,7 +330,6 @@
 
     .skills-box .skills-boxSkillTitle {
         font-size: 16px;
-        /* margin: 23px 0px 3px 0px; */
     }
 
     .skills-box .skills-boxSkillsContainer {
@@ -430,13 +376,9 @@
     /* contact 부분 스타일  */
     .contact-container {
         height: 700px;
-        /* background-color: grey; */
-        /* 나머지 스타일은 skills랑 vision의 스타일과 동일 */
     }
 
     .contact-container .contact-formAndinfoCard {
-        /* style={{flexDirection:'row', marginTop: 50}} */
-        /* flex-direction: row; */
         margin-top: 10px;
     }
 
@@ -444,12 +386,7 @@
         width: 100%;
         height: 450px;
         box-shadow: none;
-        /* background-color: pink; */
-        /* border-radius: 20px; */
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
         padding: 10px;
-        /* flex-direction: column; */
-        /* position: relative; */
     }
 
     .contact-form .common-contact-label {
@@ -462,25 +399,14 @@
     }
 
     .contact-form .contact-submitBtn {
-        /* border-style: none; */
         width: 80px;
         height: 35px;
         border-radius: 10px;
-        /* background-color: rgb(180, 215, 244); */
         font-size: 14px;
-        /* font-weight: 500; */
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-        /* cursor: pointer; */
-        /* margin-top: 20px; */
-        /* position: absolute;
-        bottom: 30px; */
     }
 
     .contact-form .contact-title {
-        /* position: absolute; */
-        /* top: 20px; */
         font-size: 27px;
-        /* font-weight: 600; */
     }
 
     .contact-formAndinfoCard .contact-infoCard {
@@ -495,9 +421,7 @@
 
     /* about 부분 반응형 스타일  */
     .about-container {
-        /* background-color: yellow; */
         height: 3700px;
-        /* padding: 25px; */
     }
     /* skills 부분 반응형 스타일 */
     .skills-container .skills-boxContainer {
@@ -505,7 +429,6 @@
         height: 100%;
         flex-wrap: wrap;
     }
-
     /* vision 부분 반응형 스타일 */
     .vision-container {
         height: 1200px;

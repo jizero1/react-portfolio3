@@ -8,7 +8,6 @@
 .home-container {
     width: 100vw;
     flex-direction: column;
-    /* padding: 30px; */
 }
 
 /* ----------- 홈화면 텍스트 ----------- */
@@ -21,7 +20,6 @@
 .home-text-container .home-text-title-container {
     width: 100%;
     height: 450px;
-    /* background-color: green; */
     flex-direction: column;
     position: relative;
 }
@@ -41,7 +39,6 @@
 .home-text-container .home-text-scrollIcon-container {
     width: 50px;
     height: 80px;
-    /* background-color: blue; */
     font-size: 25px;
     position: absolute;
     bottom: 30px;
@@ -62,7 +59,6 @@
     width: 550px;
     height: 400px;
     position: absolute;
-    /* background-color: green; */
     overflow-y: hidden;
 }
 
@@ -70,21 +66,10 @@
 .home-info-navigation {
     width: 100%;
     flex-direction: row;
-    /* height: 45vh; */
-    /* background-color: blue; */
-    /* background-color: blue; */
-
 }
 .common-info-box {
-    /* width: 450px;
-    height: 270px; */
-    /* width: 35vw;
-    min-width: 300px;
-    max-width: 700px; */
     width: clamp(300px, 40vw, 600px);
-    /* height: clamp(100px, 35vh, 400px); */
     height: 280px;
-    /* height: 300px; */
     background-color: white;
     margin: 20px;
     border-radius: 30px;
@@ -115,13 +100,11 @@
 
 .home-info-about::before {
     color: white;
-    /* background-color: #FFB6C1; */
     background-color: rgb(180, 215, 244);
 }
 
 .home-info-project:before {
     color: white;
-    /* background-color: rgb(165, 165, 246); */
     background-color: rgb(253, 230, 99);
 }
 
@@ -143,12 +126,10 @@
 }
 
 .home-info-about:hover {
-    /* background-color: #FFB6C1; */
     background-color: rgb(180, 215, 244);
 }
 
 .home-info-project:hover {
-    /* background-color: rgb(165, 165, 246); */
     background-color: rgb(253, 230, 99);
 }
 
@@ -168,7 +149,6 @@
     font-size: 30px;
     font-weight: 600;
     position: absolute;
-    /* top: 40px; */
     transition: transform 0.3s ease-out;
 }
 
@@ -186,7 +166,6 @@
 .home-info-container {
     width: 100%;
     height: 100vh;
-    /* height: 1000px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,10 +174,8 @@
 
 .home-info-header {
     width: 100%;
-    /* height: 300px; */
     padding-left: 80px;
     margin-bottom: 5%;
-    /* background-color: pink; */
 }
 
 .home-info-header-line {
@@ -239,6 +216,7 @@
     /* about projects 박스 부분  */
     .home-info-container {
         height: 780px;
+        padding-bottom: 10px;
     }
     .home-info-navigation {
         flex-direction: column;
@@ -273,7 +251,6 @@
     .home-info-header {
         margin-bottom: 30px;
         padding: 0px 24px 0px 24px;
-        /* background-color: grey; */
     }
     .home-info-header-line {
         display: none;
