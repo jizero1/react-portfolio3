@@ -250,7 +250,7 @@
         height: 230px;
     }
 
-    /* projects 자세히보기 클릭시 뜨는 모달창 [[ 내부 ]] 반응형 디자인  */
+    /* projects 자세히보기 클릭시 뜨는 모달창 내부 반응형 디자인  */
     .readMore-container .readMore-image-container {
         flex-direction: column;
     }
@@ -316,7 +316,7 @@
         padding: 40px 23px 23px 23px;
     }
 
-    /* projects 자세히보기 클릭시 뜨는 모달창 [[ 내부 ]] 디자인  */
+    /* projects 자세히보기 클릭시 뜨는 모달창 내부 디자인  */
     .readMore-container .readMore-title-container {
         padding: 70px 25px 40px 25px;
     }
